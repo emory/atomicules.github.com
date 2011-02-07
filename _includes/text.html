@@ -1,0 +1,24 @@
+---
+---
+<header>
+<!-- permalink
+<a href="{{ post.url }}" class="permalink">
+					<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}">{Month} {DayOfMonth}, {Year} at {12Hour}:{Minutes}{AmPm}</time>
+				</a>
+				-->
+
+	<h1>{{ page.title }}</h1>
+</header>
+<div class="postcontent text {TagsAsClasses}">
+	{{ post.content }}
+	<ul class="post-tags">
+		{%if post.content_source %}
+		<li class="tags"><i>Source: <a href="{{ post.content_source.url }}">{{ content.source }}</a></i></li>
+		{% endif %}
+		<li class="tags">Tags: <ul>{% for topic in post.topics %}<li><a href="/tags/{{ topic }}">{{ topic }}</a></li>{% endfor %}</ul></li>
+		
+	</ul>
+	<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
+	<br />
+</div>
+

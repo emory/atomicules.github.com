@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>i5m on Github</title>
-		<style type="text/css">
-			body {
-				padding: 3em;
-				background: white;
-			}
-			h1 {
-				font-size: 15em;
-				text-align: center;
-				font-family: Serif;
-				font-style: italic;
-			}
-			h1 a, h1 a:link, h1, a:visited, h1 a:hover, h1 a:active {
-				color: gray;
-				text-decoration: none;
-			}
-		</style>
-	</head>
-	<body>
+---
+layout: main
+title: i5m
+---
 
-
-		<h1><a href="http://i5m.co.uk">i5m.co.uk</a></h1>
-
-</body>
-</html>
+{% for post in site.posts limit:10 %}
+	{% case post.type %} 
+		{% when 'text' %}
+			{% include text.html %}
+	{% endcase %}
+{% endfor %}
