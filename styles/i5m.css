@@ -87,7 +87,7 @@ h1 {
 	color: {{ color.title }};
 }
 h1#avatar {			
-	background-image: url('{PortraitURL-128}');
+	background-image: url('http://i5m.github.com/images/avatar.png');
 	background-repeat: no-repeat;
 }
 h1, h1 a {
