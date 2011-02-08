@@ -2,7 +2,7 @@
 ---
 <header>
 	<a href="{{ post.url }}" class="permalink">
-		<time datetime="{{ post.date.year }}-{{ post.date.month }}-{{ post.date.day }}">{{ post.date.month }} {{ post.date.day }}, {{ post.date.year }}</time>
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
 	</a>
 
 	<h1>{{ post.title }}</h1>
