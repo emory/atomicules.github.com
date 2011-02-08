@@ -15,7 +15,7 @@ footer,header,hgroup,menu,nav,section {
 /* Main Layout */
 html {
 	margin: 3em;
-	background: #FFFFFF;  
+	background: #EEE;  
 
 }
 body {
@@ -54,11 +54,11 @@ pre {
 
 a {
 	outline: none;
-	color: #444444;
+	color: #666;
 	text-decoration: underline;
 }
 a:hover {
-	color: #808080;
+	color: #c00;
 }
 a img {
 	border: none;
@@ -74,7 +74,7 @@ ol {
 
 h1 {
 	font: 4em 'Lucida Grande', Gill Sans MT, sans-serif;			
-	color: #222222;
+	color: #fff;
 }
 h1#avatar {			
 	background-image: url('http://i5m.github.com/images/avatar.png');
@@ -87,10 +87,10 @@ h1#avatar a {
 	position: relative;
 	left: 25px;
 	top: 30px;
-	color: #222222;
+	color: #FFF;
 }
 h1 a:hover {
-	color: #222222;
+	color: #444;
 }
 article {
 	margin: 0 0 2.0em 0;
@@ -112,11 +112,11 @@ article {
 }
 .postcontent a {
 	text-decoration: underline;
-	color: #444444;
+	color: #666;
 }
 .postcontent a:hover {
 	text-decoration: underline;
-	color: #808080;
+	color: #c00;
 }
 .postcontent .descrip,
 .postcontent .source {
@@ -157,12 +157,12 @@ article .link .href {
 }
 article .link .href a {
 	text-decoration: none;
-	color: #444444;
+	color: #666;
 	padding: 0px;
 }
 article .link .href a:hover {
 	text-decoration: none;
-	color: #444444;
+	color: #444;
 	padding: 0px;
 }
 article .descrip ul, article .postcontent ul, article .descrip ol, article .postcontent ol {
@@ -241,7 +241,7 @@ a.permalink, a.commentlink {
 
 }
 a.permalink {
-	color: #909090;
+	color: #c00;
 }
 a.permalink:hover {
 	color: #444444;
@@ -302,4 +302,4 @@ footer a {
 	text-decoration:none;
 }
 		
-</style>
+
