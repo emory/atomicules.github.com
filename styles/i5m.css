@@ -79,6 +79,7 @@ h1 {
 h1#avatar {			
 	background-image: url('http://i5m.github.com/images/avatar.png');
 	background-repeat: no-repeat;
+	margin-bottom: 0.25em;
 }
 h1, h1 a {
 	text-decoration: none !important;
