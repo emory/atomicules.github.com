@@ -25,7 +25,10 @@
 
 		<section>
 			<article>
-				{{ content }}
+			{% case post.type %} 
+				{% when 'text' %}
+					{% include text.html %}
+			{% endcase %}
 			</article>
 	
 <!-- Needs to be moved to each post
