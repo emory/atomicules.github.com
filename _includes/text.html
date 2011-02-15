@@ -1,17 +1,20 @@
 <header>
-<a href="{{ post.url }}{{ page.url }}" class="permalink">
-		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+<a href="{{ post.url }}{% unless post == null %}{{ page.url }}{% endunless %}" class="permalink">
+		<time datetime="{{ post.date | date: "%Y-%m-%d" }}{% unless post == null %}{{ page.date | date: "%Y-%m-%d" }}{% endunless %}">{{ post.date | date: "%B %d, %Y" }}{% unless post == null %}{{ page.date | date: "%B %d, %Y" }}{% endunless %}</time>
 	</a>
 
-	<h1>{{ post.title }}{{ page.title }}</h1>
+	<h1>{{ post.title }}{% unless post == null %}{{ page.title }}{% endunless %}</h1>
 </header>
 <div class="postcontent text {TagsAsClasses}">
-	{{ post.content }}{{ page.content }}
+	{{ post.content }}{% unless post == null %}{{ page.content }}{% endunless %}
 	<ul class="post-tags">
 		{%if post.content_source %}
-		<li class="tags"><i>Source: <a href="{{ post.content_source.url }}">{{ content.source }}</a></i></li>
+		<li class="tags"><i>Source: <a href="{{ post.content_source_url }}">{{ post.content_source }}</a></i></li>
 		{% endif %}
-		<li class="tags">Tags: <ul>{% for topic in post.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}</ul></li>
+		{%if page.content_source %}
+		<li class="tags"><i>Source: <a href="{{ page.content_source_url }}">{{ page.content_source }}</a></i></li>
+		{% endif %}
+		<li class="tags">Tags: <ul>{% for topic in post.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}{% for topic in page.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}</ul></li>
 		
 	</ul>
 	<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
