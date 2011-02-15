@@ -4,8 +4,10 @@ title: i5m
 ---
 
 {% for post in site.posts limit:10 %}
+	<article>
 	{% case post.type %} 
 		{% when 'text' %}
 			{% include text.html %}
 	{% endcase %}
+	</article>
 {% endfor %}
