@@ -1,12 +1,12 @@
 <header>
-	<a href="{{ post.url }}" class="permalink">
+<a href="{{ post.url }}{{ page.url }}" class="permalink">
 		<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
 	</a>
 
-	<h1>{{ post.title }}</h1>
+	<h1>{{ post.title }}{{ page.title }}</h1>
 </header>
 <div class="postcontent text {TagsAsClasses}">
-	{{ post.content }}
+	{{ post.content }}{{ page.content }}
 	<ul class="post-tags">
 		{%if post.content_source %}
 		<li class="tags"><i>Source: <a href="{{ post.content_source.url }}">{{ content.source }}</a></i></li>
