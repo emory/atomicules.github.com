@@ -5,6 +5,7 @@ title: Archives
 
 <ul>
 {% for post in site.posts %}
+	{% comment %}This closes the nested list if a new month has begun, unless it's the very first post of course.{% endcomment %}
 	{% capture thispostmonth %}{{ post.date | date: "%B" }}{% endcapture %}
 	{% if thispostmonth != lastpostmonth %}
 		{% unless forloop.first %}
@@ -12,8 +13,9 @@ title: Archives
 	</li>
 		{% endunless %}
 	{% endif %}
-	{% if forloop.first or lastpostmonth != thispostmonth | date: "%B" %} {% comment %}Start month collection for first{% endcomment %}
-	<li>{{post.date | date: "%B" "%Y"}}
+	{% comment %}This opens the nested list for a new month or if its the very first post in the loop{% endcomment %}
+	{% if forloop.first or lastpostmonth != thispostmonth %}
+	<li>{{post.date | date: "%B %Y"}}
 		<ul>
 	{% endif %}
 
@@ -23,8 +25,3 @@ title: Archives
 
 {% endfor %}
 </ul>
-<!-- Any way to split up into months? if not via Jekyll/Liquid post process with Javascript?-->
-
-
-
-
