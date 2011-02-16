@@ -7,8 +7,10 @@ title: Archives
 {% for post in site.posts %}
 
 	{% if currentmonth != post.date | date: "%B" %}
+		{% unless forloop.first %}
 		</ul>
 	</li>
+		{% endunless %}
 	{% endif %}
 	{% if forloop.first or currentmonth != post.date | date: "%B" %} {% comment %}Start month collection for first{% endcomment %}
 	<li>{{post.date | date: "%B" "%Y"}}
