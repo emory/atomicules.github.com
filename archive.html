@@ -5,6 +5,6 @@ title: Archives
 
 <ul>
 {% for posts in site.posts %}
-<li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}>{{ post.date | date: "%B %d, %Y" }}i</time> - <span class="title">{{ post.title }}</span></a></li>
+<li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time> - <span class="title">{{ post.title }}</span></a></li>
 {% endfor %}
 </ul>
