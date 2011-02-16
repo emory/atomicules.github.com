@@ -5,6 +5,24 @@ title: Archives
 
 <ul>
 {% for post in site.posts %}
+
+	{% if currentmonth != post.date | date: "%B" %}
+		</ul>
+	</li>
+	{% endif %}
+	{% if forloop.first or currentmonth != post.date | date: "%B" %} {% comment %}Start month collection for first{% endcomment %}
+	<li>{{post.date | date: "%B" "%Y"}}
+		<ul>
+	{% endif %}
+
 <li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time> - <span class="title">{{ post.title }}</span></a></li>
+
+	{% assign currentmonth = post.date | date: "%B" %}
+
 {% endfor %}
 </ul>
+<!-- Any way to split up into months? if not via Jekyll/Liquid post process with Javascript?-->
+
+
+
+
