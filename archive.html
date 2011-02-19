@@ -10,11 +10,13 @@ title: Archives
 	{% if thispostmonth != lastpostmonth %}
 		{% unless forloop.first %}
 		</ul>
+		{% postcount %}
 	</li>
 		{% endunless %}
 	{% endif %}
 	{% comment %}This opens the nested list for a new month or if its the very first post in the loop{% endcomment %}
 	{% if forloop.first or lastpostmonth != thispostmonth %}
+	{% assign postcount = 1 %}{% comment %}Start post count for month{% endcomment %}
 	<li>{{post.date | date: "%B %Y"}}
 		<ul>
 	{% endif %}
@@ -22,6 +24,7 @@ title: Archives
 	<li><a href="{{ post.url }}" title="{{ post.title }}"><span class="title">{{ post.title }}</span><span>{{ post.content | truncate: 200 }}</span><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time></a></li>
 
 	{% capture lastpostmonth %}{{ post.date | date: "%B" }}{% endcapture %}
+	{% postcount | plus: 1 %}
 
 {% endfor %}
 </ul>
