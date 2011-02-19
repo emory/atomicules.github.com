@@ -303,4 +303,33 @@ footer a {
 	text-decoration:none;
 }
 		
+/*Archive page display */
+
+ul#archives li {
+	list-style-type: none;
+	font-size: 3em;
+}
+
+ul#archives li>ul li {
+	display: block; 
+	float: left; 
+	width: 100px; 
+	height: 100px; 
+	background: grey; 
+	margin: 10px; 
+	padding: 10px; 
+}
+
+ul#archives li>ul time {
+	display: none;
+}
+
+ul#archives li>ul li:hover time {
+	display: block
+}
+
+ul#archives span.title {
+	font-weight: bold
+}
+
 
