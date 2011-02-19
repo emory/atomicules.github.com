@@ -318,9 +318,10 @@ ul#archives li>ul li {
 	background: grey; 
 	margin: 10px; 
 	padding: 10px; 
+	font-size: 0.3em;
 }
 
-ul#archives li>ul time {
+ul#archives li>ul li time {
 	display: none;
 }
 
