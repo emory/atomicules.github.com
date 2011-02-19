@@ -305,7 +305,7 @@ footer a {
 		
 /*Archive page display */
 
-ul#archives li {
+ul#archives>li {
 	list-style-type: none;
 	font-size: 3em;
 	clear: both;
