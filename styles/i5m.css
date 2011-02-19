@@ -308,6 +308,7 @@ footer a {
 ul#archives li {
 	list-style-type: none;
 	font-size: 3em;
+	clear: both;
 }
 
 ul#archives li>ul li {
@@ -315,10 +316,11 @@ ul#archives li>ul li {
 	float: left; 
 	width: 100px; 
 	height: 100px; 
-	background: grey; 
+	background: lightgrey; 
 	margin: 10px; 
 	padding: 10px; 
 	font-size: 0.3em;
+	overflow: hidden;
 }
 
 ul#archives li>ul li time {
