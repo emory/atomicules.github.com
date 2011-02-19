@@ -17,7 +17,7 @@ title: Archives
 	{% endif %}
 	{% comment %}This opens the nested list for a new month or if its the very first post in the loop{% endcomment %}
 	{% if forloop.first or lastpostmonth != thispostmonth %}
-	{% postcount = 1 %}{% comment %}Start post count for month{% endcomment %}
+	<!--{% postcount = 1 %}-->{% comment %}Start post count for month{% endcomment %}
 	<li>{{post.date | date: "%B %Y"}}
 		<ul>
 	{% endif %}
