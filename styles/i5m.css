@@ -335,4 +335,8 @@ ul#archives span.title {
 	font-weight: bold
 }
 
+ul#archives a {
+	text-decoration: none;
+}
+
 
