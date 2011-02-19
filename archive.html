@@ -4,7 +4,6 @@ title: Archives
 ---
 
 <ul id="archives">
-	<!--% assign postcount = 1 %}{% comment %}Best initialise this{% endcomment %}-->
 {% for post in site.posts %}
 	{% comment %}This closes the nested list if a new month has begun, unless it's the very first post of course.{% endcomment %}
 	{% capture thispostmonth %}{{ post.date | date: "%B" }}{% endcapture %}
