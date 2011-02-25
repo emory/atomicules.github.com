@@ -1,0 +1,17 @@
+	<!-- Photo Post -->
+				{block:Photo}
+				</header>
+				<div class="postcontent photo {TagsAsClasses}">
+					{LinkOpenTag}
+					<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+					{LinkCloseTag}
+					{block:Caption}
+					<div class="source">{Caption}</div>
+					{/block:Caption}
+					<ul class="post-tags">
+						{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
+						{block:HasTags}<li class="tags">Tags: <ul>{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul></li>{/block:HasTags}
+					</ul>
+					<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
+					<br />
+					{/block:Photo}

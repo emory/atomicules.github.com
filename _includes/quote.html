@@ -1,0 +1,15 @@
+	<!-- Quote Post -->
+					{block:Quote}
+					</header>
+					<div class="postcontent quote {TagsAsClasses}">
+						<div class="quote">"{Quote}"</div>
+						{block:Source}
+						<div class="source">&#8212; {Source}</div>
+						{/block:Source}
+						<ul class="post-tags">
+							{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
+							{block:HasTags}<li class="tags">Tags: <ul>{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul></li>{/block:HasTags}
+						</ul>
+						<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
+						<br />
+						{/block:Quote}

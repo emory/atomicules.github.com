@@ -1,0 +1,20 @@
+	<!-- Chat Post -->
+							{block:Chat}
+							{block:Title}
+								<h1>{Title}</h1>
+							</header>
+							{/block:Title}
+							<div class="postcontent chat {TagsAsClasses}">
+								<ul>
+									{block:Lines}
+									<li class="{Alt}">{block:Label}<span class="label">{Label}</span>
+									{/block:Label}{Line}</li>
+									{/block:Lines}
+								</ul>
+								<ul class="post-tags">
+									{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
+									{block:HasTags}<li class="tags">Tags: <ul>{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul></li>{/block:HasTags}
+								</ul>
+								<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
+								<br />
+								{/block:Chat}
