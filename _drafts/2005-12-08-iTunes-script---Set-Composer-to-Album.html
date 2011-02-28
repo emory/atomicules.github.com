@@ -1,0 +1,28 @@
+---
+layout: page
+type: text
+title: iTunes script - Set Composer to Album
+categories: code
+---
+<p>Download: <a href="%base_url%downloads/set_composer_to_album.zip">Set Composer to Album - Applescript for iTunes</a></p>
+
+<p><strong>What it does: </strong>This script utilises the Composer field of a track so that you can browse through full albums only on your iPod. It avoids having to suffer the usual 'browse by album' view on your iPod being cluttered with albums with one or few tracks. Suitable for those who don't sync their full library to their iPod, but do sync a mixture of full albums and individual tracks (from full albums from their iTunes library). </p>
+
+<p><strong>BACKGROUND INFO:</strong> I have an iPod mini so I don't sync everything from my iTunes library. I ALWAYS sync some hand picked playlists (mainly genre/mood based). In addition I sync a playlist containing complete albums, varied as and when I get bored of them.</p>
+
+<p><strong>THE PROBLEM:</strong> It's pretty impossible using the iPod interface to easily browse through the full albums I've placed on my iPod, since you can't browse a playlist by album, only the entire music collection. In browsing the entire music collection the album view becomes cluttered with &quot;albums&quot; containing one or two tracks, etc from my hand picked playlists.</p>
+
+<p>So, what I decided to do was to make use of the composer field. I don't much care who composed a track, so it's not important for me to keep this info:</p>
+
+<ul>
+
+<li>I use a smart playlist called Si-iP_full_albumsX that selects everything not in my Si-iP_full_albums playlist AND that has a non-blank comment field.</li>
+
+<li>The first part of this script then runs through the Si-iP_full_albumsX playlist and sets the composer fields to blank.</li>
+
+<li>The second part of the script then runs through the Si-iP_full_albums playlist and sets the composer field of each track to "&lt;album&gt;".</li>
+
+</ul>
+
+<p>Then when I browse by composer on my iPod it is easy to browse the list of complete albums I have on my iPod. Happiness at last.</p>
+

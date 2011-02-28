@@ -1,0 +1,14 @@
+---
+layout: page
+type: text
+title: Nanoblogger Updates
+categories: site
+---
+<p>Oooh, now on <a href="http://nanoblogger.sourceforge.net/archives/2006/01/27/T19_09_06/index.html" >3.3 RC4</a>. Which was a bit of a shocker since I&apos;ve played about with some of the plugins to get formatting how I wanted and all of a sudden my Category archives only listed headlines and my archive list was blank.</p>
+
+<p>For anyone using NB who wants the full category entry type you&apos;ll notice it says &quot;IMPORTANT: Please edit category_entry.htm accordingly.&quot;, but doesn&apos;t tell you what to edit. Well it turns out it is as simple as setting the target for CATENTRY_TEMPLATE in nb.conf to the same as the ENTRY_TEMPLATE. </p>
+
+<p>As to getting the monthly list, use the masterfullindex.sh plugin instead of master_index.sh and then edit it so it only prints the month list. Ideally I should edit it so it doesn&apos;t bother processing the entry list and category list (since I&apos;m not using it, it&apos;s a waste of time), butI haven&apos;t figured the code out enough yet to go cutting large chunks out of it</p>
+
+<p>First impressions: It does seem a lot faster. Might be a bug in deleting entries in that it doesn&apos;t update the category index, BUT that could well be me - I don&apos; update it as the author recommends (due to my tweaks). Will investigate. UPDATE: Have investigated. It&apos;s something I&apos;ve done as it works fine on a clean install. Oh arse, now what have I deleted that I shouldn&apos;t have?</p>
+

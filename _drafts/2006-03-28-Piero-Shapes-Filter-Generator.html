@@ -1,0 +1,164 @@
+---
+layout: page
+type: text
+title: Piero Shapes Filter/Generator
+categories: code
+---
+<p>DOWNLOAD Latest Version: <a href="%base_url%downloads/PieroF_Shapes.zip">PieroF_Shapes</a></p>
+
+<h4>Version History</h4>
+
+<ul>
+
+	<li>Latest Version: <a href="%base_url%downloads/PieroF_Shapes.zip">PieroF_Shapes_v0.4b</a>
+
+	<ul>
+
+		<li>Now a Generator, no longer a filter.</li>
+
+	</ul>
+
+	</li>
+
+	<li>Previous Versions:
+
+	<ul>
+
+		<li><a href="%base_url%downloads/PieroF_Shapes_v0.3b.zip">PieroF_Shapes_v0.3b</a>
+
+		<ul>
+
+			<li>First public release. Development version, works as a filter</li>
+
+		</ul>
+
+		</li>
+
+	</ul>
+
+	</li>
+
+</ul>
+
+
+
+<p>A new filter from Piero (all his handiwork). The notes he sent me with the original release are included below.
+
+</p>
+
+
+
+
+
+
+
+
+
+<blockquote>
+
+<p>Hi Simon,</p>
+
+<p>as probably you read in the FCE discussion, after a bad experience with import of .psd images into FCE I decided to use what I learned in the past adding features to your fxscripts, to write my own filter to build simple shapes like rectangle, square, circle and oval.</p>
+
+
+
+<p>Attached you can find this filter so you can use it, test it, modify it etc. as you like.
+
+And if you like you can make it available to anybody in your site.</p>
+
+<p>Some technicalities:</p>
+
+<ol>
+
+<li>
+
+using it is quite simple (I guess) - no special instructions
+
+</li>
+
+<li>
+
+limitation: tested only for PAL, but probably works for NTSC as well
+
+</li>
+
+<li>
+
+you can find some description in the comments
+
+</li>
+
+<li>
+
+something I tried but I wasn&apos;t able to fix:
+
+<ol>
+
+
+
+<li>make it a generator - I always got FXScript error when loading my new generator - since I made just a single change of the first statement from &quot;filter&quot; to &quot;generator&quot; I don&apos;t know what else to do...</li>
+
+<li>make it work correctly with imported pictures with size different from 768x576</li>
+
+<li>make some general purpose &quot;debugging&quot; functions (On () end) of the type: debugOpen, debugWrite, debugClose where debugWrite builds a string of 1 or more items like &quot;Label=value&quot; - to monitor the internal variables
+
+<ol>
+
+<li>
+
+I found out no global variables are allowed: those declared outside the &quot;ON () end&quot; statement are NOT available inside
+
+</li>
+
+<li>
+
+that forces to use more parameters in parenthesis when calling the procedure
+
+</li>
+
+<li>
+
+then I got stuck with parameter passing, probably some issue about strings passed as value
+
+</li>
+
+<li>
+
+I gave up (more to learn in the future)
+
+</li>
+
+</ol>
+
+</li>
+
+</ol>
+
+</li>
+
+<li>
+
+Given the above problem my testing statements are just an unstructured sequence of instructions to write values - these instructions are commented in the current version to avoid debugging output during production work.
+
+
+
+</li>
+
+
+
+</ol>
+
+
+
+
+
+<p>Have fun...</p>
+
+<p>And let me know your comments and suggestions!</p>
+
+<p>Thanks and ciao</p>
+
+<p>Piero</p>
+
+</blockquote>
+

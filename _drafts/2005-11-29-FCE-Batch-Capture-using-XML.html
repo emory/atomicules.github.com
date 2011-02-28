@@ -1,0 +1,182 @@
+---
+layout: page
+type: text
+title: FCE Batch Capture using XML
+categories: art
+---
+<p>
+
+As we already know it can be done (Search Final Cut Express part of Apple Discussions for "iDive"), but here&apos;s how to do it. The good news it&apos;s pretty simple.
+
+</p>
+
+
+
+
+
+<p>
+
+You will need a pen and paper batch capture list and a tool for calculating frame numbers from timecode. You can do it in your head, but I like TC Calculator by Eric Fry. Search versiontracker for it (although his site seems to be down at the moment). If you&apos;ve got Tom Wolsky&apos;s book you&apos;ll have it on the DVD.
+
+</p>
+
+
+
+
+
+<p>
+
+Download the <a href="%base_url%downloads/FCE_Batch_Capture_Example_File.zip" >linked zip file</a>. It contains a default batch capture file that you can use as a base and edit to suit. It contains a single clip captured to one bin. To capture more than one clip simply duplicate everything between &lt;clip&gt;&lt;/clip&gt; and paste below the exisiting &lt;clip&gt;&lt;/clip&gt;. Same goes if you want more than one bin.
+
+</p>
+
+
+
+
+
+<p>
+
+When you&apos;ve edited the file to suit, drga into the browser of FCE, it will pop up a dialog box. Most of this can be left as is. The just Capture Project
+
+</p>
+
+
+
+
+
+<p>
+
+Most of the bits you need to change are highlighted by *** ***
+
+</p>
+
+
+
+<ul>
+
+<li>
+
+***BIN NAME*** give it any name you want.
+
+</li>
+
+
+
+<li>
+
+***CLIP NAME*** Change both of these to match
+
+</li>
+
+
+
+<li>&lt;duration&gt;&lt;/duration&gt; Alter the number here to set the duration of the captured clip. This is in number of frames.</li>
+
+
+
+<li>
+
+&lt;ntsc&gt;&lt;/ntsc&gt; This file is set for PAL. For NTSC users change this value to TRUE
+
+</li>
+
+
+
+<li>&lt;timebase&gt;&lt;/timebase&gt; This sets the frames per secs. Mine is set for PAL. For NTSC users change to 30</li>
+
+
+
+<li>
+
+***LOG NOTE*** Change to whatever or delete the &lt;logginginfo&gt;&lt;/logginginfo&gt; section out if you don&apos;t want it
+
+</li>
+
+
+
+<li>
+
+&lt;timecode&gt;&lt;/timecode&gt; This is the important section:
+
+
+
+<ul>
+
+
+
+<li>
+
+&lt;string&gt;&lt;/string&gt; specifies the starting timecode of the clip. Note that if you are using NTSC and dropped frame timecode then you need to use a semi-colon in the timecode, i.e. 00:00:00;00. If it&apos;s dropped frame then you should add &lt;displayformat&gt;DF&lt;/displayformat&gt; inbetween the &lt;timecode&gt;&lt;/timecode&gt; element
+
+<br />
+
+
+
+&lt;frame&gt;&lt;/frame&gt; This SHOULD NOT be required as well as the &lt;string&gt;&lt;/string&gt; element since it is duplicate information, but for me it would not work without it. FCE would rewind to the start of the tape, sit there and moan about insufficient pre-roll for timecode. So I suggest putting it in. Note it doesn&apos;t even have to be the right value, FCE will warn you of a mismatch, take the &lt;string&gt;&lt;/string&gt; value and still work. The WIERDNESS of FC.
+
+</li>
+
+
+
+
+
+<li>
+
+***REEL NAME*** More for you than anything else.
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+
+
+
+
+
+
+<p>
+
+NOTES:
+
+</p>
+
+
+
+
+
+<p>
+
+Notes on editing the XML files. Just use Apple&apos;s TextEdit but ensure you save as UTF-8.
+
+</p>
+
+
+
+<p>
+
+WARNING to BBEDIT users: For some reason FCE/FCP is very quirky with text files and even though BBEDIT can control the text format (encodings, line endings/breaks, etc) better than TextEdit I have not been able to get a bbedit created file to work. When importing to FCE I get a File Error: File Unknown. I&apos;ve been into contact with Barebones about this and they are a bit stumped as well. The only difference they could spot between a bbedit created file and a TextEdit one was the line break encoding. I&apos;ve tried every setting in BBEDIT and can&apos;t get it to work even though in thoery the file is correct. So the work around is to edit in bbedit, then open with text edit and click save, before importing into FCE.
+
+</p>
+
+
+
+
+
+<p>
+
+FCE 3 is based on FCP4.5. This uses the xmeml version 1. FCP5 uses xmeml version 2.
+
+</p>
+
+
+
+<p>
+
+For further information see the <a href="http://developer.apple.com/appleapplications/fcpxml.html" >Apple FCP XML Page</a>
+
+</p>
+

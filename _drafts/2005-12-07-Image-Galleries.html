@@ -1,0 +1,38 @@
+---
+layout: page
+type: text
+title: Image Galleries
+categories: code
+---
+<p>
+
+I've had right fun with these (really). There are obviously billions of bits of software out there for creating image galleries, much the same as there are for blogging. But it takes ages to find the one you want. Ideally I wanted a nice plugin to <a href="http://www.apple.com/ilife/iphoto">iPhoto</a>. The default web page export leaves a lot to be desired in terms of web standards. There's a <a href="http://allthatissolid.com/well-formed/index.php">Well-Formed</a> plugin, but that doesn't do slides only an index page. There's a bunch of other plugins; all have the same problem in that even if they are template based they still insist on having some unuser configurable code that writes the images out as a table. I wanted divs so I could have a <a href="http://www.alistapart.com/articles/practicalcss/">floatly light layout</a>
+
+</p>
+
+<p>
+
+I stumbled across <a href="http://rjbs.manxome.org/projects/jgal/">jgal</a> mentioned on the <a href="http://groups.yahoo.com/group/nanoblogger/">Nanoblogger</a> user list. It seems to be defunct now, but it&apos;s command line and so matches <a href="http://nanoblogger.sf.net">Nanoblogger</a> nicely. I can't decide if it&apos;s good or bad that it doesn't make use of the built in OSX image technologies: it uses <a href="http://www.imagemagick.org">ImageMagick</a>. It'd be nice to have an image gallery script with more integration with the OS, but then it's ace that I can install and run a thing like this on OSX in the first place.
+
+</p>
+
+<p>As it is I had to tweak it a bit anyway. Since I wanted a div layout it&apos; easier for me to achieve with square thumbnails. To avoid me having to learn too much Perl it&apos; easier to let jgal do it&apos; thing and then write some <a href="http://www.apple.com/automator">Automator</a> workflows that delete the exisitng thumbnails and replace them with square ones. I'm quite sure I could do this with ImageMagick, but it'd mean me having to figure that out and also editing the jgal code correctly. 
+
+</p>
+
+<p>Again to avoid editing the jgal code, I then use a <a href="http://www.barebones.com">BBEdit</a> Text Factory to parse the gallery index and convert it from a table layout to a div one (easy to do if you create a table layout with one column, which I can do with jgal). I guess I could have done this with other table based layout plugins (such as the built in iPhoto ones), but jgal is template based and has a nice flat folder structure which makes sorting links out easier.
+
+</p>
+
+<p>
+
+However, finally I decided I could avoid looking at the jgal code no more. In the templates there is a place holder for the Gallery Title, but I could find no way of entering this as a command line option. The only way I could get it in was by parsing all the html files afterwards and replacing the empty tag for it. However, I've actually managed to edit the jgal Perl script and add a title option into the command line arguments. I'm quite impressed I've managed to do this. Now I've done this I might have to re-think editing the script so that it writes a div based layout to start with, since, afterall, a simple div based layout should be A LOT easier than a table based one. I could also see if I could figure out the ImageMagick scaling of images.
+
+</p>
+
+<p>
+
+Recently I came across a <a href="http://hailstonesoftware.com/articles/2005/10/25/web-album-creator-script">web album creator script</a>  written in <a href="http://www.ruby-lang.org">Ruby</a>. I'd like to use this since it has slightly more integration with iPhoto, it&apos;d be cool to learn Ruby and it uses built in OSX image events. However, it isn't template based and the time it would take for me to make it template based means I might as well stick with jgal for now.
+
+</p>
+

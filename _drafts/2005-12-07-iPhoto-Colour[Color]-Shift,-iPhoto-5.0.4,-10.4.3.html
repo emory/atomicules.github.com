@@ -1,0 +1,24 @@
+---
+layout: page
+type: text
+title: iPhoto Colour[Color] Shift, iPhoto 5.0.4, 10.4.3
+categories: art
+---
+<p>Been doing a bit of investigation of the <a href="http://www.macosxhints.com/article.php?story=20050601191113703&amp;query=safari+bug" >ColorSync</a> <a href="http://www.oreillynet.com/pub/wlg/7345">issues</a> of iPhoto. I've found that if I apply a ColorSync profile (using Automator) such as &quot;sRGB&quot; and DO NOT check &quot;Preserve original color space&quot; that any edits in iPhoto will not remove this profile, i.e. it stays as sRGB. If the box is checked then on editing in iPhoto the profile will change to &quot;Generic RGB Profile&quot;. This is the same as editing a photo without a profile in the first place.</p>
+
+<p>However, it still doesn't change the problem of a slight colour[color] shift occuring when the sRGB profile is applied in the first place.</p>
+
+<p>If you use ColorSync Utility you have three options (in the help):</p>
+
+<ol>
+
+<li>&quot;Apply Profile&quot; which doesn't actually change the ColorSync Profile, it just adjusts the image.</li>
+
+<li>Assign Profile. This is not meant to alter the image, only apply a profile</li>
+
+<li>Match Profile. Is meant to adjust the image to suit the new profile as well as applying it</li>
+
+</ol>
+
+<p>I guess these correspond to the Automator Action and the check box. However, I wonder if there is a bug in the Automator action as the image looks the same whether or not &quot;Preserve original color space&quot; is selected? All Automator modified images look like the &quot;Match Profile&quot; option. So I guess for now, I'll go for that.</p>
+

@@ -1,0 +1,100 @@
+---
+layout: page
+type: text
+title: Gimp Image slicing plugin for use with Motion 2
+categories: code
+---
+<p>
+
+Download: <a href="%base_url%downloads/i5m-image-subdivide.zip">i5m-image-subdivide.zip
+
+</a>
+
+</p>
+
+
+
+<p>
+
+A very clever man called Patrick Sheffield posted on Apple Discussions a technique for doing <a href="http://discussions.apple.com/message.jspa?messageID=1216525#1216525">fun things with a photo in Motion</a>. It required slicing the image up using Photoshop/Imageready. I wanted a way to do this with Gimp since I don&apos;t have Photoshop. There are lots of image slicing plugins for Gimp, but I took <a href="http://registry.gimp.org/plugin?id=3565">this one</a> (since it is purely script-fu based; no other laguages required) and modified it slightly so that the tiles are numbered sequentially and not by row and column. 
+
+</p>
+
+
+
+<p>
+
+Just incase you&apos;ve not used Gimp, here are some notes on getting it and using it for this technique in Motion:
+
+</p>
+
+
+
+<ol>
+
+
+
+<li>
+
+Get <a href="http://gimp-app.sourceforge.net">Gimp.app</a>. There are other ways, but this seems to most simple way to me
+
+</li>
+
+
+
+<li>
+
+Install the i5m-image-subdivide plugin.
+
+<br />
+
+
+
+Unzip the downloaded file. To install this you need to place it in the Gimp user defaults folder. Unlike native Apple applications this is not found in ~/Library/Preferences but in common with a lot of *nix style apps in a hidden folder in your home directory. You will need to launch Gimp first in order to create this folder.
+
+<br />
+
+
+
+Once you have done that, in the Finder you select &quot;Go &gt; Go to folder&quot; or &quot;Command+Shift+G&quot; and type in &quot;~/.gimp-2.2&quot;
+
+This simply opens the .gimp-2-2 folder in Finder. Normally any files or folders beginning with a period are hidden from the Finder.
+
+<br />
+
+
+
+Place the i5m-image-subdivide.scm file in the scripts folder.
+
+</li>
+
+
+
+<li>
+
+Launch Gimp again. Open an image file. Select Script-Fu&gt;i5m&gt;Image subdivide. Running it is simple: You can select the image type and the number of rows and columns to split the image into. The file names are incremented automatically in the same directory as the image you&apos;ve opened, i.e. the original file name is appended with each &quot;tile&quot; number. Therefore you may want to rename your image before you run this script to include a space at the end, or a dash, or underscore, etc. Unfortunately there are no user configurable options for the file naming or for setting the output location.
+
+</li>
+
+
+
+<li>
+
+In Patrick&apos;s technique he creates a Quicktime movie from an image sequence. I don&apos;t see the point in this step (could be my ignorance though). I would just skip straight to importing the image sequence into Motion. Then replicate this sequence using Tile Fill. Set Origin as Upper Left and Build Style to By Row. Adjust size to suit. To get the complete image go into the Inspector for the Replicator and set Source Frame Offset to 1. Uncheck Play Frames and you are good to go.
+
+</li>
+
+
+
+</ol>
+
+
+
+
+
+<p>
+
+This is the first time I&apos;ve ever looked at the Gimp scripting language. I might eventually look at modifying the script so you can set filename suffixes and specify output locations. However, since this works ok as it is I&apos;m not going to rush to it.
+
+</p>
+

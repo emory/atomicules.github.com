@@ -1,0 +1,50 @@
+---
+layout: page
+type: text
+title: Opening doors behind the scenes
+categories: site
+---
+
+
+<p>A long, long time ago I once validated my website (the old one) on <a href="http://en.wikipedia.org/wiki/Bobby_%28software%29">what was the Bobby website</a>. Even though at the time my site was valid XHTML I was presented with a whole slew of errors and that was the end of that. I thought, &quot;Hell, no one reads it anyway, there&apos;s no need for accessibility&quot;. </p>
+
+
+
+<p>Recently, It&apos;s been niggling me again and I thought I&apos;d take a look to see how far off I was. The Bobby website has now change and is called <a href="http://webxact.watchfire.com/">Watchfire WebXACT</a>.</p>
+
+
+
+<p>As it turned out there wasn&apos;t too much to change. It only failed to pass Priority 2 and 3 automatic checks requiring the following:
+
+</p>
+
+<ul>
+
+<li>The javascript event handlers for the comments had to be changed so they didn&apos;t rely on a mouse</li>
+
+<li>I had to associate form controls with labels on the search form I have</li>
+
+<li>I had to create link phrases that make sense</li>
+
+<li>I had to make sure I didn&apos;t use the same link phrase on a page</li>
+
+<li>Include default place holding characters in the search box</li>
+
+<li>Separate adjacent links with more than whitespace</li>
+
+</ul>
+
+<p>It turns out if I&apos;d not bothered with comments things would have been better to start with - I wouldn&apos;t have the javascript to worry about for starters. As it was I had to add an onkeypress equivalent to the mouse one. The form controls one was the oddest since I&apos;d never played with forms before and so just wasn&apos;t familiar with the elements. Creating link phrases that make sense and making sure I didn&apos;t use the same link phrase was a biggy: For example on any page I have the &quot;Permanent Link&quot; and &quot;Comment&quot; links used multiple times. I had to alter my Nanoblogger templates so these actually read &quot;Permanent Link to e2006-08-01T21_59_02.txt&quot; and &quot;Comment on e2006-08-01T21_59_02.txt&quot;. Using the post ID was the only way I could guarantee not having the same link text on a page - using the post title didn&apos;t guarantee this. Unfortunately the links, although now satisfying the link phrase requirements, were ugly to look at so I used CSS to hide those bits for visual readers - which gets me past the automatic accessibility checks it seems, but I&apos;m not really sure how correct that really is. The separating adjacent links thing only applied to one link I have that&apos;s hidden normally - it&apos;s there for non CSS browsers to skip to the navigation.</p>
+
+
+
+<p>Unfortunately, In doing the accessibility changes I decided it was high time I started using a revision control system when modifying my web templates, etc, and so decided to learn and figure out <a href="http://subversion.tigris.org/">Subversion</a>. That took me a bit of time, as things do nowadays, which is why it&apos;s taken until now for this post</p>
+
+
+
+<p>So my site (or most of it) now passes Priority 1, 2 and 2 automatic checkpoints. There are some warnings on the manual checkpoints, but I figure I&apos;m off to a good enough start for now.</p>
+
+
+
+<p>Oh, still to do are defining some access keys, although I&apos;ve started with them; The basics are there: <strong>F</strong>resh, <strong>S</strong>tale, <strong>Q</strong>uery. Although I can only do what I can in the confines of Nanoblogger - I&apos;ve already tweaked bits of the code, I don&apos;t want to do too much more because maintaining it gets tricky then.</p>
+

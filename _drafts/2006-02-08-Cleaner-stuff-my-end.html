@@ -1,0 +1,18 @@
+---
+layout: page
+type: text
+title: Cleaner stuff my end
+categories: site
+---
+<p>Pretty much since I&apos;ve had this site back up I&apos;ve had two copies of the thing locally. This is obviously well redundant, but was driven by me wanting to use BBEDIT&apos;s Site Syntax Checker. If I&apos;d just run it through my Nanoblogger directory it would be checking a load of folders I don&apos; want it to (i.e. metadata files, databases, caches, etc used to generate the blog) and would generate a shed load of errors. So instead I synced a local copy of just the blog so I could check it all easily and also upload more easily.</p>
+
+<p>BBEDIT does offer a tool for skipping certain directories when checking Site Syntax, but these directories have to be enclosed in brackets/parentheses. I finally figured out how to alter Nanoblogger enough (config.sh - wasn&apos;t that hard, I just hadn&apos;t had time to look) so that I could do this. So now it&apos;s all a lot neater my end with just one copy of my site.</p>
+
+<p>Then I just altered my upload command: </p>
+
+<p>find . -newer .lastupload \! \( -name &quot;.*&quot; -or -path &quot;*(*&quot; -or -name &quot;blog.conf&quot; \) -type f -print | cpio -pdumv /Volumes/myidisk<br />
+
+touch .lastupload</p>
+
+<p>Lovely</p>
+

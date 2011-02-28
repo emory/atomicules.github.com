@@ -1,0 +1,32 @@
+---
+layout: page
+type: text
+title: Cropping in Quicktime Pro
+categories: art
+---
+<p>A limitation of FCE is that you are stuck with DV and HDV frame sizes. I.e. it isn&apos;t very good for Multimedia projects (It&apos;s also not good for this because of interlacing and framerate limitations). In FCP you can work with whatever sequence settings you want, say if you wanted to work with a 320x240 frame size for web delivery. You can always re-size your FCE DV-PAL sequence on export down to 320x240, but sometimes you want to import and export material at that size, such as a computer generated animation sequence, etc.</p>
+
+
+
+<p>One way of doing this is to import the 320x240 clip and re-size it in FCE to fill the PAL/NTSC frame. This can then be scaled down again on export. This could result in a significant loss of quality though.</p>
+
+
+
+<p>One possible solution is to work with a DV sequence. For this example PAL at 720x576 will be assumed. Asjust instructions as necessary for NTSC. Import the footage that is smaller say 320x240 and drag to the timeline so that FCE plonks it in the middle of the Canvas at it&apos;s original size. You will effectively have a big black border all around. I think FCE automatically adjusts the aspect ratio to suit rectangular pixels. This is good normally, but not what we want in this case. Double click on the clip in the sequence to open it in the Viewer. Reset the Distort section in the Motion tab. Next do whatever sequence edits you want and export at full DV frame size (default Quicktime Movie Export). This can then be cropped in Quicktime Pro back down to the desired size.</p>
+
+
+
+<p>To crop in Quicktime Pro you first need to create a mask. In an application such as <a href="http://www.graphicconverter.net">GraphicConvertor</a> Create an image 720x576 pixels. Make it pure white. Put a black rectangle 320x240 in the middle. In GraphicConverter the easiest way to do this is to create a new image 320x240 and then paste into the original document using &quot;paste centered&quot;. Save it as a gif or pict.</p>
+
+
+
+<p>In Quicktime Pro go to Window &gt; Show Movie Properties. Select the Video Track and the Visual Settings Tab. In the mask area select Choose... and pick the image file you saved. The movie should immediately resize. Save as a self contained movie or reference movie depending on what you want to do with it. Remember it&apos;s still in DV-PAL video codec which means it&apos;s interlaced, etc.</p>
+
+
+
+<p>Note: In trying this it wasn&apos;t resizing for me, that&apos;s because my timecode track was enabled in my Quicktime Movie Export. FCE uses need to be aware of this. Delete the timecode track or at least turn it off.</p>
+
+
+
+<p>Final Note: If working with computer animation, etc it maybe easier to work in the 720p30 format since it&apos; progressive and has square pixels and saves all the grief of working out pixel aspect ratios. I think I&apos;ve got it spot on above about not letting FCE adjust it, but I haven't checked extensively.</p>
+

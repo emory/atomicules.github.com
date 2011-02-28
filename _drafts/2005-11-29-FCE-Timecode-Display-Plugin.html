@@ -1,0 +1,60 @@
+---
+layout: page
+type: text
+title: FCE Timecode Display Plugin
+categories: code
+---
+<p>Since FCE lacks the ability to display the timecode of a captured clip 
+
+I set about learning and writing an fxscript to do so once I realised it was possible (due to Joe Maller&apos;s Time Bender Plugin). The result was version 1 and then 2 of the plugin.</p>
+
+<p>PieroF of the <a href="http://discussions.apple.com/" >Apple Discussions board</a> took what I had written and improved it and that resulted in version 2.1. Then, unbeknown to each other we both set about improving the plugin, however Piero beat me there with bells on. The latest version is v3.0.1 It is much improved. In his own words:</p>
+
+
+
+<ol>
+
+	<li>Added display of Clip Start &amp; End Timecode: [xx:xx:xx:xx]</li>
+
+	<li>Added display of handles size: &plusmn;xx:xx:xx:xx	(origin: IN &amp; OUT)</li>
+
+	<li>Added Control for selecting IN &amp; OUT (in place of 1, 2, all)</li>
+
+	<li>Added Control for selecting Start &amp; End</li>
+
+	<li>Added Control for selecting handles size</li>
+
+	<li>Moved controls to a better position</li>
+
+	<li>Disabled Control for Left, Centre, Right Alignment, ONLY WHEN Text Display = Inline</li>
+
+	<li>Modified Alpha handling: removed AlphaType(kblack) to avoid side effects (see code)	</li>	
+
+</ol>
+
+
+
+<ul>
+
+<li><a href="%base_url%downloads/PieroFi5m_FCE_timecode_display_v3.0.1.fxscript.zip" >Current Release v3.0.1</a> Select in/out point timecodes and/or media limits, plus the addition of media handle sizes. By Piero. NOTE: I erroneously stated that the plugin displayed the time to in/out point from current frame instead of displaying the handle size (Perhaps we&apos;ll add this in at some point!). I&apos;ve reworded the plugin to avoid this confusion, hence v3.0.1</li>
+
+<li>Previous Versions
+
+<ul>
+
+	<li><a href="%base_url%downloads/PieroFi5m_FCE_timecode_display_v2.2.txt.zip" >v2.2</a> More formatting controls by me.
+
+	</li>
+
+	<li><a href="%base_url%downloads/PieroFi5m_FCE_timecode_display_v2.1.txt.zip" >v2.1</a> Formatting controls added by PieroF</li>
+
+	<li><a href="%base_url%downloads/i5m_FCE_timecode_display_v2.txt.zip" >v2</a> Added Clip start and end timecodes in addition to current frame&apos;s timecode</li>
+
+	<li><a href="%base_url%downloads/i5m_FCE_timecode_display.txt.zip">v1</a> Basic timecode display for PAL and NTSC</li>
+
+</ul>
+
+</li>
+
+</ul>
+

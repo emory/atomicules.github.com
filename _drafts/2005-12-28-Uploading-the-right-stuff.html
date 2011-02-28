@@ -1,0 +1,26 @@
+---
+layout: page
+type: text
+title: Uploading the right stuff
+categories: site
+---
+<p><a href="http://nanoblogger.sf.net">Nanoblogger</a>, is great and all that for static and local publishing and it&apos;s pretty good at only updating the bits that need updating and not every single page on the site (100+ pages), but I&apos;ve been stuck as to how to then efficiently upload the changes to my <a href="http://www.mac.com">iDisk</a>. 
+
+</p>
+
+<p>
+
+It shouldn&apos;t have been a hard problem to solve since all I want is to copy all the files modified after the last upload. But, it&apos;s taken me a while to figure it out. 
+
+</p>
+
+<p>I couldn&apos;t get <a href="http://developer.apple.com/documentation/Darwin/Reference/ManPages/man1/rsync.1.html">rsync</a> to work even though <a href="http://homepage.mac.com/barijaona/web/blosxom_dotmac.html">others seemed to use it</a>, it seemed to insist on copying everything, probably something to do with how the <a href="http://www.decimus.net/forum/viewtopic.php?t=117">iDisk fails to handle file dates properly</a>, plus rsync will read from my iDisk which is damn slow over a bluetooth modem, I don't want it to check there for what needs updating I just want to copy what I know needs uploading. I tried things like <a href="http://www.decimus.net/synk">Synk</a>, but that had the same problem as rsync. To slow: as it tries scanning it all on the receiving end. I definitely didn&apos;t want to use the built in idisk syncing, no way am I trying to sync that whole thing when I want to update a few pages. I was stumped. I knew it must be possible from the command line, but it wasn&apos;t immediately obvious since none of the copy commands: cp, ditto, etc support a &quot;Modified after date&quot; flag. <a href="http://www.google.co.uk/search?q=unix+command+copy+files+modified+after+date">I failed miserably to find anything via Google</a>. Until I found <a href="http://www.macosxhints.com/article.php?story=20051005204725280">this on Macosxhints</a>. That then set me straight. You have to use find and pipe the output into cpio. 
+
+</p>
+
+<p>
+
+Now all I need to do is sort out my local publishing a bit. At the moment I&apos;ve got two local copies. The active one which is full of templates and raw data, etc and a clean one which I update containing only the files required for publishing. There is no real need for all this duplication, but it was a quick way to solve the problems of filtering stuff for upload and for site syntax/xhtml validation in <a href="http://www.barebones.com/products/bbedit/featuresweb.shtml">BBEdit</a>.
+
+</p>
+
