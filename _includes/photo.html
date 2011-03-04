@@ -1,17 +1,16 @@
-	<!-- Photo Post -->
-				{block:Photo}
-				</header>
-				<div class="postcontent photo {TagsAsClasses}">
-					{LinkOpenTag}
-					<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-					{LinkCloseTag}
-					{block:Caption}
-					<div class="source">{Caption}</div>
-					{/block:Caption}
-					<ul class="post-tags">
-						{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
-						{block:HasTags}<li class="tags">Tags: <ul>{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul></li>{/block:HasTags}
-					</ul>
-					<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
-					<br />
-					{/block:Photo}
+{% include post_header.html %}
+
+</header>
+<div class="postcontent photo">
+	{% if post.click-through or page.click-through %}
+	<a href="{{ post.click-through }}{% if post == null %}{{ page.click-through }}{% endif %}">
+	{% endif %}
+		<img src="{{ post.photo }}{% if post == null %}{{ page.photo }}{% endif %}" alt="{{ post.title }}{% if post == null %}{{ page.title }}{% endif %}" />
+	{% if post.click-through or page.click-through %}
+	</a>
+	{% endif %}
+	<div class="source">
+		{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}
+	</div>
+	{% include post_footer.html %}
+</div>	

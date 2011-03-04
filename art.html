@@ -8,6 +8,12 @@ title: Art
 	{% case post.type %} 
 		{% when 'text' %}
 			{% include text.html %}
+		{% when 'link' %}
+			{% include link.html %}
+		{% when 'quote' %}
+			{% include quote.html %}
+		{% when 'video' %}
+			{% include video.html %}
 	{% endcase %}
 	</article>
 {% endfor %}

@@ -1,15 +1,21 @@
 ---
 ---
-{% include header.html %}
+{% include page_header.html %}
 
 			<article>
 			{% case page.type %} 
 				{% when 'text' %}
 					{% include text.html %}
+				{% when 'link' %}
+					{% include link.html %}
+				{% when 'quote' %}
+					{% include quote.html %}
+				{% when 'video' %}
+					{% include video.html %}
 			{% endcase %}
 			</article>
 	
 
 
-{% include footer.html %}
+{% include page_footer.html %}
 

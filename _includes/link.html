@@ -1,23 +1,12 @@
-	<!-- Link Post -->
-						{block:Link}
-						</header>
-						<div class="postcontent link {TagsAsClasses}">
-							<div class="href">
-								<a href="{URL}" {Target}>&#187; {Name}</a>
-							</div>
-							{block:Description}
-							<div class="descrip">{Description}</div>
-							{/block:Description}				
-							<ul class="post-tags">
-								{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
-								{block:HasTags}<li class="tags">Tags: 
-								<ul>{block:Tags}
-									<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}
-								</ul>
-								</li>{/block:HasTags}
-							</ul>
-							<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>
-							<br />
+{% include post_header.html %}
 
-							{/block:Link}
-
+</header>
+<div class="postcontent link">
+	<div class="href">
+		<a href="{{ post.link }}{% if post == null %}{{ page.link }}{% endif %}">&#187; {{ post.title }}{% if post == null %}{{ page.title }}{% endif %}</a>
+	</div>
+	<div class="descrip">
+		{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}
+	</div>		
+	{% include post_footer.html %}
+</div>

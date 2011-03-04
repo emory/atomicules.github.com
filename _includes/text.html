@@ -1,22 +1,10 @@
-<header>
-<a href="{{ post.url }}{% if post == null %}{{ page.url }}{% endif %}" class="permalink">
-		<time datetime="{{ post.date | date: "%Y-%m-%d" }}{% if post == null %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}">{{ post.date | date: "%B %d, %Y" }}{% if post == null %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>
-	</a>
+{% include post_header.html %}
 
 	<h1>{{ post.title }}{% if post == null %}{{ page.title }}{% endif %}</h1>
 </header>
-<div class="postcontent text {TagsAsClasses}">
+<div class="postcontent text">
 	{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}
-	<ul class="post-tags">
-		{%if post.content_source %}
-		<li class="tags"><i>Source: <a href="{{ post.content_source_url }}">{{ post.content_source }}</a></i></li>
-		{% endif %}
-		{%if page.content_source %}
-		<li class="tags"><i>Source: <a href="{{ page.content_source_url }}">{{ page.content_source }}</a></i></li>
-		{% endif %}
-		<li class="tags">Tags: <ul>{% for topic in post.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}{% for topic in page.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}</ul></li>
-		
-	</ul>
 
+	{% include post_footer.html %}
 </div>
 

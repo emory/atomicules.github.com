@@ -1,17 +1,12 @@
-	<!-- Audio Post -->
-								{block:Audio}
-								</header>
-								<div class="postcontent audio {TagsAsClasses}">
-									<div class="audiobox">
-										<center>{AudioPlayerBlack}</center>
-									</div>
-									{block:Caption}
-									<div class="descrip">{Caption}</div>
-									{/block:Caption}						
-									<ul class="post-tags">
-										{block:RebloggedFrom}<li class="tags"><i>Reblogged from <a href="{ReblogParentURL}">{ReblogParentTitle}</a></i></li>{/block:RebloggedFrom}
-										{block:HasTags}<li class="tags">Tags: <ul>{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}</ul></li>{/block:HasTags}
-									</ul>
-									<a href="{Permalink}#disqus_thread" class="commentlink">Comments</a>	
-									<br />
-									{/block:Audio}
+{% include post_header.html %}
+
+</header>
+<div class="postcontent audio">
+	<div class="audiobox">
+		<center>{AudioPlayerBlack}</center>
+	</div>
+	<div class="descrip">{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}</div>
+	{% include post_footer.html %}
+</div>	
+
+

@@ -2,7 +2,7 @@
 layout: archive
 title: Archives
 ---
-
+{% comment %}Limitation of this is that need a post each month for it to differentiate between years, etc{% endcomment %}
 <ul id="archives">
 {% for post in site.posts %}
 	{% comment %}This closes the nested list if a new month has begun, unless it's the very first post of course.{% endcomment %}
