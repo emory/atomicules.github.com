@@ -1,7 +1,7 @@
 ---
 layout: page
 type: text
-title: 
+title:  
 categories: code
 ---
 Can I move from Tumblr?
