@@ -5,7 +5,7 @@ title: Code
 
 {% for post in site.categories.code limit:10 %}
 	<article>
-		{% case page.type %} 
+		{% case post.type %} 
 			{% when 'text' %}
 				{% include text.html %}
 			{% when 'photo' %}
