@@ -5,15 +5,21 @@ title: Code
 
 {% for post in site.categories.code limit:10 %}
 	<article>
-	{% case post.type %} 
-		{% when 'text' %}
-			{% include text.html %}
-		{% when 'link' %}
-			{% include link.html %}
-		{% when 'quote' %}
-			{% include quote.html %}
-		{% when 'video' %}
-			{% include video.html %}
-	{% endcase %}
+		{% case page.type %} 
+			{% when 'text' %}
+				{% include text.html %}
+			{% when 'photo' %}
+				{% include photo.html %}
+			{% when 'quote' %}
+				{% include quote.html %}
+			{% when 'link' %}
+				{% include link.html %}
+			{% when 'chat' %}
+				{% include chat.html %}
+			{% when 'audio' %}
+				{% include audio.html %}
+			{% when 'video' %}
+				{% include video.html %}
+		{% endcase %}
 	</article>	
 {% endfor %}
