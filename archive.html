@@ -37,9 +37,8 @@ title: Archives
 					{% if post.video contains 'youtube' %}
 						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" />
 					{% elsif post.video contains 'vimeo' %}
-						<!-- Use javascript to load thumbnails for Vimeo -->
-						<img src="" id="{{ post.video | remove:'http://vimeo.com/' }}" />
-						<script type="text/javascript">getvimeothumbnail({{ post.video | remove:'http://vimeo.com/' }})</script>
+						<img src="" id="vimeo-{{ post.video | remove:'http://vimeo.com/' }}" />
+						<script type="text/javascript">vimeoLoadingThumb({{ post.video | remove:'http://vimeo.com/' }});</script>
 					{% else %}
 						<img src=" " width ="100px" />
 					{% endif %}
