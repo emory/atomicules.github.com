@@ -12,7 +12,10 @@
 				var url = "http://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
 
 				var id_img = "#vimeo-" + id;
-				$(id_img).before('<script type="text/javascript" src="'+ url +'"></script>');
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = url;
+				document.getElementsById(id_img).parentNode.appendChild(script);
 			}
 
 			function showThumb(data){
