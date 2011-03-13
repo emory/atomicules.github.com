@@ -5,5 +5,5 @@
 	{%if page.content_source %}
 	<li class="tags"><i>Source: <a href="{{ page.content_source_url }}">{{ page.content_source }}</a></i></li>
 	{% endif %}
-	<li class="tags">Tags: <ul>{% for topic in post.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}{% for topic in page.categories %}<li><a href="/{{ topic }}">{{ topic }}</a></li>{% endfor %}</ul></li>
+	<li class="tags">Tags: <ul>{% for topic in post.categories %}<li><a href="/{{ topic }}.html">{{ topic }}</a></li>{% endfor %}{% for topic in page.categories %}<li><a href="/{{ topic }}.html">{{ topic }}</a></li>{% endfor %}</ul></li>
 </ul>
