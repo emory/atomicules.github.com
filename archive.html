@@ -28,14 +28,21 @@ title: Archives
 				{% when 'quote' %}
 					<span class="title">"{{ post.quote }}"</span><span>{{ post.content | truncate: 200 }}</span>
 				{% when 'link' %}
-					{% include link.html %}
+					<span class="title">&#187; {{ post.link }}</span>
 				{% when 'chat' %}
 					<!-- Don't know -->
 				{% when 'audio' %}
 					<!-- Include a play icon/image? -->
 				{% when 'video' %}
-					<img src=" " width ="100px" />
-					<!-- Use javascript to load thumbnails for Vimeo and Youtube and replace a generic icon -->
+					{% if post.video contains 'youtube' %}
+						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" />
+					{% elsif post.video contains 'vimeo' %}
+						<!-- Use javascript to load thumbnails for Vimeo -->
+						<img src="" id="{{ post.video | remove:'http://vimeo.com/' }}" />
+						<script type="text/javascript">getvimeothumbnail({{ post.video | remove:'http://vimeo.com/' }})</script>
+					{% else %}
+						<img src=" " width ="100px" />
+					{% endif %}
 			{% endcase %}
 	</a></li>
 
