@@ -19,7 +19,25 @@ title: Archives
 		<ul>
 	{% endif %}
 
-	<li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time><span class="title">{{ post.title }}</span><span>{{ post.content | truncate: 200 }}</span></a></li>
+	<li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
+			{% case post.type %} 
+				{% when 'text' %}
+					<span class="title">{{ post.title }}</span><span>{{ post.content | truncate: 200 }}</span>
+				{% when 'photo' %}
+					<img src="{{ post.photo }}" alt="{{ post.title }}" width="100px" />
+				{% when 'quote' %}
+					<span class="title">"{{ post.quote }}"</span><span>{{ post.content | truncate: 200 }}</span>
+				{% when 'link' %}
+					{% include link.html %}
+				{% when 'chat' %}
+					<!-- Don't know -->
+				{% when 'audio' %}
+					<!-- Include a play icon/image? -->
+				{% when 'video' %}
+					<img src=" " width ="100px" />
+					<!-- Use javascript to load thumbnails for Vimeo and Youtube and replace a generic icon -->
+			{% endcase %}
+	</a></li>
 
 	{% capture lastpostmonth %}{{ post.date | date: "%B" }}{% endcapture %}
 
