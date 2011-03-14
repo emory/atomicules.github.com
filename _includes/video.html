@@ -7,7 +7,7 @@
 	{% elsif post.video contains 'youtube' or page.video contains 'youtube' %}
 	<iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}{% if post == null %}{{ page.video | remove:'http://www.youtube.com/watch?v=' }}{% endif %}?rel=0" frameborder="0" allowfullscreen></iframe>
 	{% else %}
-	<!-- Have a look at this http://diveintohtml5.org/video.html -->
+	{% comment %}<!-- Have a look at this http://diveintohtml5.org/video.html -->{% endcomment %}
 	{% endif %}
 	<div class="descrip">{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}</div>
 										
