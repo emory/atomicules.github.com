@@ -19,7 +19,7 @@ title: Archives
 		<ul>
 	{% endif %}
 
-	<li><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
+	<li class="{% for topic in post.categories %} {{ topic }} {{ endfor }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
 			{% case post.type %} 
 				{% when 'text' %}
 					<span class="title">{{ post.title }}</span><span>{{ post.content | truncate: 200 }}</span>
@@ -30,9 +30,9 @@ title: Archives
 				{% when 'link' %}
 					<span class="title">&#187; {{ post.link }}</span>
 				{% when 'chat' %}
-					<!-- Don't know -->
+					{% comment %}Don't know{% endcomment %}
 				{% when 'audio' %}
-					<!-- Include a play icon/image? -->
+					{% comment %}Include a play icon{% endcomment %}
 				{% when 'video' %}
 					{% if post.video contains 'youtube' %}
 						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" />
