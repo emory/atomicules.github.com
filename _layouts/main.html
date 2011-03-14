@@ -7,11 +7,11 @@
 
 			<!-- Page Navigation -->
 			<nav id="prev-next" class="autopagerize_insert_before">
-			{% if page.previous %}
+			{% if page.previous.url %}
 			<a id="previous" href="{{ page.previous.url }}">&#171; previous</a>
 			{% endif %}
 			{{ paginator.page }} of {{ paginator.total_pages}}&nbsp;
-			{% if page.next %%}
+			{% if page.next.url %%}
 			<a id="next" href="{{ page.next.url }}">next &#187;</a>
 			{% endif %}
 			</nav><!-- End of prev-next Page Navigation -->
