@@ -8,13 +8,13 @@
 			<!-- Page Navigation -->
 			<nav id="prev-next" class="autopagerize_insert_before">
 			{% if paginator.next_page %}
-				{% if paginator.next_page > 1 %}
 			<a id="previous" href="{{ /page{{paginator.next_page }}">&#171; earlier</a>
-				{% endif %}
 			{% endif %}
 			{{ paginator.page }} of {{ paginator.total_pages}}&nbsp;
 			{% if paginator.previous_page %}
+				{% if paginator.previous_page > 1 %}
 			<a id="next" href="{{ /page{{paginator.previous_page }}">later &#187;</a>
+				{% endif %}
 			{% endif %}
 			</nav><!-- End of prev-next Page Navigation -->
 
