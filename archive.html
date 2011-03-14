@@ -19,7 +19,7 @@ title: Archives
 		<ul>
 	{% endif %}
 
-	<li class="{{ post.categories.sort }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
+	<li class="{{ post.categories | join: ' ' }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
 			{% case post.type %} 
 				{% when 'text' %}
 					<span class="title">{{ post.title }}</span><span>{{ post.content | truncate: 200 }}</span>
