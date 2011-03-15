@@ -22,6 +22,43 @@
 				var id_img = "vimeo-" + data[0].id;
 				document.getElementById(id_img).src = data[0].thumbnail_small;
 			}
+
+			function showCategory(category) {
+				var site = document.getElementsByClassName("site");
+				var code = document.getElementsByClassName("code");
+				var art = document.getElementsByClassName("art");
+				switch (category) {
+					case "art":
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = 'none'};
+						for (var i = 0; i < art.length; i++) {art[i].style.display = ''};
+						break;
+					case "code":
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < art.length; i++) {art[i].style.display = 'none'};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = ''};
+						break;
+					case "all":
+						for (var i = 0; i < site.length; i++) {site[i].style.display = ''};
+						for (var i = 0; i < art.length; i++) {art[i].style.display = ''};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = ''};
+				}
+			}
+
+			function filterCategory() {
+				if (document.forms.filter.category[0].checked) {
+					category = "art"
+				}
+				if (document.forms.filter.category[1].checked) {
+					category = "code"
+				}
+				if (document.forms.filter.category[2].checked) {
+					category = "all"
+				}
+				showCategory(category)
+			}
+			
+
 		</script>
 	</head>
 	<body>

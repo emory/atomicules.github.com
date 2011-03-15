@@ -2,6 +2,9 @@
 layout: archive
 title: Archives
 ---
+<form name="filter" onClick="filterCategory();">
+	Show: <input type="radio" name="category" value="art" >Art</input> <input type="radio" name="category" value="code" >Code</input> <input type="radio" name="category" value="both" checked>All</input>
+</form>
 {% comment %}Limitation of this is that need a post each month for it to differentiate between years, etc{% endcomment %}
 <ul id="archives">
 {% for post in site.posts %}
