@@ -1,0 +1,44 @@
+---
+layout: page
+type: text
+title: TeuxDeux
+categories: 
+- code
+- art
+---
+The sheer number of todo and task management applications is evidence that no one has got this right yet. Well, that, and there is no consensus on the right way to do things. Even I can't make my mind up and I think the same is true for anyone that even briefly steps on the road to [Getting Things Done](http://en.wikipedia.org/wiki/Getting_Things_Done): basically you will ultimately spend more time reviewing, researching, trialling and swopping between tools that 'help' you get things done, that actually, you know, getting things done.
+
+Anyone with a problem with procrastination (ugh, work!) will have been in the same boat: the oppurtunity to spend an "unlimited amount of time procrastinating under the excuse of investigating the best way to stop procrastinating and tackle the tasks at hand" is just too inviting. 
+
+One thing I have figured out is that, for me, simpler is better. So for managing tasks a simple list is going to be much more effective than a full blown task/project management app like [Things](http://culturedcode.com/things/) or [Omnifocus](http://www.omnigroup.com/products/omnifocus/). For the past two years I've been using [Gmail Tasks](http://mail.google.com/tasks) because I thought it was simple enough and it had some good features:
+
+* Due dates
+* Note fields (not often used, but sometimes handy)
+* Indenting
+* Multiple lists (I.e. great for shopping and wish lists as well)
+
+plus tasks could be created from (and linked to) emails and most importantly it was fairly cross platform and portable:
+
+* Web app
+* Mobile web app
+* Third party iOS client with offline access, [GeeTasks](http://www.geetasks.com/)
+
+(I work cross platform all the time, so my Holy Grail of a task / ToDo app is the above plus a desktop app all staying in sync. No one in the world does this yet for some unfathomable reason; proving there is yet more room in the market).
+
+However, it turns out it wasn't simple enough. Indenting tasks ultimately lead to me creating separate lists. Separate lists lead to me trying to contextualise (@home, @work, @phone, etc) my tasks. And all this really did was hide from me what needed doing. When I was using the GeeTasks iPhone app this wasn't so bad as it gives you a visual indication (badge and counts on the lists) of tasks that need completing. But ever since I lost my iPod Touch to the kids and have just been using the web app my tasks have just become hidden in lists.
+
+I'd completely forgotten about [TeuxDeux](http;//www.teauxdeux.com) which I had a play with over a year ago. I gave up at the time as I didn't think you could edit tasks (and I'm ace at typos) - turns our you always could but it was an undocumented feature. If only I'd known, I probably would have stuck with it!
+
+I've gone back to TeuxDeux because it's very visual; there is no missing what needs to be done today and if a task isn't completed it automatically carries over. Also:
+
+* It is very simple, there is no chance (and hopefully won't ever be) of me using too much functionality and adding contexts, etc and burying away tasks. 
+* I can live without the note field (tasks just have a name, that's it in TeuxDeux, if I need to make notes somewhere I can use Simplenote).
+* It's independent of any other account I have (a 'problem' I had with Gmail Tasks was which of my Gmail accounts should I tie tasks to?).
+* I can use the Someday columns as basic lists (wishlists, etc). 
+* There is an iPhone app.
+* A print layout. Unfortunately this seems to be a bit knackered, at least from Chrome, but this is potentially a huge feature for me when I'm at home and can't get near the computer or iPod.
+* It is a work of art.
+
+I'm also going to start mixing my work and personal tasks in there, because with such a simple input field I have no worries about including sensitive info (no comments, notes, attachments or linked emails, etc). Using two separate tools (an intranet based tool for work tasks) has been more annoying than I realised. 
+
+Strictly speaking it isn't really any nearer my Holy Grail of a ToDo app. There is no desktop app, although apparently an Adobe Air (yuck!) app is in the works (mind you, being on a PPC Mac I'd likely be out of luck either way). However, since TeuxDeux isn't as aggressive as Gmail about re-logging in, it does work better as a pseudo desktop app using something like Fluid.app, Chrome applications, etc. At home I'm trying the approach of [setting TeuxDeux as my homepage](http://www.swiss-miss.com/2009/12/teuxdeux.html) which seems remarkably simple and clever, but I'd never thought of it before. I would do the same at work if it wasn't for the stupid proxy server authentication. 

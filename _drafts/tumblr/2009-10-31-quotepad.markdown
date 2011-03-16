@@ -1,0 +1,9 @@
+---
+layout: page
+type: link
+title: Quotepad
+link: http://quotepad.info/
+categories: 
+- code
+---
+Free and for Windows. The nearest thing I can find to Simplenote and Notational Velocity. Proving quite handy for those 9-5 days in the week.

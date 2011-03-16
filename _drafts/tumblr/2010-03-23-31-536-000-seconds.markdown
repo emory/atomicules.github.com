@@ -1,0 +1,11 @@
+---
+layout: page
+type: link
+title: 31.536.000 SECONDS
+link: http://www.the-impossible-project.com/resources/projects_downloads/text/Press%20Kit%2022%20March.pdf
+categories: 
+- art
+---
+(Link to PDF Press Release).
+
+Great news for Polaroid fans, although seeing as how SX-70 and 600 series cameras weren't exactly going cheap on eBay before, I think I'll have to just stick to peel apart film for the foreseeable future.

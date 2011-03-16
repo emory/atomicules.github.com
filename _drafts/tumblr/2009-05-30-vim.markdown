@@ -1,0 +1,41 @@
+---
+layout: page
+type: text
+title: Vim
+categories: 
+- code
+---
+(because everyone has got to have their own <a href="http://www.vim.org/">Vim</a> post)
+
+I'm pretty much settled on using Vim as my editor of choice after giving up <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> (many moons ago) and trying to find a good free alternative. I went through everything (<a href="http://tuppis.com/smultron/">Smultron</a>, oh, no, actually that's it) before making a concerted effort to learn Vim. I guess at the time I must have been spending a lot of time in the terminal (perhaps in the days when I had proper webhosting).
+
+Since I'm as cross platform as can be nowadays (windows, mac, and linux) Vim is an ideal choice and makes far more sense than ending up with a mac specific editor (as much as I'd love to be on my mac all the time). I've <strike>not</strike> managed to get Vim running on <a href="http://slax.org">Slax</a> as well <strike>as I'd like, but I guess I'll sort it eventually</strike> (ha! fixed before I even got around to posting this; the mistake was just using the <a href="http://www.slax.org/modules.php?action=detail&amp;id=829">gvim module</a>, whereas you need the base <a href="http://www.slax.org/modules.php?action=detail&amp;id=829">vim module</a> as well in order to get all the runtime scripts so you have menu's, etc).
+
+Now I'm just trying to find a bare minimum of plugins and config options to be happy. I don't want a huge vim configuration file I don't understand - I've tried using other people's Vim config files and figure it's easier to start from scratch.
+
+As far as plugins goes, I think Vim suffers a little from the general open source problem of too many bloody options. I.e. there are loads of plugins that do the same thing, how do you know which one to pick? Which one is still being actively developed? It's the same for Firefox plugins, etc, although at least they have a review and commenting system. <a href="http://www.vim.org/scripts/index.php">Vim plugins</a> don't.
+
+Anyway. Here's what I'm using. I'm mainly going to program in Ruby also dabble in the occasional bit of HTML and CSS, so that's my slant in getting Vim setup. I shall update as needed (especially with getting config options that have consistent results across all three platforms, i.e. MacVim and Windows seem to have some better default settings than in Slax)
+
+## Config Options
+
+<script src="http://gist.github.com/414504.js?file=gistfile1.vimrc"></script>
+
+## Plugins
+
+* [pathogen](http://www.vim.org/scripts/script.php?script_id=2332) - For far more sane installation of vim plugins. Install this first!
+* <a href="http://www.vim.org/scripts/script.php?script_id=13">closetag</a><b> - </b>For closing open tags
+* <a href="http://www.vim.org/scripts/script.php?script_id=1849">Autoclose</a> - Autoclose brackets as you type the opening bracket. I wish this could be expanded to other tags.
+* <a href="http://www.vim.org/scripts/script.php?script_id=39">Matchit</a> - Very, very handy, especially when programming to try and find the closing end statement, etc.
+* <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> - Built in directory browser. Not absolutely necessary with gvim, but handy.
+* <a href="http://www.vim.org/scripts/script.php?script_id=2540">snipMate</a> - TextMate style snippets. Very cool. There are a couple of other options (<a href="http://www.vim.org/scripts/script.php?script_id=1726">ruby_imaps</a>, <a href="http://www.vim.org/scripts/script.php?script_id=1318">snippetsEMU</a> ), but this one seems to be the best one.
+* <a href="http://www.vim.org/scripts/script.php?script_id=1697">surround</a> - Looks quite handy for editing pairs of tags.
+* <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERD Commenter</a> - easily comment lines and sections of any code
+* <a href="http://www.vim.org/scripts/script.php?script_id=2438">EasyGrep</a> - As name suggests EASILY perform find and replace across multiple files. Just ace.
+* <a href="http://www.vim.org/scripts/script.php?script_id=1896">ragtag</a> - Because Tim Pope made it.
+* <strike>[Supertab](http://www.vim.org/scripts/script.php?script_id=1643)</strike> - I hear it's good, but not actually got around to using yet.
+* [taglist](http://www.vim.org/scripts/script.php?script_id=273) - Think I mainly used this when I played with C.
+* <a href="http://www.vim.org/scripts/script.php?script_id=2628">Vim-R-Plugin</a> - For [working with R](http://i5m.co.uk/post/1629735475/vim-r-plugin).
+* <a href="http://www.vim.org/scripts/script.php?script_id=2596">Full Screen Vim for Windows</a> - This is great!
+
+And worth a mention, but I'm not using it: [Command-T](https://github.com/wincent/Command-T). This is an interesting plugin to quickly open files by typing in a few letters of their path or filename. It's based on a Textmate feature. However, installing it is a bit of a palaver and (especially on Windows) requires certain versions of Vim, Ruby, and Ruby developer tools so you can build the extension once you've installed it. I tried it using the non-recommended versions (Vim 7.3 and Ruby 1.9.1) and it crashed. Just seems a lot of hassle for what it's worth.

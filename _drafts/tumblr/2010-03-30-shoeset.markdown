@@ -1,0 +1,37 @@
+---
+layout: page
+type: text
+title: Shoeset
+categories: 
+- code
+- shoes
+---
+A little [Shoes](http://shoes.heroku.com) app that generates tag clouds for a user's chosen set on Flickr.
+
+[![Shoeset](http://farm5.static.flickr.com/4047/4438251586_acde764cf1.jpg "Shoeset")](http://www.flickr.com/services/apps/72157623408545587/)
+
+This was basically a geek solution to me asking myself, "I wonder what films I had best results with at those weddings?" Since I tend to use sets for events, and a mix of film and cameras at events, this worked well for me.
+
+Uses the excellent [Flickraw](http://github.com/hanklords/flickraw#) gem and this [TagCloud](http://snippets.dzone.com/posts/show/6027) class. It's the first time I've used Flickraw, the last time I did anything with the Flickr API was a few years ago using [rflickr in a rails app](http://www.maxdunn.com/RoR+and+Flickr).
+
+Note that in order not to have [too many queries per second](http://developer.yahoo.com/flickr/), the app pauses for 1 second on each photo in the set (So probably no good for people with huge sets, but what can you do...). Probably full of bugs (a few fixed in v0.0.2), but it was just for fun (I never profess to know what I'm doing).
+
+Since it really is quite simple, there's nothing that interesting about the code. Although this was the first time I'd used threading in Shoes: there is no single flickr api command to get the tags for all photos in a set so it's necessary to iterate through each photo and get the tags, this is done in a separate thread so that a progress bar can be updated outside of the thread. The problem with having this threaded is that it was possible for the user to set of multiple queries at the same time, so (in v0.0.2) I had to put in a [check to see whether a query was already running](http://github.com/i5m/shoeset/commit/2a1778f05b55911cc2931e772f480ab8a3c58454).
+
+And although very simple, I like the [use of reverse! on an array](http://github.com/i5m/shoeset/blob/master/cloud.rb#L42-L46) to alternate text colours:
+
+    color = ["steelblue", "deeppink"]
+    #No idea why I spelt that the 'wrong' way
+    @wordcount.each_key do |word|
+        font_size = (10 + (@wordcount[word] * ratio)).round
+	cloud << %Q{para "#{word}", :size => #{font_size}, :stroke => #{color[0]}; }
+	color.reverse!
+    end
+
+The most interesting thing, for me, about doing this app was learning about headers in Shoe shy files. I packaged the app up on a Windows machine as a Shy file, which should be platform independent. However, it wouldn't work on my OSX PPC machine. And vice versa. After a bit of investigation I discovered that the bulk of the Shy file was valid, it was just the header that was causing trouble. The [header of the Shy file](http://github.com/shoes/shoes/blob/master/lib/shoes/shy.rb#L30-L34) contains three parameters: the file type (Shy, so you can't simply rename an arbitrary file as .shy), the Version (should Shoes ever change file formats, etc) and the byte number offset for the end of the header (i.e. where to start reading the actual application files from). It was this last parameter that was causing the trouble and if I manually overrode it I could get the Shy file to open on both platforms.
+
+I finally tracked it down to [this](http://github.com/shoes/shoes/blob/master/lib/shoes/shy.rb#L15):
+
+    LAYOUT = "A4SL".freeze
+
+These parameters are used in [Array.pack](http://ruby-doc.org/core/classes/Array.html#M002222) and [String.unpack](http://ruby-doc.org/core/classes/String.html#M000760). The problem is that **S**hort integers and **L**ong integers are done in [native byte order](http://en.wikipedia.org/wiki/Endianness#Examples_of_storing_the_value_0A0B0C0Dh_in_memory). So for Windows, etc this was little-endian, but on OSX PPC this was big-endian. Fixing was as simple as [always forcing little-endian, "A4vV"](http://github.com/ashbb/shoes/commit/4ab9ee2f86e0f240d5e7915888dd8db3cdca836b).
