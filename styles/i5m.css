@@ -305,13 +305,13 @@ footer a {
 		
 /*Archive page display */
 
-ul#archives>li {
+article#archive>ul>li {
 	list-style-type: none;
 	font-size: 3em;
 	clear: both;
 }
 
-ul#archives li>ul li {
+article#archive li>ul li {
 	display: block; 
 	float: left; 
 	width: 100px; 
@@ -323,27 +323,41 @@ ul#archives li>ul li {
 	overflow: hidden;
 }
 
-ul#archives li>ul li time {
+article#archive li>ul li time {
 	display: none;
 }
 
-ul#archives li>ul li:hover time {
+article#archive li>ul li:hover time {
 	display: block;
 	font-size: 8em;
 	top: 0px;
 	left: 0px;
 }
 
-ul#archives li>ul li:hover span {
+article#archive li>ul li:hover span, article#archive li>ul li:hover img, article#archive li>ul li:hover p{
 	display: none;
 }
 
-ul#archives span.title {
+article#archive span.title {
 	font-weight: bold
 }
 
-ul#archives a {
+article#archive a {
 	text-decoration: none;
 }
 
+article#archive {
+	border-bottom: none;
+}
 
+article#archive form {
+	margin-bottom: 2em;
+	font-size: 1.5em;
+	color: #c00;
+}
+
+article#archive form input {
+	margin-left: 2.5em;
+	margin-right: 0.25em;
+
+}
