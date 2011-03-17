@@ -40,10 +40,10 @@ title: Archives
 					{% if post.video contains 'youtube' %}
 						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" />
 					{% elsif post.video contains 'vimeo' %}
-						<img src="" id="vimeo-{{ post.video | remove:'http://vimeo.com/' }}" />
+						<img src="/images/play.png" id="vimeo-{{ post.video | remove:'http://vimeo.com/' }}" />
 						<script type="text/javascript">vimeoLoadingThumb({{ post.video | remove:'http://vimeo.com/' }});</script>
 					{% else %}
-						<img src=" " width ="100px" />
+						<img src="/images/play.png" width ="100px" />
 					{% endif %}
 			{% endcase %}
 	</a></li>
