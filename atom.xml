@@ -20,7 +20,46 @@ layout: nil
    <link href="http://i5m.github.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://i5m.github.com{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">
+		{% case post.type %} 
+			{% when 'text' %}
+				 {{ post.content | xml_escape }}
+			{% when 'photo' %}
+				{% if post.click-through or page.click-through %}
+				&lt;a href=&quot;{{ post.click-through }}&quot;&gt;
+				{% endif %}
+					&lt;img src=&quot;{{ post.photo }}&quot; alt=&quot;{{ post.title }}&quot; /&gt;
+				{% if post.click-through or page.click-through %}
+				&lt;/a&gt;
+				{% endif %}
+				&lt;div class=&quot;source&quot;&gt;
+					{{ post.content | xml_escape }}
+				&lt;/div&gt;
+			{% when 'quote' %}
+				&lt;div class=&quot;quote&quot;&gt;&quot;{{ post.quote | xml_escape }}&quot;&lt;/div&gt;
+				&lt;div class=&quot;source&quot;&gt;&#8212; {{ post.content | xml_escape }} &lt;/div&gt;
+			{% when 'link' %}
+				&lt;div class=&quot;href&quot;&gt;
+					&lt;a href=&quot;{{ post.link }}&quot;&gt;&#187; {{ post.title }}&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;descrip&quot;&gt;
+					{{ post.content | xml_escape }}
+				&lt;/div&gt;		
+			{% when 'chat' %}
+				
+			{% when 'audio' %}
+				
+			{% when 'video' %}
+				{% if post.video contains 'vimeo' or page.video contains 'vimeo' %}
+				&lt;iframe src=&quot;http://player.vimeo.com/video/{{ post.video | remove:'http://vimeo.com/' }}{% if post == null %}{{ page.video | remove:'http://vimeo.com/' }}{% endif %}?portrait=0&amp;color=01AAEA&quot; width=&quot;500&quot; height=&quot;375&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+				{% elsif post.video contains 'youtube' or page.video contains 'youtube' %}
+				&lt;iframe title=&quot;YouTube video player&quot; width=&quot;480&quot; height=&quot;390&quot; src=&quot;http://www.youtube.com/embed/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}{% if post == null %}{{ page.video | remove:'http://www.youtube.com/watch?v=' }}{% endif %}?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+				{% else %}
+				{% comment %}&lt;!-- Have a look at this http://diveintohtml5.org/video.html --&gt;{% endcomment %}
+				{% endif %}
+				&lt;div class=&quot;descrip&quot;&gt;{{ post.content | xml_escape }}&lt;/div&gt;	
+		{% endcase %}
+   </content>
  </entry>
  {% endfor %}
  
