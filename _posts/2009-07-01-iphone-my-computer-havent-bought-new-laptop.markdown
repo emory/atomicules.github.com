@@ -2,7 +2,7 @@
 layout: page
 type: quote
 title: 
-quote: 'iPhone = my computer...Haven't bought new laptop since late 06'
+quote: "iPhone = my computer...Haven't bought new laptop since late 06"
 
 
 categories: 

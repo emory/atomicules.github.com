@@ -1,7 +1,7 @@
 ---
 layout: page
 type: link
-title: H&FJ: Four Techniques for Combining Fonts
+title: 'H&FJ: Four Techniques for Combining Fonts'
 link: http://www.typography.com/email/2010_03/index_tw.htm
 categories: 
 - art

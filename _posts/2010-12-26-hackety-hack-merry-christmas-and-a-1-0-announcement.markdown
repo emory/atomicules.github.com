@@ -1,7 +1,7 @@
 ---
 layout: page
 type: link
-title: Hackety Hack: Merry Christmas (and a 1.0 announcement)
+title: 'Hackety Hack: Merry Christmas (and a 1.0 announcement)'
 link: http://blog.hackety-hack.com/post/2457961910/merry-christmas-and-a-1-0-announcement
 categories: 
 - code

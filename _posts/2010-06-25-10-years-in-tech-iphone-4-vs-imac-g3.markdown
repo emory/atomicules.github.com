@@ -1,7 +1,7 @@
 ---
 layout: page
 type: link
-title: 10 Years in Tech: iPhone 4 vs iMac G3
+title: '10 Years in Tech: iPhone 4 vs iMac G3'
 link: http://www.macstories.net/news/2000-imac-compared-to-the-iphone-4/
 categories: 
 - code

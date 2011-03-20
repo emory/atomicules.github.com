@@ -1,7 +1,7 @@
 ---
 layout: page
 type: link
-title: Firefox 4: the HTML5 parser – inline SVG and MathML
+title: 'Firefox 4: the HTML5 parser – inline SVG and MathML'
 link: http://hacks.mozilla.org/2010/05/firefox-4-the-html5-parser-inline-svg-speed-and-more/ 
 categories: 
 - code
