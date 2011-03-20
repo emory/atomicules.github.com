@@ -24,18 +24,18 @@ Anyway. Here's what I'm using. I'm mainly going to program in Ruby also dabble i
 ## Plugins
 
 * [pathogen](http://www.vim.org/scripts/script.php?script_id=2332) - For far more sane installation of vim plugins. Install this first!
-* <a href="http://www.vim.org/scripts/script.php?script_id=13">closetag</a><b> - </b>For closing open tags
-* <a href="http://www.vim.org/scripts/script.php?script_id=1849">Autoclose</a> - Autoclose brackets as you type the opening bracket. I wish this could be expanded to other tags.
-* <a href="http://www.vim.org/scripts/script.php?script_id=39">Matchit</a> - Very, very handy, especially when programming to try and find the closing end statement, etc.
-* <a href="http://www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> - Built in directory browser. Not absolutely necessary with gvim, but handy.
-* <a href="http://www.vim.org/scripts/script.php?script_id=2540">snipMate</a> - TextMate style snippets. Very cool. There are a couple of other options (<a href="http://www.vim.org/scripts/script.php?script_id=1726">ruby_imaps</a>, <a href="http://www.vim.org/scripts/script.php?script_id=1318">snippetsEMU</a> ), but this one seems to be the best one.
-* <a href="http://www.vim.org/scripts/script.php?script_id=1697">surround</a> - Looks quite handy for editing pairs of tags.
-* <a href="http://www.vim.org/scripts/script.php?script_id=1218">NERD Commenter</a> - easily comment lines and sections of any code
-* <a href="http://www.vim.org/scripts/script.php?script_id=2438">EasyGrep</a> - As name suggests EASILY perform find and replace across multiple files. Just ace.
-* <a href="http://www.vim.org/scripts/script.php?script_id=1896">ragtag</a> - Because Tim Pope made it.
-* <strike>[Supertab](http://www.vim.org/scripts/script.php?script_id=1643)</strike> - I hear it's good, but not actually got around to using yet.
+* [closetag](http://www.vim.org/scripts/script.php?script_id=13) - For closing open tags
+* [Autoclose](http://www.vim.org/scripts/script.php?script_id=1849) - Autoclose brackets as you type the opening bracket. I wish this could be expanded to other tags.
+* [Matchit](http://www.vim.org/scripts/script.php?script_id=39) - Very, very handy, especially when programming to try and find the closing end statement, etc.
+* [NERDTree](http://www.vim.org/scripts/script.php?script_id=1658) - Built in directory browser. Not absolutely necessary with gvim, but handy.
+* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) - TextMate style snippets. Very cool. There are a couple of other options ([ruby_imaps](http://www.vim.org/scripts/script.php?script_id=1726), [snippetsEMU](http://www.vim.org/scripts/script.php?script_id=1318)), but this one seems to be the best one.
+* [surround](http://www.vim.org/scripts/script.php?script_id=1697) - Looks quite handy for editing pairs of tags.
+* [NERD Commenter](http://www.vim.org/scripts/script.php?script_id=1218) - easily comment lines and sections of any code
+* [EasyGrep](http://www.vim.org/scripts/script.php?script_id=2438) - As name suggests EASILY perform find and replace across multiple files. Just ace.
+* [ragtag](http://www.vim.org/scripts/script.php?script_id=1896) - Because Tim Pope made it.
+* ~[Supertab](http://www.vim.org/scripts/script.php?script_id=1643)~ - I hear it's good, but not actually got around to using yet.
 * [taglist](http://www.vim.org/scripts/script.php?script_id=273) - Think I mainly used this when I played with C.
-* <a href="http://www.vim.org/scripts/script.php?script_id=2628">Vim-R-Plugin</a> - For [working with R](http://i5m.co.uk/post/1629735475/vim-r-plugin).
-* <a href="http://www.vim.org/scripts/script.php?script_id=2596">Full Screen Vim for Windows</a> - This is great!
+* [Vim-R-Plugin](http://www.vim.org/scripts/script.php?script_id=2628) - For [working with R](http://i5m.co.uk/post/1629735475/vim-r-plugin).
+* [Full Screen Vim for Windows](http://www.vim.org/scripts/script.php?script_id=2596) - This is great!
 
 And worth a mention, but I'm not using it: [Command-T](https://github.com/wincent/Command-T). This is an interesting plugin to quickly open files by typing in a few letters of their path or filename. It's based on a Textmate feature. However, installing it is a bit of a palaver and (especially on Windows) requires certain versions of Vim, Ruby, and Ruby developer tools so you can build the extension once you've installed it. I tried it using the non-recommended versions (Vim 7.3 and Ruby 1.9.1) and it crashed. Just seems a lot of hassle for what it's worth.
