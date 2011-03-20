@@ -2,7 +2,7 @@
 layout: page
 type: text
 title: Some other stuff I've been listening to
-categories: 
+categories: art 
 ---
 As well as my foray into Dubstep some other stuff I've been listening to:
 
