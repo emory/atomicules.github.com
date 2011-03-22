@@ -2,7 +2,7 @@
 layout: page
 type: video
 title: 
-video: <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/xPNFApou5_4&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/xPNFApou5_4&fs=1" type="application/x-shockwave-flash" width="425" height="344" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+video: http://www.youtube.com/v/xPNFApou5_4
 categories: 
 - Art
 ---
