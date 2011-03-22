@@ -3,7 +3,7 @@
 	<h1>{{ post.title }}{% if post == null %}{{ page.title }}{% endif %}</h1>
 </header>
 <div class="postcontent text">
-	{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}
+	{{ post.content }}{% if post == null %}{{ content }}{% endif %}
 
 	{% include post_footer.html %}
 </div>

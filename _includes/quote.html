@@ -3,7 +3,7 @@
 </header>
 <div class="postcontent quote">
 	<div class="quote">"{{ post.quote }}{% if post == null %}{{ page.quote }}{% endif %}"</div>
-	<div class="source">&#8212; {{ post.content }}{% if post == null %}{{ page.content }}{% endif %}</div>
+	<div class="source">&#8212; {{ post.content }}{% if post == null %}{{ content }}{% endif %}</div>
 	{% include post_footer.html %}
 </div>	
 

@@ -6,7 +6,7 @@
 		<a href="{{ post.link }}{% if post == null %}{{ page.link }}{% endif %}">&#187; {{ post.title }}{% if post == null %}{{ page.title }}{% endif %}</a>
 	</div>
 	<div class="descrip">
-		{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}
+		{{ post.content }}{% if post == null %}{{ content }}{% endif %}
 	</div>		
 	{% include post_footer.html %}
 </div>

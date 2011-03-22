@@ -9,7 +9,7 @@
 	{% else %}
 	{% comment %}<!-- Have a look at this http://diveintohtml5.org/video.html -->{% endcomment %}
 	{% endif %}
-	<div class="descrip">{{ post.content }}{% if post == null %}{{ page.content }}{% endif %}</div>
+	<div class="descrip">{{ post.content }}{% if post == null %}{{ content }}{% endif %}</div>
 										
 	{% include post_footer.html %}
 </div>	
