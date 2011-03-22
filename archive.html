@@ -25,11 +25,11 @@ title: Archives
 	<li class="{{ post.categories | join: ' ' }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time>
 			{% case post.type %} 
 				{% when 'text' %}
-					<span class="title">{{ post.title }}</span>{{ post.content | truncate: 200 }}
+					<span class="title">{{ post.title }}</span>{{ post.content }}
 				{% when 'photo' %}
 					<img src="{{ post.photo }}" alt="{{ post.title }}" width="100px" />
 				{% when 'quote' %}
-					<span class="title">"{{ post.quote }}"</span>{{ post.content | truncate: 200 }}
+					<span class="title">"{{ post.quote }}"</span>{{ post.content }}
 				{% when 'link' %}
 					<span class="title">&#187; {{ post.link }}</span>
 				{% when 'chat' %}
