@@ -1,0 +1,9 @@
+---
+layout: page
+type: link
+title: rstat.us
+link: http://rstat.us/
+categories: 
+- code
+---
+The Twitter [kick-in-the-pants to developers](http://groups.google.com/group/twitter-development-talk/browse_thread/thread/c82cd59c7a87216a) earlier this month cause a bit of stir amongst developers [and](http://twitter.com/#!/gamoe/status/46538404862767104) [users](http://twitter.com/#!/gamoe/status/46537484380815360) alike. So some [very talented people](https://github.com/hotsh) who obviously [do not value sleep](http://rstat.us/updates/4d8b2f10c26df84a89000506) at all built a Twitter clone, but that is [open-source](http://rstat.us/open_source) and ultimately [distributed](http://blog.steveklabnik.com/announcing-rstatus). Nice.
