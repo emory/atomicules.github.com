@@ -27,7 +27,11 @@ title: Archives
 				{% when 'text' %}
 					<span class="title">{{ post.title }}</span>{{ post.content }}
 				{% when 'photo' %}
-					<img src="{{ post.photo }}" alt="{{ post.title }}" width="100px" />
+					{% if post.photo contains 'flickr' %}{% comment %}Assumes always using the medium size for this to work{% endcomment %}
+						<img src="{{ post.photo | replace:'.jpg','_s.jpg' }}" alt="{{ post.title }}" style="margin-left: 12.5px; margin-top: 12.5px; "/>
+					{% else %}
+						<img src="{{ post.photo }}" alt="{{ post.title }}" width="100px" />
+					{% endif %}		
 				{% when 'quote' %}
 					<span class="title">"{{ post.quote }}"</span>{{ post.content }}
 				{% when 'link' %}
