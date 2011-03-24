@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.github.com/images/tumblr_krith6wV831qzcagpo1_500.jpg
+photo: http://farm3.static.flickr.com/2641/4011639393_80caccf196.jpg
 click-through: http://www.flickr.com/photos/i-5-m/4011639393/
 categories: 
 - art
