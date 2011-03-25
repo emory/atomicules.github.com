@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.github.com/images/tumblr_kr2zlvkk9k1qz7eo6o1_500.jpg
+photo: http://i5m.co.uk/images/tumblr_kr2zlvkk9k1qz7eo6o1_500.jpg
 click-through: http://www.post-gazette.com/pg/07252/815585-109.stm
 categories: 
 - Art

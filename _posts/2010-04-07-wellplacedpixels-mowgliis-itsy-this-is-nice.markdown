@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.github.com/images/tumblr_kztsptKzZO1qazfelo1_400.png
+photo: http://i5m.co.uk/images/tumblr_kztsptKzZO1qazfelo1_400.png
 click-through: 
 categories: 
 - art

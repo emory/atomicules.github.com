@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>i5m</title>
- <link href="http://i5m.github.com/atom.xml" rel="self"/>
- <link href="http://i5m.github.com/"/>
+ <link href="http://i5m.co.uk/atom.xml" rel="self"/>
+ <link href="http://i5m.co.uk/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://i5m.github.com/</id>
+ <id>http://i5m.co.uk/</id>
  <author>
    <name>i5m</name>
    <email>i5ivem@gmail.com</email>
@@ -17,9 +17,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://i5m.github.com{{ post.url }}"/>
+   <link href="http://i5m.co.uk{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://i5m.github.com{{ post.id }}</id>
+   <id>http://i5m.co.uk{{ post.id }}</id>
    <content type="html">
 		{% case post.type %} 
 			{% when 'text' %}

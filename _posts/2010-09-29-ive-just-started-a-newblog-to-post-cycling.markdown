@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.github.com/images/tumblr_l9i2ds5OyG1qzcagp.jpg
+photo: http://i5m.co.uk/images/tumblr_l9i2ds5OyG1qzcagp.jpg
 click-through: 
 categories: 
 - code
