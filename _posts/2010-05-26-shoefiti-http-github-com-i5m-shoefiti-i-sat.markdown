@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.guthub.com/images/tumblr_l315r7ufnU1qzcagp.jpg
+photo: http://i5m.co.uk/images/tumblr_l315r7ufnU1qzcagp.jpg
 click-through: http://github.com/i5m/shoefiti
 categories: 
 - code
