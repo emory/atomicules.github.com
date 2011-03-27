@@ -2,7 +2,7 @@
 layout: page
 type: video
 title: 
-video: http://www.youtube.com/v/xPNFApou5_4
+video: http://www.youtube.com/watch?v=xPNFApou5_4
 categories: 
 - Art
 ---
