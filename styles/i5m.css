@@ -48,7 +48,7 @@ pre {
 	margin: 1em 0pt;
 	overflow-x: auto;
 	overflow-y: hidden;
-	padding 0.25em;
+	padding: 0.25em;
 	padding-bottom: 2em;
 }
 
@@ -271,7 +271,7 @@ a.commentlink:hover {
 #links li a {
 	padding-bottom: 0.2em;
 }
-}			
+			
 #dsq-comments {
 	margin-top: 0px;
 	padding-top: 0px;
