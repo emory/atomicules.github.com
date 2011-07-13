@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>i5m - Feedafever Shared Items</title>
+		<link rel="shortcut icon" href="/images/favicon.png" />
+		<link rel="alternate" type="application/rss+xml" href="http://fever.i5m.co.uk/?rss=saved" />
+		<link href="/styles/i5m.css" media="screen" rel="Stylesheet" title="i5m" type="text/css" />
+		<!-- From: https://github.com/jfhovinne/jFeed -->
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery.jfeed.js"></script>
+
+<script type="text/javascript">
+
+jQuery(function() {
+
+    jQuery.getFeed({
+        url: 'feed.xml',
+        success: function(feed) {
+        
+            jQuery('#result').append('<h2>'
+            + '<a href="'
+            + feed.link
+            + '">'
+            + feed.title
+            + '</a>'
+            + '</h2>');
+            
+            var html = '';
+            
+            for(var i = 0; i < feed.items.length && i < 5; i++) {
+            
+                var item = feed.items[i];
+                
+                html += '<h3>'
+                + '<a href="'
+                + item.link
+                + '">'
+                + item.title
+                + '</a>'
+                + '</h3>';
+                
+                html += '<div class="updated">'
+                + item.updated
+                + '</div>';
+                
+                html += '<div>'
+                + item.description
+                + '</div>';
+            }
+            
+            jQuery('#result').append(html);
+        }    
+    });
+});
+
+</script>
+		
+	</head>
+	<body>
+		<header>
+			<hgroup>
+				<h1 id="avatar"><a href="/">i5m</a></h1>
+				<h2>Probably <a href="http://i5m.co.uk/art.html">art</a> + <a href="http://i5m.co.uk/code.html">code</a> in the loosest sense of those words.</h2>
+			</hgroup>
+			<nav id="links">
+				<ul>
+					<li><a href="/archive">Archive</a></li>
+					<li><a href="profiles.google.com/u/0/i5ivem/about" rel="me">Owt Else</a></li>
+				</ul>
+			</nav><!-- End of links -->			
+		</header><!-- End of Side/Top bar -->
+
+		<section>
+			<article>
+				<div id="result" />
+		
+			</article>
+
+
+
+		</section>
+
+	<footer>
+		<p>Powered by <a href="https://github.com/i5m/i5m.github.com">Github</a> / i5m created content: <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></p>
+	</footer>
+
+</body>
+</html>
+
+
