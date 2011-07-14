@@ -18,36 +18,35 @@ jQuery(function() {
         url: 'http://fever.i5m.co.uk/?rss=saved',
         success: function(feed) {
         
-            jQuery('#result').append('<h2>'
-            + '<a href="'
-            + feed.link
-            + '">'
-            + feed.title
-            + '</a>'
-            + '</h2>');
-            
             var html = '';
             
-            for(var i = 0; i < feed.items.length && i < 5; i++) {
+            for(var i = 0; i < feed.items.length && i < 10; i++) {
             
                 var item = feed.items[i];
                 
-                html += '<h3>'
+				html += '<article><header>'
                 + '<a href="'
                 + item.link
-                + '">'
-                + item.title
-                + '</a>'
-                + '</h3>';
-                
-                html += '<div class="updated">'
+                + '" class="permalink">'
                 + item.updated
-                + '</div>';
-                
-                html += '<div>'
-                + item.description
-                + '</div>';
-            }
+                + '</a>'
+				+ '<h1>'
+				+ item.title
+				+ '</h1>'
+				+ '</header>'
+				+ '<div class="postcontent text">'
+				+ item.description
+				+ '<ul class="post-tags"><li class="tags"><i>Source: <a href="'
+				+ item.link
+				+ '">'
+				+ item.link
+				+ '</a></i></li></ul>' 
+				+ '</div>'
+				+ '</article>';
+				
+			}
+
+			html += '<p>These are my ten most recent shared items from <a href="http://feedafever.com/">Fever</a>, for more subscribe to the <a href="http://fever.i5m.co.uk/?rss=saved">feed</a> of this page.</p>';
             
             jQuery('#result').append(html);
         }    
@@ -65,20 +64,15 @@ jQuery(function() {
 			</hgroup>
 			<nav id="links">
 				<ul>
-					<li><a href="/archive">Archive</a></li>
-					<li><a href="profiles.google.com/u/0/i5ivem/about" rel="me">Owt Else</a></li>
+					<li><a href="/archive.html">Archive</a></li>
+					<li><a href="/elsewhere.html">Elsewhere</a></li>
 				</ul>
 			</nav><!-- End of links -->			
 		</header><!-- End of Side/Top bar -->
 
-		<section>
-			<article>
-				<div id="result" />
-		
-			</article>
+		<section id="result">
 
-
-
+			
 		</section>
 
 	<footer>
