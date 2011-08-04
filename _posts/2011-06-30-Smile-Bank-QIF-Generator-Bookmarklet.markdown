@@ -7,7 +7,7 @@ categories:
 ---
 Errr... didn't mean to end up doing this <s>today</s> yesterday.
 
-I bank with [Smile](http://www.smile.co.uk), probably the most luddite "internet" bank account in the history of the universe, and to date have relied on (as have probably most Smile account holders) the very useful [QIF generator](http://4square.co.uk/smile) by [Dave Small](http://benward.me/blog/online-banking-wishlist#comment-907) (that blog comment is the only "official" post that I can find about the tool, I think most have come across it via [word-of-mouth](https://www.wesabe.com/groups/39-uk-wesabe-users/discussions/384-any-other-uk-users#comment_4752)) to export my statements to [PocketSmith](https://my.pocketsmith.com/login). So all is usually well, and since laziness rules I've never bothered to write my own convertor. On occasion the tool has gone offline and I've gone looking at [alternatives](http://userscripts.org/scripts/search?q=smile.co.uk&submit=), but they've never really worked for me, and by the time I've finished looking and checked back again the 4square tool is usually back online. 
+I bank with [Smile](http://www.smile.co.uk), probably the most luddite "internet" bank account in the history of the universe, and to date have relied on (as have probably most Smile account holders) the very useful [QIF generator](http://www.web-development.co.uk/smile/) by [Dave Small](http://benward.me/blog/online-banking-wishlist#comment-907) (that blog comment is the only "official" post that I can find about the tool, I think most have come across it via [word-of-mouth](https://www.wesabe.com/groups/39-uk-wesabe-users/discussions/384-any-other-uk-users#comment_4752)) to export my statements to [PocketSmith](https://my.pocketsmith.com/login). So all is usually well, and since laziness rules I've never bothered to write my own convertor. On occasion the tool has gone offline and I've gone looking at [alternatives](http://userscripts.org/scripts/search?q=smile.co.uk&submit=), but they've never really worked for me, and by the time I've finished looking and checked back again the 4square tool is usually back online. 
 
 However, on a couple of occassions recently the 4square website has been down (again not for long), but it's been at a critical time for me (I need to know how skint I am NOW!). So I decided to finally stop being lazy and write my own back-up QIF-generator tool.
 
@@ -28,3 +28,5 @@ Came across an interesting issue whilst doing this in that it seems you [can't p
 Doesn't work: `window.open("data:text/plain;charset=utf-8, No \n line \n breaks");`
 
 Works: `window.open("data:text/html;charset=utf-8, Yes <br />line <br /> breaks");`
+
+*[EDIT 04-Aug-2011: Updated link to new home of Dave Small's Smile QIF Generator web page]*
