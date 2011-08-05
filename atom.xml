@@ -50,9 +50,10 @@ layout: nil
 			{% when 'audio' %}
 				
 			{% when 'video' %}
-				{% if post.video contains 'vimeo' or page.video contains 'vimeo' %}
+				{% capture videosource %}{{ post.video | truncate: 15 }}{% endcapture %}
+				{% if videosource == "http://vimeo..." %}
 				&lt;iframe src=&quot;http://player.vimeo.com/video/{{ post.video | remove:'http://vimeo.com/' }}{% if post == null %}{{ page.video | remove:'http://vimeo.com/' }}{% endif %}?portrait=0&amp;color=01AAEA&quot; width=&quot;500&quot; height=&quot;375&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-				{% elsif post.video contains 'youtube' or page.video contains 'youtube' %}
+				{% elsif videosource == "http://www.y..." %}
 				&lt;iframe title=&quot;YouTube video player&quot; width=&quot;480&quot; height=&quot;390&quot; src=&quot;http://www.youtube.com/embed/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}{% if post == null %}{{ page.video | remove:'http://www.youtube.com/watch?v=' }}{% endif %}?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 				{% else %}
 				{% comment %}&lt;!-- Have a look at this http://diveintohtml5.org/video.html --&gt;{% endcomment %}
