@@ -1,0 +1,10 @@
+---
+layout: page
+type: link
+title: Kyle Bean's Portfolio
+link: http://www.kylebean.co.uk/portfolio/
+categories: 
+- art
+content-source: http://twitter.com/#!/livino/status/103175832226369536 
+---
+This guy has talent. I love the Hen.
