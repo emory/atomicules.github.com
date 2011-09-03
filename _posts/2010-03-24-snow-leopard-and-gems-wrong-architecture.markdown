@@ -1,7 +1,7 @@
 ---
 layout: page
 type: text
-title: Snow Leopard and Gems "wrong architecture"
+title: Snow Leopard and Gems 'wrong architecture'
 categories: 
 - code
 ---
