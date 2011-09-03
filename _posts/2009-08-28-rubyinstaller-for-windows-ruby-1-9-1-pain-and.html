@@ -5,75 +5,75 @@ title: RubyInstaller for Windows, Ruby 1.9.1 Pain and installing libxml rubygem
 categories: 
 - code
 ---
-<p>Unfortunately for me, Windows remains a daily fact of life, and as much as I wish I could use OSX or Linux instead, I can't. Such is working life. So I feel it's a shame that Windows remains very much a third class citizen in the Ruby world.</p>&#13;
-<p>I fairly recently came across the <a href="http://rubyinstaller.org/">RubyInstaller</a> project, and excellent effort to update the ageing 1.8.6 One-Click installer still offered on the official <a href="http://www.ruby-lang.org/en/downloads/">Ruby download</a> page. They now offer two new "<a href="http://rubyforge.org/frs/?group_id=167&amp;release_id=38052">Technology Preview</a>" installers for Ruby; one for 1.8.6 and one for 1.9.1.</p>&#13;
-<p>Although there is perhaps <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_short">one step back</a> with these installers, there are <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_long">a lot of steps forward</a>, and I'm very glad someone is making a decent effort on Windows. I particulary like that it doesn't modify the windows PATH environment variable, rather it offers a special shortcut to a Command Prompt that sources the Ruby install. This means you can easily install both Ruby 1.8.6 and 1.9.1 and have command prompts open for both and you can just type "ruby" or "irb" in both and it works rather than having to type "ruby19" or "irb19", etc. Mind you, there is also a shortcut staright to IRB and a built-in gems documentation local web server you can start up. Nice.</p>&#13;
-<p>It was a combination of the one-step back and trying Ruby 1.9.1 again that snagged me though, and things that "just worked" under the old One-Click installer weren't working under the new RubyInstaller, specifically trying to install <a href="http://roo.rubyforge.org/">roo</a>, led to an error installing <a href="http://libxml.rubyforge.org/">libxml-ruby</a>, even after I'd installed the <a href="http://wiki.github.com/oneclick/rubyinstaller/development-kit">Developer Kit</a> (you need that for Hpricot); I was getting the following:</p>&#13;
-<pre><code>&#13;
-Building native extensions.  This could take a while...&#13;
-ERROR:  Error installing libxml-ruby:&#13;
-ERROR: Failed to build gem native extension.&#13;
-&#13;
-C:/Ruby19/bin/ruby.exe extconf.rb&#13;
-checking for socket() in -lsocket... no&#13;
-checking for gethostbyname() in -lnsl... no&#13;
-checking for atan() in -lm... yes&#13;
-checking for inflate() in -lz... no&#13;
-checking for inflate() in -lzlib... no&#13;
-checking for inflate() in -lzlib1... no&#13;
-*** extconf.rb failed ***&#13;
-Could not create Makefile due to some reason, probably lack of&#13;
-necessary libraries and/or headers.  Check the mkmf.log file for more&#13;
-details.  You may need configuration options.&#13;
-&#13;
-Provided configuration options:&#13;
---with-opt-dir&#13;
---without-opt-dir&#13;
---with-opt-include&#13;
---without-opt-include=${opt-dir}/include&#13;
---with-opt-lib&#13;
---without-opt-lib=${opt-dir}/lib&#13;
---with-make-prog&#13;
---without-make-prog&#13;
---srcdir=.&#13;
---curdir&#13;
---ruby=C:/Ruby19/bin/ruby&#13;
---with-iconv-dir&#13;
---without-iconv-dir&#13;
---with-iconv-include&#13;
---without-iconv-include=${iconv-dir}/include&#13;
---with-iconv-lib&#13;
---without-iconv-lib=${iconv-dir}/lib&#13;
---with-zlib-dir&#13;
---without-zlib-dir&#13;
---with-zlib-include&#13;
---without-zlib-include=${zlib-dir}/include&#13;
---with-zlib-lib&#13;
---without-zlib-lib=${zlib-dir}/lib&#13;
---with-socketlib&#13;
---without-socketlib&#13;
---with-nsllib&#13;
---without-nsllib&#13;
---with-mlib&#13;
---without-mlib&#13;
---with-zlib&#13;
---without-zlib&#13;
---with-zliblib&#13;
---without-zliblib&#13;
---with-zlib1lib&#13;
---without-zlib1lib&#13;
-extconf failure: need zlib&#13;
-&#13;
-&#13;
-Gem files will remain installed in C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-rub&#13;
-y-1.1.3 for inspection.&#13;
-Results logged to C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.3/ext/libxm&#13;
-l/gem_make.out&#13;
-</code>&#13;
-</pre>&#13;
-<p>The answer was on the <a href="http://libxml.rubyforge.org/rdoc/index.html">libxml</a> page:</p>&#13;
-<blockquote>If you are running Windows, make sure to install the Win32 RubyGem which             includes an already built binary file</blockquote>&#13;
-<p>So I <a href="http://rubyforge.org/frs/?group_id=494">downloaded</a> the <b>libxml-ruby-1.1.3-x86-mswin32-60.gem</b> and installed locally and all was well. (Note that under Ruby 1.8.6, rubygems is sensible enough to install this version, not so under 1.9.1)</p>&#13;
-<p>However, 1.9.1 still remains a pain in the arse on Windows, I think mainly because of gems.</p>&#13;
-<p>Trying to require 'roo' under 1.9.1 and 1.8.6 lead to an error because it couldn't find "libiconv-2.dll" and "libxml2-2.dll". Ok, fair enough, they are in the \libxml-ruby-1.1.3-x86-mswin32-60\lib directory, so it should be able to find them, but it is easier enough to copy them to the Ruby/bin directory. But then, under 1.9.1, I got an error about not being able to find "msvcrt-ruby18.dll", which as far as I can tell means the gem is not ready for Ruby 1.9.1.</p>&#13;
+<p>Unfortunately for me, Windows remains a daily fact of life, and as much as I wish I could use OSX or Linux instead, I can't. Such is working life. So I feel it's a shame that Windows remains very much a third class citizen in the Ruby world.</p>
+<p>I fairly recently came across the <a href="http://rubyinstaller.org/">RubyInstaller</a> project, and excellent effort to update the ageing 1.8.6 One-Click installer still offered on the official <a href="http://www.ruby-lang.org/en/downloads/">Ruby download</a> page. They now offer two new "<a href="http://rubyforge.org/frs/?group_id=167&amp;release_id=38052">Technology Preview</a>" installers for Ruby; one for 1.8.6 and one for 1.9.1.</p>
+<p>Although there is perhaps <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_short">one step back</a> with these installers, there are <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_long">a lot of steps forward</a>, and I'm very glad someone is making a decent effort on Windows. I particulary like that it doesn't modify the windows PATH environment variable, rather it offers a special shortcut to a Command Prompt that sources the Ruby install. This means you can easily install both Ruby 1.8.6 and 1.9.1 and have command prompts open for both and you can just type "ruby" or "irb" in both and it works rather than having to type "ruby19" or "irb19", etc. Mind you, there is also a shortcut staright to IRB and a built-in gems documentation local web server you can start up. Nice.</p>
+<p>It was a combination of the one-step back and trying Ruby 1.9.1 again that snagged me though, and things that "just worked" under the old One-Click installer weren't working under the new RubyInstaller, specifically trying to install <a href="http://roo.rubyforge.org/">roo</a>, led to an error installing <a href="http://libxml.rubyforge.org/">libxml-ruby</a>, even after I'd installed the <a href="http://wiki.github.com/oneclick/rubyinstaller/development-kit">Developer Kit</a> (you need that for Hpricot); I was getting the following:</p>
+<pre><code>
+Building native extensions.  This could take a while...
+ERROR:  Error installing libxml-ruby:
+ERROR: Failed to build gem native extension.
+
+C:/Ruby19/bin/ruby.exe extconf.rb
+checking for socket() in -lsocket... no
+checking for gethostbyname() in -lnsl... no
+checking for atan() in -lm... yes
+checking for inflate() in -lz... no
+checking for inflate() in -lzlib... no
+checking for inflate() in -lzlib1... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+--with-opt-dir
+--without-opt-dir
+--with-opt-include
+--without-opt-include=${opt-dir}/include
+--with-opt-lib
+--without-opt-lib=${opt-dir}/lib
+--with-make-prog
+--without-make-prog
+--srcdir=.
+--curdir
+--ruby=C:/Ruby19/bin/ruby
+--with-iconv-dir
+--without-iconv-dir
+--with-iconv-include
+--without-iconv-include=${iconv-dir}/include
+--with-iconv-lib
+--without-iconv-lib=${iconv-dir}/lib
+--with-zlib-dir
+--without-zlib-dir
+--with-zlib-include
+--without-zlib-include=${zlib-dir}/include
+--with-zlib-lib
+--without-zlib-lib=${zlib-dir}/lib
+--with-socketlib
+--without-socketlib
+--with-nsllib
+--without-nsllib
+--with-mlib
+--without-mlib
+--with-zlib
+--without-zlib
+--with-zliblib
+--without-zliblib
+--with-zlib1lib
+--without-zlib1lib
+extconf failure: need zlib
+
+
+Gem files will remain installed in C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-rub
+y-1.1.3 for inspection.
+Results logged to C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.3/ext/libxm
+l/gem_make.out
+</code>
+</pre>
+<p>The answer was on the <a href="http://libxml.rubyforge.org/rdoc/index.html">libxml</a> page:</p>
+<blockquote>If you are running Windows, make sure to install the Win32 RubyGem which             includes an already built binary file</blockquote>
+<p>So I <a href="http://rubyforge.org/frs/?group_id=494">downloaded</a> the <b>libxml-ruby-1.1.3-x86-mswin32-60.gem</b> and installed locally and all was well. (Note that under Ruby 1.8.6, rubygems is sensible enough to install this version, not so under 1.9.1)</p>
+<p>However, 1.9.1 still remains a pain in the arse on Windows, I think mainly because of gems.</p>
+<p>Trying to require 'roo' under 1.9.1 and 1.8.6 lead to an error because it couldn't find "libiconv-2.dll" and "libxml2-2.dll". Ok, fair enough, they are in the \libxml-ruby-1.1.3-x86-mswin32-60\lib directory, so it should be able to find them, but it is easier enough to copy them to the Ruby/bin directory. But then, under 1.9.1, I got an error about not being able to find "msvcrt-ruby18.dll", which as far as I can tell means the gem is not ready for Ruby 1.9.1.</p>
 <p>So I am back to Ruby 1.8.6 again. And all is well. Ruby 1.9.1 remains, once again, a distant dream on Windows.</p> 
