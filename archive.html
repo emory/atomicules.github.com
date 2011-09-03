@@ -3,7 +3,9 @@ layout: archive
 title: Archives
 ---
 <form name="filter" onClick="filterCategory();">
-	Show: <input type="radio" name="category" value="art" >Art</input> <input type="radio" name="category" value="code" >Code</input> <input type="radio" name="category" value="both" checked>All</input>
+	Show: <label for="artrad">Art</label><input type="radio" name="artrad" id="artrad" value="art" >
+	<label for="coderad">Code</label><input type="radio" name="coderad" id="coderad" value="code" >
+	<label for="allrad">All</label><input type="radio" name="allrad" id="allrad" value="both" checked>
 </form>
 {% comment %}Limitation of this is that need a post each month for it to differentiate between years, etc{% endcomment %}
 <ul>
@@ -25,29 +27,29 @@ title: Archives
 	<li class="{{ post.categories | join: ' ' }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time></a>
 			{% case post.type %} 
 				{% when 'text' %}
-					<span class="title">{{ post.title }}</span>{{ post.content }}
+					<span class="title">{{ post.title }}</span> {{ post.content | strip_html | truncate: 40 }}
 				{% when 'photo' %}
 					{% if post.photo contains 'flickr' %}{% comment %}Assumes always using the medium size for this to work{% endcomment %}
 						<img src="{{ post.photo | replace:'.jpg','_s.jpg' }}" alt="{{ post.title }}" style="margin-left: 12.5px; margin-top: 12.5px; "/>
 					{% else %}
-						<img src="{{ post.photo }}" alt="{{ post.title }}" width="100px" />
+						<img src="{{ post.photo }}" alt="{{ post.title }}" width="100" />
 					{% endif %}		
 				{% when 'quote' %}
-					<span class="title">"{{ post.quote }}"</span>{{ post.content }}
+					<span class="title">"{{ post.quote }}"</span> {{ post.content | strip_html | truncate: 40}}
 				{% when 'link' %}
-					<span class="title">&#187; {{ post.title }}</span>{{ post.content }}
+					<span class="title">&#187; {{ post.title }}</span> {{ post.content |strip_html | truncate: 40 }}
 				{% when 'chat' %}
 					{% comment %}Don't know{% endcomment %}
 				{% when 'audio' %}
 					{% comment %}Include a play icon{% endcomment %}
 				{% when 'video' %}
 					{% if post.video contains 'youtube' %}
-						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" />
+						<img src="http://img.youtube.com/vi/{{ post.video | remove:'http://www.youtube.com/watch?v=' }}/2.jpg" alt="{{ post.title }}" />
 					{% elsif post.video contains 'vimeo' %}
-						<img src="/images/play.png" id="vimeo-{{ post.video | remove:'http://vimeo.com/' }}" />
+						<img src="/images/play.png" id="vimeo-{{ post.video | remove:'http://vimeo.com/' }}" alt="{{ post.title }}" />
 						<script type="text/javascript">vimeoLoadingThumb({{ post.video | remove:'http://vimeo.com/' }});</script>
 					{% else %}
-						<img src="/images/play.png" width ="100px" />
+						<img src="/images/play.png" width ="100" alt="play" />
 					{% endif %}
 			{% endcase %}
 	</li>
