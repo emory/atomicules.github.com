@@ -27,7 +27,7 @@ title: Archives
 	<li class="{{ post.categories | join: ' ' }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time></a>
 			{% case post.type %} 
 				{% when 'text' %}
-					<span class="title">{{ post.title }}</span> {{ post.content | strip_html | truncate: 40 }}
+					<span class="title">{{ post.title }}</span> {{ post.content | strip_html | truncatewords: 10 }}
 				{% when 'photo' %}
 					{% if post.photo contains 'flickr' %}{% comment %}Assumes always using the medium size for this to work{% endcomment %}
 						<img src="{{ post.photo | replace:'.jpg','_s.jpg' }}" alt="{{ post.title }}" style="margin-left: 12.5px; margin-top: 12.5px; "/>
@@ -35,9 +35,9 @@ title: Archives
 						<img src="{{ post.photo }}" alt="{{ post.title }}" width="100" />
 					{% endif %}		
 				{% when 'quote' %}
-					<span class="title">"{{ post.quote }}"</span> {{ post.content | strip_html | truncate: 40}}
+					<span class="title">"{{ post.quote }}"</span> {{ post.content | strip_html | truncatewords: 10}}
 				{% when 'link' %}
-					<span class="title">&#187; {{ post.title }}</span> {{ post.content |strip_html | truncate: 40 }}
+					<span class="title">&#187; {{ post.title }}</span> {{ post.content |strip_html | truncatewords: 10 }}
 				{% when 'chat' %}
 					{% comment %}Don't know{% endcomment %}
 				{% when 'audio' %}
