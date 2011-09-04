@@ -15,11 +15,11 @@ What I liked with Google Reader was that I had a shared items page. Fever offers
 
 The first problem I had in doing an offline test was that my RSS file started with a blank line rather than the xml declaration. An easy fix, but took me a while to twig why jFeed was just doing nothing. After getting it working offline, the next problem I had was due to bloody [CORS](http://enable-cors.org/). My Fever installation is on a sub-domain (seemed like a sensible idea at the time!) and of course trying to load the feed would result in:
 
-> XMLHttpRequest cannot load <url> Origin <origin> is not allowed by Access-Control-Allow-Origin
+    XMLHttpRequest cannot load <url> Origin <origin> is not allowed by Access-Control-Allow-Origin
 
 According to the Enable CORS website that is easily fixed by adding the following into the [.htaccess file for Apache](http://enable-cors.org/#how-apache), but I could not get that to work and even started to wonder whether the [.htaccess file was being ignored](http://jappler.com/blog/archive/2008/10/22/how-to-test-htaccess-files), but it wasn't. What did (almost) work in the end was editing my Fever installation itself, the `index.php` page, and [setting the headers](http://enable-cors.org/#how-php) from there. I say almost, because I now got a slight different error:
 
-> XMLHttpRequest cannot load <url> Request header field x-requested-with is not allowed by Access-Control-Allow-Headers.
+    XMLHttpRequest cannot load <url> Request header field x-requested-with is not allowed by Access-Control-Allow-Headers.
 
 And oddly enough was solved by a [post on jQuery](https://forum.jquery.com/topic/jquery-1-5-latest-chrome-post-ajax-request-xmlhttprequest-cannot-load-url-request-header-field-x-requested-with-is-not-allowed-by-access-control-allow-headers) (even though the error is nothing to do with jQuery).So, adding the following into Fever's index.php (so this may get wiped out each time Fever is updated, but this doesn't seem to happen too often) did the trick:
 
