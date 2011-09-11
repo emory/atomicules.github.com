@@ -356,8 +356,10 @@ article#archive form {
 	color: #c00;
 }
 
-article#archive form input {
-	margin-left: 2.5em;
-	margin-right: 0.25em;
+article#archive form label {
+	margin-left: 0.75em;
+}
 
+article#archive form input {
+	margin-left: 0.25em;
 }

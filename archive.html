@@ -3,9 +3,9 @@ layout: archive
 title: Archives
 ---
 <form name="filter" onClick="filterCategory();">
-	Show: <label for="artrad">Art</label><input type="radio" name="artrad" id="artrad" value="art" >
-	<label for="coderad">Code</label><input type="radio" name="coderad" id="coderad" value="code" >
-	<label for="allrad">All</label><input type="radio" name="allrad" id="allrad" value="both" checked>
+	Show: <label>Art<input type="radio" name="category" id="artrad" value="art" ></label>
+	<label>Code<input type="radio" name="category" id="coderad" value="code" ></label>
+	<label>All<input type="radio" name="category" id="allrad" value="both" checked></label>
 </form>
 {% comment %}Limitation of this is that need a post each month for it to differentiate between years, etc{% endcomment %}
 <ul>
