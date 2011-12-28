@@ -1,3 +1,5 @@
+@import url("pygments.css") screen;
+
 /*whilst editing 
 body, section, aside, footer {
 	border: 1px dotted red;
@@ -42,7 +44,7 @@ header>form {
 	margin-top: 1em;
 }
 pre {
-	background-color: LightGrey;
+	/*background-color: LightGrey;*/
 	border: 1px solid;
 	font-size: 1em;
 	margin: 1em 0pt;
@@ -51,7 +53,6 @@ pre {
 	padding: 0.25em;
 	padding-bottom: 2em;
 }
-
 a {
 	outline: none;
 	color: #666;
