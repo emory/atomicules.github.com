@@ -4,7 +4,9 @@ type: video
 title: 
 video: http://www.youtube.com/watch?v=-IQKsrXDHrg
 categories: 
-- art
+
+- pictures
+- owtelse
 ---
 It's a sad fact of being old(er), that as much as I would like to listen to "New Music" (new to me would do for a start, doesn't have to be new full-stop) I am not John Peel and neither do people send me records to listen to, and nor do I have most of the day set aside for listening. In fact, my entire listening-to-music-time is limited to the dubious decision to listen whilst on my bike ride to and from work.
 

@@ -3,7 +3,8 @@ layout: page
 type: text
 title: No Balls
 categories: 
-- art
+
+- pictures
 ---
 It's fair to say I've been more frustrated than a teenage boy (no understatement) with the looooooong halt on my photography. Which is why I made a decision to try to [get back into drawing](http://www.flickr.com/photos/i-5-m/5505513095/in/photostream), so I was at least doing something creative (I want - and feel it is important - to have both creative and technical interests, even if I don't achieve it). 
 

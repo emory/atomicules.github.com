@@ -4,7 +4,7 @@ type: link
 title: Antipodean - Force directed graph layout in JavaScript
 link: http://dhotson.tumblr.com/post/520720950/force-directed-graph-layout-in-javascript
 categories: 
-- Code
+- code
 ---
 <blockquote>
 <p>I had a go at implementing a simple force directed graph layout algorithm in JavaScript.<br><a href="http://dhotson.github.com/springy.html">Try it out</a>.</p> <p><a href="http://dhotson.github.com/springy.html"><img src="http://media.tumblr.com/tumblr_l0v8oqP8Ve1qz7e23.png" style="border: none;"></a></p> <p>So what does this <a href="http://en.wikipedia.org/wiki/Force-based_algorithms">force directed</a> stuff mean anyway? Basically, it uses a physics simulation to figure out how to show the graph/network decently.</p> <p>In particular, it simulates a bunch of...</p></blockquote>

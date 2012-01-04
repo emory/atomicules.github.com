@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Aperture Collages
 categories: 
-- art
+
+- pictures
 ---
 I knew you could use [light tables to put together collages](http://www.flickr.com/photos/i-5-m/3933058647/in/set-72157622284301577/) and use print to pdf to output it. I then [learnt that the book tool is a bit better](http://www.flickr.com/groups/aperture_users/discuss/72157610731776828/?search=Collage) since you can constrain layout a bit better; fit to 3x2 and align/scale images, etc  - although it is a shame you can't have a one page book. But I still couldn't figure out getting a decent resolution image out: 
 

@@ -5,7 +5,8 @@ title:
 photo: http://farm5.static.flickr.com/4025/4369243760_90328626ac.jpg
 click-through: http://www.flickr.com/photos/i-5-m/4369243760/sizes/l/in/set-72157623338750353/
 categories: 
-- art
+
+- pictures
 ---
 Related to the previous post, I guess I should mention the rest of [my Kodachrome shots](http://www.flickr.com/photos/i-5-m/sets/72157623338750353/). With the demise of Kodachrome I knew I had to shoot one roll before it was gone for good, and realistically I knew I'd have to limit myself to just one roll. So I was determined to make it a good one. 
 

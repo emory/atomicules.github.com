@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Judge a Book by its Cover and a Band by its Name 
 categories: 
-- art
+
+- owtelse
 ---
 
 I've done quite well on listening to new stuff lately, even had a day working from home when I got to use Spotify to check out a few artists. However, it seems I'm overly influenced by a band's name or album name when it comes with picking what new music to try listening to. I should know better by now, as 90% of the stuff I try I think is pants however raving the reviews, but I guess you've got to filter things down somehow.

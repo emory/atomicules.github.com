@@ -5,7 +5,8 @@ title:
 photo: http://i5m.co.uk/images/tumblr_le91csJDFt1qzcagpo1_r1_500.jpg
 click-through: http://www.dwaynesphoto.com/
 categories: 
-- art
+
+- pictures
 ---
 <a href="http://www.dwaynesphoto.com/">The Last Roll of Kodachrome</a>. 
 

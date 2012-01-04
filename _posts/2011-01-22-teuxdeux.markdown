@@ -4,7 +4,8 @@ type: text
 title: TeuxDeux
 categories: 
 - code
-- art
+
+- owtelse
 ---
 The sheer number of todo and task management applications is evidence that no one has got this right yet. Well, that, and there is no consensus on the right way to do things. Even I can't make my mind up and I think the same is true for anyone that even briefly steps on the road to [Getting Things Done](http://en.wikipedia.org/wiki/Getting_Things_Done): basically you will ultimately spend more time reviewing, researching, trialling and swopping between tools that 'help' you get things done, that actually, you know, getting things done.
 

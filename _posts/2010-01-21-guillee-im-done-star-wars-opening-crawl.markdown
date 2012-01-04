@@ -6,7 +6,8 @@ photo: http://i5m.co.uk/images/tumblr_ktut57zrWg1qz4ueh.jpg
 click-through: http://www.gesteves.com/experiments/starwars.html
 categories: 
 - code
-- art
+
+- pictures
 ---
 <p><a href="http://blog.gesteves.com/post/261593774/im-done-star-wars-opening-crawl-using-only-html" class="tumblr_blog">guillee</a>:</p>
 

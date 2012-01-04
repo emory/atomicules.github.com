@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Recently Found and Listened
 categories: 
-- art
+
+- owtelse
 ---
 I was a bit worried that with the demise of my iPod Mini I'd struggle to keep up with listening to new music this year (and it feels like I've done quite well so far), but I am kind of [getting](http://rstat.us/updates/4e8986641bdece449f010f3d) [by](http://rstat.us/updates/4e8f7e601bdece7837012f02). Anyway...
 

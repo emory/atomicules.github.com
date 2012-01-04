@@ -5,7 +5,8 @@ title:
 photo: http://farm7.static.flickr.com/6145/5933275613_b197904528.jpg
 click-through: http://www.flickr.com/photos/kmtucker/5933275613/
 categories: 
-- art
+
+- pictures
 ---
 **[Classic](http://www.flickr.com/photos/kmtucker/5933275613/) by [Artful Magpie](http://www.flickr.com/photos/kmtucker/).**
 

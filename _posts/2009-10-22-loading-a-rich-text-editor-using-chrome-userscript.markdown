@@ -3,7 +3,7 @@ layout: page
 type: text
 title: Loading a Rich Text Editor using Chrome UserScript
 categories: 
-- Code
+- code
 ---
 Chrome UserScripting doesn't have the advantage of [UnsafeWindow](http://wiki.greasespot.net/UnsafeWindow) that GreaseMonkey does. From what I can tell UnsafeWindow seems to be the lazy way to do things, but which has the advantage of being FAR F*CKING easier, hence it's popularity.
 

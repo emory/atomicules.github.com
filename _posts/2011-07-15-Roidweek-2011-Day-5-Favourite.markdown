@@ -5,7 +5,8 @@ title:
 photo: http://farm7.static.flickr.com/6140/5940405562_8aa0bfe27e.jpg
 click-through: http://www.flickr.com/photos/ptobin/5940405562/
 categories: 
-- art
+
+- pictures
 ---
 **[shuttlecocks](http://www.flickr.com/photos/ptobin/5940405562/) by [ten minutes](http://www.flickr.com/photos/ptobin/).**
 

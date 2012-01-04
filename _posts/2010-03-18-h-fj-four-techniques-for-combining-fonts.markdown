@@ -4,7 +4,8 @@ type: link
 title: 'H&amp;FJ: Four Techniques for Combining Fonts'
 link: http://www.typography.com/email/2010_03/index_tw.htm
 categories: 
-- art
+
+- owtelse
 ---
 <p><a href="http://dhotson.tumblr.com/post/456769803/h-fj-four-techniques-for-combining-fonts" class="tumblr_blog">dhotson</a>:</p>
 

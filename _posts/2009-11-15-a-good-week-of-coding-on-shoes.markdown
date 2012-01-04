@@ -4,7 +4,6 @@ type: text
 title: A good week of coding on Shoes
 categories: 
 - code
-- shoes
 ---
 * Spurred on by [Mental implementing keyup/down on Linux](http://github.com/shoes/shoes/commit/8b1c84fa9cfef4a380a488212461d7e4abcf798d)... 
 * ...[I had a go on Windows](http://github.com/i5m/shoes/commits/keyup-keydown) and to my credit (and amazement) I did actually manage it, but was later [outdone by ashbb](http://github.com/ashbb/shoes/commit/4ab14247ebd5c1a600e8ac4944eccd12738f517f). But I tried, and that means learning, and finishing a week knowing more then I did at the start of the week is always a good thing (and sadly something I can't take that for granted nowadays). 

@@ -4,7 +4,9 @@ type: video
 title: 
 video: http://www.youtube.com/watch?v=MvPnM2Q1nwU
 categories: 
-- art
+
+- pictures
+- owtelse
 ---
 <p><a href="http://dhotson.tumblr.com/post/1227446522/incredible-o-blackalicious-alphabet" class="tumblr_blog">dhotson</a>:</p>
 

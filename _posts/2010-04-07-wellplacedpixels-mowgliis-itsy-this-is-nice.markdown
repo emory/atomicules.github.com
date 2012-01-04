@@ -5,7 +5,7 @@ title:
 photo: http://i5m.co.uk/images/tumblr_kztsptKzZO1qazfelo1_400.png
 click-through: 
 categories: 
-- art
+
 - code
 ---
 <p><a href="http://wellplacedpixels.com/post/472982590/mowgliis-itsy" class="tumblr_blog">wellplacedpixels</a>:</p>

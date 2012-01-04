@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Don't Wait For Me
 categories: 
-- art
+
+- owtelse
 ---
 It seems like I've been waiting ages (hang on, it is ages! About three years for both!) for the new albums to come out from The Pigeon Detectives and The Wombats and so I was very eager to listen to them both (but not so eager to write about them it seems...). But on first listen I was shocked to find them both disappointing.
 

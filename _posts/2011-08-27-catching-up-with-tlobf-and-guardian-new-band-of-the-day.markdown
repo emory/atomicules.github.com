@@ -4,7 +4,8 @@ type: text
 title: Catching up with TLOBF and Guardian New Band of the Day
 date: 2011-08-27
 categories: 
-- art
+
+- owtelse
 ---
 I'd fallen a bit behind (and have again, already, but let's not start) with checking through saved items from my TLOBF and Guardian's New Band of the Day feeds, but managed to make some progress this month with checking out what seemed like it might be interesting...
 

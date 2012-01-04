@@ -4,7 +4,8 @@ type: link
 title: Pavement Reunion
 link: http://pitchfork.com/news/36505-holy-shit-pavement-reunion-is-real/
 categories: 
-- art
+
+- owtelse
 ---
 Ok, so a bit behind with this post. But I just wanted a chance to say: I saw [Pavement back in 1995 at the Brixton Academy](http://ragemagazine.co.uk/ISSUE3/INDLIV03.PDF) (link to PDF review from [Rage magazine](http://ragemagazine.co.uk/)).
 

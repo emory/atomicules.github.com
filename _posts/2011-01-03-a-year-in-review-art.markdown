@@ -3,7 +3,9 @@ layout: page
 type: text
 title: A Year in Review... Art
 categories: 
-- art
+
+- pictures
+- owtelse
 ---
 ## Photography
 

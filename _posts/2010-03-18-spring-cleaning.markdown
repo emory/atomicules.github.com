@@ -5,7 +5,8 @@ title: Spring Cleaning
 categories: 
 - code
 - site
-- art
+
+- pictures
 ---
 As I mentioned in my [last post](http://i5m.co.uk/post/436804510/google-buzz-is-was-anyway-perfectly-private-enough), I've taken the opportunity to use Google Buzz to clean-up my website. I've removed the side bar that featured Twitter, Delicious, Google Reader, Last.fm and Flickr widgets and instead have replaced with a simple link to my Buzz profile page. Makes for a much cleaner site. The only thing Buzz doesn't do yet is pull in info from Last.fm, but I wasn't keeping the sidebar around just for that. And hopefully Last.fm will make some changes to their site so it works with Buzz.
 

@@ -4,7 +4,7 @@ type: link
 title: Tumblephone - Instant Mobile version of my site 
 link: http://tumblephone.com/i5m
 categories: 
-- Code
+- code
 ---
 This is ace. I was wondering if anyone had done any mobile themes for Tumblr, and wondering if it was possible to serve up different themes (I doubt it?), but then problem solved.
 

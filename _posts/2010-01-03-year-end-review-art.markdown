@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Year End Review - Art
 categories: 
-- art
+
+- pictures
 ---
 Well, I say art, but at the moment it's just photography. I seem to have stopped writing so much. And I think that's about as arty as I'll get.  
 

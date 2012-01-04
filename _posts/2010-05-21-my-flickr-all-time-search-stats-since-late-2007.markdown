@@ -6,7 +6,8 @@ photo: http://i5m.co.uk/images/tumblr_l2micbgGOU1qzcagpo1_r1_500.png
 click-through: http://flickr.vispillo.org/output-authed/1274097387973.html
 categories: 
 - code
-- art
+
+- pictures
 ---
 My Flickr all time search stats, since late 2007, click on the image to get more info.
 

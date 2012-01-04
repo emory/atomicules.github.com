@@ -5,6 +5,5 @@ title: Shoes policeman builds for Linux
 link: http://twitter.com/ashbb/status/13735045248
 categories: 
 - code
-- shoes
 ---
 [ashbb](http://ashbb.github.com/) is now knocking out [recent Shoes builds](http://www.rin-shun.com/shoes/index.html) for Linux as well as Windows. That just leaves us with OSX Snow Leopard to go...

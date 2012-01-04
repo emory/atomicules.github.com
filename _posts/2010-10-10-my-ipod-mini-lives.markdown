@@ -3,7 +3,8 @@ layout: page
 type: text
 title: My iPod Mini Lives
 categories: 
-- Art
+
+- owtelse
 ---
 One of mine and the missus' best drunken rambling ideas ever was that, rather than watch some averagely funny film we've seen umpteen times before, we should spend Saturday nights listening to some music - each of us picking something new for us to listen to. Unfortunately like many a good drunken idea it has never actually happened and now we just end up watching x-factor with the girls. Such is life. 
 

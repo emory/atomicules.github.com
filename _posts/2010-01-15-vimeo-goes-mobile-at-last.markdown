@@ -4,7 +4,8 @@ type: link
 title: Vimeo goes mobile (at last!)
 link: http://www.vimeo.com/blog:265
 categories: 
-- art
+
+- pictures
 ---
 Never been a big fan of YouTube and have always preferred Vimeo for hosting and watching video creations. That was until my main computing platform became an iPod and I was locked out of Vimeo. I'm glad they've finally sorted mobile (non-flash) access out. 
 

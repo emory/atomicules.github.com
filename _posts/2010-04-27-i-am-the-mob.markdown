@@ -3,7 +3,8 @@ layout: page
 type: text
 title: I Am the Mob!
 categories: 
-- art
+
+- owtelse
 ---
 [Ellie Goulding inspired](https://twitter.com/i5m/status/11603631951) I decided to dig out my Catatonia stuff and give it another listen. It must have been _awhile_ since I'd not a single mp3 in iTunes, having never ripped any from my CDs (of which I've a few).
 

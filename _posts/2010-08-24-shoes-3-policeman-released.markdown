@@ -3,8 +3,7 @@ layout: page
 type: text
 title: Shoes 3 Policeman released!
 categories: 
-- Code
-- shoes
+- code
 ---
 <p><a href="http://whyday.tumblr.com/post/979051903/shoes-3-policeman-0-r1514-released" class="tumblr_blog">whyday</a>:</p>
 

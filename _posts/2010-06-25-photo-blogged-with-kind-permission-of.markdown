@@ -5,7 +5,8 @@ title:
 photo: http://farm3.static.flickr.com/2723/4109028367_d9d6549d7c.jpg
 click-through: http://www.flickr.com/photos/iri5/4109028367/in/set-72157611954107572/
 categories: 
-- art
+
+- pictures
 ---
 _Photo blogged with kind permission of [iri5](http://www.flickr.com/photos/iri5/) (and on that note if you want to reblog, it really wouldn't do any harm to ask her permission, she seems very nice)._
 

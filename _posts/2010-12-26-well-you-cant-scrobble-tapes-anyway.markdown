@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Well, you can't scrobble tapes anyway
 categories: 
-- Art
+
+- owtelse
 ---
 Last.fm seems to have decided to stop scrobbling anything for me, probably something to do with the knackered battery in my iPod Mini, but since the last post I've been listening to these (honest, guv):
 

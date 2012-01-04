@@ -4,7 +4,8 @@ type: link
 title: 31.536.000 SECONDS
 link: http://www.the-impossible-project.com/resources/projects_downloads/text/Press%20Kit%2022%20March.pdf
 categories: 
-- art
+
+- pictures
 ---
 (Link to PDF Press Release).
 

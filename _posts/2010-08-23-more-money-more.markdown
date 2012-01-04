@@ -5,7 +5,8 @@ title:
 photo: http://farm5.static.flickr.com/4095/4901175581_6515a8b235.jpg
 click-through: http://www.flickr.com/photos/nationalarchives/4901175581/
 categories: 
-- art
+
+- pictures
 ---
 **[More Money, More Fun](http://www.flickr.com/photos/nationalarchives/4901175581/) by [The National Archives](http://www.flickr.com/photos/nationalarchives/).**
 

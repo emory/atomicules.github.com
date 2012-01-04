@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Ditching Spreadsheets for Budgeting
 categories: 
-- Code
+- code
+- owtelse
 ---
 I've been doing monthly budgets on spreadsheets since I finished Uni, started work and finally became financially responsible for myself (sorry it took so long dad!). I first starting using Appleworks, then I think I might have moved to NeoOffice for a bit, and then for the last few years I've been using Google Docs. The spreadsheet itself has had a few tweaks over the years, but there's nothing mindblowing about it: I just wanted to make it as quick as possible to get my bank statements into it (more on that later), have some basic forecasting of how much cash I've left until payday, and provide some basic tracking of what categories money has been spent on (e.g. Shopping, having my nails done, etc). 
 

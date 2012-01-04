@@ -5,7 +5,8 @@ title:
 photo: http://i5m.co.uk/images/tumblr_kr2zlvkk9k1qz7eo6o1_500.jpg
 click-through: http://www.post-gazette.com/pg/07252/815585-109.stm
 categories: 
-- Art
+
+- bicycles
 ---
 <p><a href="http://dhotson.tumblr.com/post/205713601/the-next-page-the-limberness-of-the-fixed-gear">dhotson</a>:</p>
 

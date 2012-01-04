@@ -4,7 +4,8 @@ type: link
 title: Not beautiful, but definitely not boring.  
 link: http://www.myspace.com/dimblebyandcapper
 categories: 
-- Art
+
+- owtelse
 ---
 "Not beautiful" maybe being a bit harsh, but it makes for a better title. She's just not my cup of tea. Listening to the Introducing podcast has paid off again:
 

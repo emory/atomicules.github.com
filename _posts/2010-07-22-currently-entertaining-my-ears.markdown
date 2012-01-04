@@ -3,7 +3,8 @@ layout: page
 type: text
 title: Currently Entertaining My Ears
 categories: 
-- art
+
+- owtelse
 ---
 I need to get my life so it's single piece flow, but in the meantime I seem to be working in batches. And this batch is music.
 

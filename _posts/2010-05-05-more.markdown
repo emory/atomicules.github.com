@@ -5,6 +5,7 @@ title:
 photo: http://farm4.static.flickr.com/3323/4581934757_8b00fd9fa8.jpg
 click-through: http://www.flickr.com/photos/i-5-m/4581934757/
 categories: 
-- art
+
+- pictures
 ---
 More [Roidweek](http://www.flickr.com/groups/polaroidweek2010/) fun. 

@@ -5,8 +5,8 @@ title:
 photo: http://i5m.co.uk/images/tumblr_lcq73tQNS31qazfel.jpg
 click-through: 
 categories: 
-- Art
-- Code
+
+- code
 ---
 <p><a href="http://wellplacedpixels.com/post/2054364619/silvio-rizzis-reeder-for-mac" class="tumblr_blog">wellplacedpixels</a>:</p>
 
