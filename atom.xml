@@ -4,22 +4,22 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>i5m</title>
- <link href="http://i5m.co.uk/atom.xml" rel="self"/>
- <link href="http://i5m.co.uk/"/>
+ <title>atomicules</title>
+ <link href="http://atomicules.co.uk/atom.xml" rel="self"/>
+ <link href="http://atomicules.co.uk/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://i5m.co.uk/</id>
+ <id>http://atomicules.co.uk/</id>
  <author>
-   <name>i5m</name>
-   <email>i5ivem@gmail.com</email>
+   <name>atomicules</name>
+   <email>atomicules@lavabit.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://i5m.co.uk{{ post.url }}"/>
+   <link href="http://atomicules.co.uk{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://i5m.co.uk{{ post.id }}</id>
+   <id>http://atomicules.co.uk{{ post.id }}</id>
    <content type="html">
 		{% case post.type %} 
 			{% when 'text' %}

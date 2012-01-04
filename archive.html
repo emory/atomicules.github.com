@@ -3,9 +3,12 @@ layout: archive
 title: Archives
 ---
 <form name="filter" onClick="filterCategory();">
-	Show: <label>Art<input type="radio" name="category" id="artrad" value="art" ></label>
+	Show: <label>All<input type="radio" name="category" id="allrad" value="all" checked></label>
+	<label>Pictures<input type="radio" name="category" id="picturesrad" value="pictures" ></label>
 	<label>Code<input type="radio" name="category" id="coderad" value="code" ></label>
-	<label>All<input type="radio" name="category" id="allrad" value="both" checked></label>
+	<label>Bicycles<input type="radio" name="category" id="bicyclesrad" value="bicycles" ></label>
+	<label>Site<input type="radio" name="category" id="siterad" value="site" ></label>
+	<label>Owt Else<input type="radio" name="category" id="owtelserad" value="owtelse" ></label>
 </form>
 {% comment %}Limitation of this is that need a post each month for it to differentiate between years, etc{% endcomment %}
 <ul>
@@ -27,7 +30,7 @@ title: Archives
 	<li class="{{ post.categories | join: ' ' }}" ><a href="{{ post.url }}" title="{{ post.title }}"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d" }}</time></a>
 			{% case post.type %} 
 				{% when 'text' %}
-					<span class="title">{{ post.title }}</span> {{ post.content | strip_html | truncatewords: 10 }}
+					<span class="title">{{ post.title }}</span> <span class="content">{{ post.content | strip_html | truncatewords: 10 }}</span>
 				{% when 'photo' %}
 					{% if post.photo contains 'flickr' %}{% comment %}Assumes always using the medium size for this to work{% endcomment %}
 						<img src="{{ post.photo | replace:'.jpg','_s.jpg' }}" alt="{{ post.title }}" style="margin-left: 12.5px; margin-top: 12.5px; "/>
@@ -35,9 +38,9 @@ title: Archives
 						<img src="{{ post.photo }}" alt="{{ post.title }}" width="100" />
 					{% endif %}		
 				{% when 'quote' %}
-					<span class="title">"{{ post.quote }}"</span> {{ post.content | strip_html | truncatewords: 10}}
+					<span class="title">"{{ post.quote }}"</span> <span class="content">{{ post.content | strip_html | truncatewords: 10}}</span>
 				{% when 'link' %}
-					<span class="title">&#187; {{ post.title }}</span> {{ post.content |strip_html | truncatewords: 10 }}
+					<span class="title">&#187; {{ post.title }}</span> <span class="content">{{ post.content |strip_html | truncatewords: 10 }}</span>
 				{% when 'chat' %}
 					{% comment %}Don't know{% endcomment %}
 				{% when 'audio' %}

@@ -1,4 +1,5 @@
 @import url("pygments.css") screen;
+@import url(http://fonts.googleapis.com/css?family=Damion);
 
 /*whilst editing 
 body, section, aside, footer {
@@ -16,32 +17,93 @@ footer,header,hgroup,menu,nav,section {
 
 /* Main Layout */
 html {
-	margin: 3em;
+	margin-left: 7em;
+	margin-right: 7em;
 	background: #EEE;  
 
 }
 body {
 	font: 0.8em 'Lucida Grande', Gill Sans MT, sans-serif;
 	margin: 0px;
-	padding: 1em;
+	padding: 0px;
 	background: #fff;
 	min-width: 53em; /*fits tagline and photos*/
 }
 section {
-	padding: 1em;
-	margin-left: 25%;
-	max-width: 50em;
+	padding: 1em 3em 1em 3em;
+	margin-left: auto;
+	margin-right: auto;
+	/* max-width: 50em; */ /* Remove this as prevents archive floats from being usefully resized, etc */
 }
-header>hgroup>h2, header>nav {
-	float: right;			
+header>hgroup {
+	width: 100%;
 	background: #fff;
 	padding: 0px;
 	margin: 0px;			
-	margin-top: -6em;
 	text-align: right;
-}	
+	background-image: url('../images/atomicules_back_grey.png');
+	background-repeat: repeat;
+}
+header>hgroup h1 {
+	font-family: 'Damion', cursive;
+	font-size: 8em;
+	color: #fff;
+}
+header>hgroup h2, header>hgroup h1 a, header>hgroup h2 a, header nav a, footer, footer a {
+	color: #fff;
+}
+header>hgroup h1, header>hgroup h2, header nav ul {
+	padding-right: 10px;
+}
+header>hgroup h1 a:hover, header>hgroup h2 a:hover, header nav a:hover, footer a:hover {
+	text-shadow: 1px 0px 20px white;
+}
 header>form {
 	margin-top: 1em;
+}
+/* These next few in pixels since search box is defined in pixels */
+header nav { 
+	width: 100%;
+	background: #bd3c36;
+	text-align: right;
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+header nav ul {
+	margin-right: 0px;
+}
+
+header nav li {
+	display: inline;
+	list-style: none;
+	margin-left: 0.5em;
+}
+header iframe {
+	position: relative;
+	top: -38px;
+	padding-left: 10px;
+}
+/* end pixels */
+/* Body Footer styles */
+footer {
+	display: block;
+	background: #bd3c36;
+	font-size: 1.0em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	clear: both;
+}
+footer a {
+	text-decoration: underline;
+}
+footer img {
+	vertical-align: text-top;
 }
 pre {
 	/*background-color: LightGrey;*/
@@ -72,26 +134,10 @@ ol {
 	margin-left: 0em !important;
 	margin-bottom: 1em !important;
 }
-
-h1 {
-	font: 4em 'Lucida Grande', Gill Sans MT, sans-serif;			
-	color: #fff;
-}
-h1#avatar {			
-	background-image: url('http://i5m.github.com/images/avatar.png');
-	background-repeat: no-repeat;
-	margin-bottom: 0.25em;
-}
 h1, h1 a {
 	text-decoration: none !important;
 }
-h1#avatar a {
-	position: relative;
-	left: 25px;
-	top: 30px;
-	color: #FFF;
-}
-h1 a:hover {
+h1 a:hover, h2 a:hover, nav a:hover, footer a:hover {
 	color: #444;
 }
 article {
@@ -254,55 +300,15 @@ a.commentlink {
 a.commentlink:hover {
 	color: #444444;
 }
-#links {
-	font-size: 1.1em;
-	margin-bottom: 1.0em;
-	line-height: 2.0em;
-}
-#links ul {
-	padding-left: 0px;
-	margin-left: 0px;
-}
 
-#links li {
-	display: inline;
-	list-style: none;
-	margin-right: 0.5em;
-}
-#links li a {
-	padding-bottom: 0.2em;
-}
 			
 #dsq-comments {
 	margin-top: 0px;
 	padding-top: 0px;
 }
 
-/* Body Footer styles */
-footer {
-	display: block;
-	color: #444444;
-	font-size: 1.0em;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	margin-bottom: -4.0em;
-	width: 100%;
-	padding-top: 2.0em;
-	clear: both;
-}
-footer a {
-	text-decoration: underline;
-}
-#avatar {
-	height: 128px; width: 128px;
-	border: 1px; border-color: transparent;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	-opera-border-radius:15px;
-	border-radius:15px;
-	text-decoration:none;
-}
+
+
 		
 /*Archive page display */
 
@@ -330,12 +336,12 @@ article#archive li>ul li time {
 
 article#archive li>ul li:hover time {
 	display: block;
-	font-size: 8em;
+	font-size: 7.5em;
 	top: 0px;
 	left: 0px;
 }
 
-article#archive li>ul li:hover span, article#archive li>ul li:hover img, article#archive li>ul li:hover p{
+article#archive li>ul li:hover span, article#archive li>ul li:hover img {
 	display: none;
 }
 

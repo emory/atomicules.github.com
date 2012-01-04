@@ -2,14 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>i5m - {{ page.title }}</title>
+		<title>atomicules - {{ page.title }}</title>
 		<link rel="shortcut icon" href="/images/favicon.png" />
 		<link rel="alternate" type="application/atom+xml" href="/atom.xml" />
-		<link href="/styles/i5m.css" media="screen" rel="Stylesheet" title="i5m" type="text/css" />
+		<link href="/styles/atomicules.css" media="screen" rel="Stylesheet" title="atomicules" type="text/css" />
 		<!-- Theme originally based on Pro White 1.0 (http://customthemes.tumblr.com/post/70461310/prowhite-by-josh-jenkins-based-on-black-and-blue), but it has come a long way since then - this blog is no longer on Tumblr for starters! -->
 		<link rel="openid.server" href="http://www.myopenid.com/server"> 
 		<link rel="openid.delegate" href="http://i5m.myopenid.com/"> 
-		<link rel="me" type="text/html" href="http://www.google.com/profiles/i5ivem" /> 
 		<script type="text/javascript" >
 			//From http://stackoverflow.com/questions/1361149/get-img-thumbnails-from-vimeo/4285098#4285098
 			function vimeoLoadingThumb(id){    
@@ -28,35 +27,73 @@
 			}
 
 			function showCategory(category) {
-				var site = document.getElementsByClassName("site");
+				var pictures = document.getElementsByClassName("pictures");
 				var code = document.getElementsByClassName("code");
-				var art = document.getElementsByClassName("art");
+				var bicycles = document.getElementsByClassName("bicycles");
+				var site = document.getElementsByClassName("site");
+				var owtelse = document.getElementsByClassName("owtelse");
 				switch (category) {
-					case "art":
-						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+					case "pictures":
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = ''};
 						for (var i = 0; i < code.length; i++) {code[i].style.display = 'none'};
-						for (var i = 0; i < art.length; i++) {art[i].style.display = ''};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = 'none'};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = 'none'};
 						break;
 					case "code":
-						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
-						for (var i = 0; i < art.length; i++) {art[i].style.display = 'none'};
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = 'none'};
 						for (var i = 0; i < code.length; i++) {code[i].style.display = ''};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = 'none'};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = 'none'};
+						break;
+					case "bicycles":
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = 'none'};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = 'none'};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = ''};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = 'none'};
+						break;
+					case "site":
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = 'none'};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = 'none'};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = 'none'};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = ''};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = 'none'};
+						break;
+					case "owtelse":
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = 'none'};
+						for (var i = 0; i < code.length; i++) {code[i].style.display = 'none'};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = 'none'};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = 'none'};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = ''};
 						break;
 					case "all":
-						for (var i = 0; i < site.length; i++) {site[i].style.display = ''};
-						for (var i = 0; i < art.length; i++) {art[i].style.display = ''};
+						for (var i = 0; i < pictures.length; i++) {pictures[i].style.display = ''};
 						for (var i = 0; i < code.length; i++) {code[i].style.display = ''};
+						for (var i = 0; i < bicycles.length; i++) {bicycles[i].style.display = ''};
+						for (var i = 0; i < site.length; i++) {site[i].style.display = ''};
+						for (var i = 0; i < owtelse.length; i++) {owtelse[i].style.display = ''};
 				}
 			}
 
 			function filterCategory() {
 				if (document.forms.filter.category[0].checked) {
-					category = "art"
+					category = "pictures"
 				}
 				if (document.forms.filter.category[1].checked) {
 					category = "code"
 				}
 				if (document.forms.filter.category[2].checked) {
+					category = "bicycles"
+				}
+				if (document.forms.filter.category[3].checked) {
+					category = "site"
+				}
+				if (document.forms.filter.category[4].checked) {
+					category = "owtelse"
+				}
+				if (document.forms.filter.category[5].checked) {
 					category = "all"
 				}
 				showCategory(category)
@@ -68,16 +105,16 @@
 	<body>
 		<header>
 			<hgroup>
-				<h1 id="avatar"><a href="/">i5m</a></h1>
-				<h2>Probably <a href="/art.html">art</a> + <a href="/code.html">code</a> in the loosest sense of those words.</h2>
+				<h1><a href="/">atomicules</a></h1>
+				<h2>Pertaining to: making <a href="/pictures.html">pictures</a>, writing <a href="/code.html">code</a> and riding <a href="/bicycles.html">bicycles</a>.</h2>
 			</hgroup>
-			<nav id="links">
+			<nav>
 				<ul>
 					<li><a href="/archive.html">Archive</a></li>
 					<li><a href="/fever.html">Fever</a></li>
 					<li><a href="/elsewhere.html">Elsewhere</a></li>
 				</ul>
-			</nav>		
-			<iframe src="http://duckduckgo.com/search.html?width=73&amp;site=i5m.co.uk" style="overflow:hidden;margin:0;padding:0;width:121px;height:38px;border-style:none;" ></iframe>
+			</nav>
+			<iframe src="http://duckduckgo.com/search.html?width=200&amp;site=atomicules.co.uk&amp;bgcolor=bd3c36" style="overflow:hidden;margin:0;padding:0px 0px 0px 2px;width:248px;height:38px;border-style:none;" ></iframe>
 		</header>
 		<section>		
