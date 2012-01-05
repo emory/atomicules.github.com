@@ -1,0 +1,23 @@
+---
+layout: page
+type: text
+title: Wide Boy
+categories: 
+- bicycles
+---
+Although the current mild weather is lulling me into a false sense of security (I'm sure more snow will be here soon), I can't but help turn thoughts towards spring and the day I can take off my winter tyres.
+
+However, I won't be racing back to skinny slicks. Although the 23mm tyres I had on last summer and autumn were nippy on the road (I [overtook someone on a Boardman Team bike](http://twitter.com/#!/atomicules/status/21042728881)), riding my wider (35c) winter tyres has taught me a valuable lesson: wider tyres = less broken spokes. 
+
+I have to face facts, and that is, the first/last five miles of my commute are on terrible roads and riding rock hard, thin tyres just excerbates the broken spoke issue. And quite frankly I'm fed up of fixing them. It's no good getting home five minutes quicker if I'm going to have to spend half-an-hour to an hour replacing broken spokes. 
+
+So I'm looking for something in the 30c to 32c size range. Not too wide, not too skinny (I've had broken spokes with 28s before so I consider them too skinny). 
+
+And to try to keep the options down I'm going to stick to Schwalbe:
+
+* [CX Comp](http://www.schwalbe.co.uk/c2-1087-schwalbe-tires-cx-comp.html),  30c, 430g.
+* [Marathon](http://www.schwalbe.co.uk/c2-1073-schwalbe-tires-marathon.html), 32c, 580g.
+* [Marathon Plus](http://www.schwalbe.co.uk/c2-1071-schwalbe-tires-marathon-plus.html), 32c, 800g.
+* [Marathon Racer](http://www.schwalbe.co.uk/c2-1070-schwalbe-tires-marathon-racer.html), 30c, 325g.
+
+Realistically I'll probably go with the CX Comp as they are cheap and fairly lightweight, although I'd really like to get the Marathon Racer.
