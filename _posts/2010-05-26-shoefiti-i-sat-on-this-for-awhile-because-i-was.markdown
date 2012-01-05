@@ -2,12 +2,12 @@
 layout: page
 type: photo
 title: 
-photo: http://i5m.co.uk/images/tumblr_l315r7ufnU1qzcagp.jpg
-click-through: http://github.com/i5m/shoefiti
+photo: http://atomicules.co.uk/images/tumblr_l315r7ufnU1qzcagp.jpg
+click-through: http://github.com/atomicules/shoefiti
 categories: 
 - code
 ---
-[Shoefiti](http://github.com/i5m/shoefiti)
+[Shoefiti](http://github.com/atomicules/shoefiti)
 
 I sat on this for awhile because I was hoping to make it better before I 'released' it, but I've come across two major roadblocks: *1)* I'm not very good *2)* I don't have a lot of time. So I decided I might as well just make it public now.
 

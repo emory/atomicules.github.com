@@ -47,4 +47,4 @@ Hey, look at that, Freestylers at the top again. That is probably due to having 
 
 ## Literature
 
-Reading. I need to read some more books. I read [one thing via the Kindle app](http://i5m.co.uk/post/345897482/kindle-books) right at the start of the year. Depressing. 
+Reading. I need to read some more books. I read [one thing via the Kindle app](http://atomicules.co.uk/2010/01/21/kindle-books.html) right at the start of the year. Depressing. 

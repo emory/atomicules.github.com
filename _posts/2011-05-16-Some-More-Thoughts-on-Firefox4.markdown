@@ -5,7 +5,7 @@ title: Some More Thoughts on Firefox 4 and TenFourFox
 categories: 
 - code
 ---
-As a result of my [FormData frustrations](http://i5m.co.uk/code/2011/05/07/Pinboard-Save-Tabs-and-Camino.html) I thought I'd give TenFourFox a proper whirl and at the same time try FireFox 4 as my default on Windows (instead of Chrome) so I could also try out the synchronisation service.
+As a result of my [FormData frustrations](http://atomicules.co.uk/2011/05/07/Pinboard-Save-Tabs-and-Camino.html) I thought I'd give TenFourFox a proper whirl and at the same time try FireFox 4 as my default on Windows (instead of Chrome) so I could also try out the synchronisation service.
 
 ## Firefox 4 (in general)
 

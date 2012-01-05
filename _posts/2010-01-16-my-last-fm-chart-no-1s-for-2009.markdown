@@ -12,4 +12,4 @@ Forgot to put this under my year in review post. [My Last.fm chart](http://www.l
 * Top Album: Ladyhawke - Ladyhawke 
 * Top Song: Magic - Ladyhawke
 
-Ladyhawke is a good album. So many good tracks. [I said that](http://i5m.co.uk/post/116758292/right-lets-try-out-some-reblogging-and-then) at the time. Freestylers are still way ahead and I suspect it will stay that way for a while. There is nothing else I enjoy listening to more than the Freestylers. It's just not getting old for me.
+Ladyhawke is a good album. So many good tracks. [I said that](http://atomicules.co.uk/2009/06/02/right-lets-try-out-some-reblogging-and-then.html) at the time. Freestylers are still way ahead and I suspect it will stay that way for a while. There is nothing else I enjoy listening to more than the Freestylers. It's just not getting old for me.

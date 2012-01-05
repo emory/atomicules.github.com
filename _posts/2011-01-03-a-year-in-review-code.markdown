@@ -9,13 +9,13 @@ I started off the year quite involved with [Shoes](http://blog.shoesrb.com/), bu
 
 At work, in early 2010, I had a little side project going that was a Shoes app. So I managed to spend quite a bit of time (almost) legitimately tinkering with Shoes. But that wound up earlier this year, plus my job role changed and I lost a lot of "free" time. So not a lot of Shoes anymore, but Shoes is in very capable hands, far more capable than mine - I couldn't keep up with the pace of development and have never been able to get Shoes 3 to build on OSX PPC (and that's another thing, lagging behind on the technology front doesn't help: Windows XP at work and OSX PPC at home). 
 
-The best I managed outside of work was two little apps: [Shoeset](http://i5m.co.uk/post/484221765/shoeset) and [Shoefiti](http://i5m.co.uk/post/634515577/shoefiti-i-sat-on-this-for-awhile-because-i-was)
+The best I managed outside of work was two little apps: [Shoeset](http://atomicules.co.uk/2010/03/30/shoeset.html) and [Shoefiti](http://atomicules.co.uk/2010/05/26/shoefiti-i-sat-on-this-for-awhile-because-i-was.html)
 
 I have still managed to do a fair bit of coding at work (the only problem of course is it's difficult to blog about it since it's at work). I just can't help myself from tinkering. Considering the size of the organisation, I thought for a long time that I couldn't be the only geek and there must be others like me that, for example, couldn't stand Internet Explorer and would write userscripts to fix intranet applications for Chrome and Firefox, but now I'm starting to think I am a bit unique (and not necessarily in a good way; it's not that I'm more clever, rather that I can't just "do as I'm told" - I think it's just a sign that ultimately I need to work for myself if I am to ever do anything truly challenging and interesting). So this year has seen...
 
 a lot of:
 
-* JavaScript (custom "plugins" for web pages, user scripts and [extensions for Chrome and Firefox](http://i5m.co.uk/post/1209798503/some-notes-on-developing-extensions-for-chrome-vs))
+* JavaScript (custom "plugins" for web pages, user scripts and [extensions for Chrome and Firefox](http://atomicules.co.uk/2010/09/29/some-notes-on-developing-extensions-for-chrome-vs.html))
 
 quite a bit of:
 
