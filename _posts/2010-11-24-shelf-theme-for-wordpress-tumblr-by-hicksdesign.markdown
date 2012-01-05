@@ -1,7 +1,7 @@
 ---
 layout: page
 type: link
-title: Shelf theme for WordPress & Tumblr by Hicksdesign
+title: Shelf theme for WordPress &amp; Tumblr by Hicksdesign
 link: http://hicksdesign.co.uk/journal/shelf-now-in-stock
 categories: 
 
