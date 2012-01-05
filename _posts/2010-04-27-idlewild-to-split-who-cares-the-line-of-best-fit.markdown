@@ -2,7 +2,7 @@
 layout: page
 type: link
 title: Idlewild to split… Who cares? | The Line Of Best Fit
-link: http://www.thelineofbestfit.com/2010/04/idlewild-to-split-who-cares/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+TheLineOfBestFit+%28The+Line+Of+Best+Fit%29
+link: http://www.thelineofbestfit.com/2010/04/idlewild-to-split-who-cares/
 categories: 
 
 - owtelse
