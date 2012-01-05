@@ -15,9 +15,9 @@ Uses the excellent [Flickraw](http://github.com/hanklords/flickraw#) gem and thi
 
 Note that in order not to have [too many queries per second](http://developer.yahoo.com/flickr/), the app pauses for 1 second on each photo in the set (So probably no good for people with huge sets, but what can you do...). Probably full of bugs (a few fixed in v0.0.2), but it was just for fun (I never profess to know what I'm doing).
 
-Since it really is quite simple, there's nothing that interesting about the code. Although this was the first time I'd used threading in Shoes: there is no single flickr api command to get the tags for all photos in a set so it's necessary to iterate through each photo and get the tags, this is done in a separate thread so that a progress bar can be updated outside of the thread. The problem with having this threaded is that it was possible for the user to set of multiple queries at the same time, so (in v0.0.2) I had to put in a [check to see whether a query was already running](http://github.com/i5m/shoeset/commit/2a1778f05b55911cc2931e772f480ab8a3c58454).
+Since it really is quite simple, there's nothing that interesting about the code. Although this was the first time I'd used threading in Shoes: there is no single flickr api command to get the tags for all photos in a set so it's necessary to iterate through each photo and get the tags, this is done in a separate thread so that a progress bar can be updated outside of the thread. The problem with having this threaded is that it was possible for the user to set of multiple queries at the same time, so (in v0.0.2) I had to put in a [check to see whether a query was already running](http://github.com/atomicules/shoeset/commit/2a1778f05b55911cc2931e772f480ab8a3c58454).
 
-And although very simple, I like the [use of reverse! on an array](http://github.com/i5m/shoeset/blob/master/cloud.rb#L42-L46) to alternate text colours:
+And although very simple, I like the [use of reverse! on an array](http://github.com/atomicules/shoeset/blob/master/cloud.rb#L42-L46) to alternate text colours:
 
     color = ["steelblue", "deeppink"]
     #No idea why I spelt that the 'wrong' way

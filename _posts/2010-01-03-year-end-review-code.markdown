@@ -24,7 +24,7 @@ Using Shoes at work has also lead me to look at the Shoes source code:
 
 [ashbb](http://vgoff.blogspot.com/) actually did all the leg work here in actually [fixing Shoes for Windows](http://github.com/ashbb/shoes_hack_note), but just trying to follow his work has been an achievement for me. 
 
-* Even managed to dabble in a bit of C in modifying Shoes to provide [Key up](http://github.com/i5m/shoes/commit/0cf7ec09bbfb4d3524f8de5a882ca7801000d67a) and [down](http://github.com/i5m/shoes/commit/1a95aab2be9062c9a3242c7f4f8892735dfd04c3) on Windows. I was, of course, subsequently [totally eclipsed by ashbb](http://github.com/ashbb/shoes/commit/5e17fc9307526f7ac61071f45776594fed2ed648), but I had a go, and that's the main thing. And the thrill of editing C code (never been near C before), compiling and actually managing to improve the functionality of a programme, was ace.   
+* Even managed to dabble in a bit of C in modifying Shoes to provide [Key up](http://github.com/atomicules/shoes/commit/0cf7ec09bbfb4d3524f8de5a882ca7801000d67a) and [down](http://github.com/atomicules/shoes/commit/1a95aab2be9062c9a3242c7f4f8892735dfd04c3) on Windows. I was, of course, subsequently [totally eclipsed by ashbb](http://github.com/ashbb/shoes/commit/5e17fc9307526f7ac61071f45776594fed2ed648), but I had a go, and that's the main thing. And the thrill of editing C code (never been near C before), compiling and actually managing to improve the functionality of a programme, was ace.   
 
 ## Next year plans:
 

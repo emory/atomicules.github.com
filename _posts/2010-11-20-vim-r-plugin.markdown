@@ -18,4 +18,4 @@ There's one tiny problem that affected me when trying to send the selection or f
 
 Seems Vim R Plugin uses the results of `whoami` to create the `VIMPLUGIN_TMPDIR`, which houses the temporary files for sending commands to R, but for Windows users on a domain (i.e. corporate or institution users) `whoami` returns the domain name with the username and the backslash screws up the filepath.
 
-I learnt that [Vim Scripts are on Github](https://github.com/vim-scripts)  - a nice consequence of figuring out a little [fix](https://github.com/i5m/Vim-R-plugin/commit/d87305153328ac390ad99f75e9325ce411745).
+I learnt that [Vim Scripts are on Github](https://github.com/vim-scripts)  - a nice consequence of figuring out a little [fix](https://github.com/atomicules/Vim-R-plugin/commit/d87305153328ac390ad99f75e9325ce411745).

@@ -5,7 +5,7 @@ title: Some Ubuntu 10.04 Notes...
 categories: 
 - code
 ---
-...due to my [unexpected](http://twitter.com/i5m/status/13262677183) [Ubuntu](http://twitter.com/i5m/status/13262725543) [trial](http://twitter.com/i5m/status/13377189047) at work.
+...due to my [unexpected](http://twitter.com/atomicules/status/13262677183) [Ubuntu](http://twitter.com/i5m/status/13262725543) [trial](http://twitter.com/atomicules/status/13377189047) at work.
 
 * It's bloody good. Looks lovely. I'd quite happily use this full time if I had that choice/option (not like there's any competition with XP, but I mean I'd also switch from OSX for this; Was never a fan of the brown theme, preferring [Mint](http://www.linuxmint.com/), but I prefer this new theme to Mint).
 * Does multiple monitor support pretty much no problem. (The first time I set them up, laptop (1440x900) and monitor (1280x1024), I had a few glitches getting the settings to work: I had to apply the settings a few times and toggle between settings, etc until it worked ok. But subsequent times it worked first go. Bizarre.)

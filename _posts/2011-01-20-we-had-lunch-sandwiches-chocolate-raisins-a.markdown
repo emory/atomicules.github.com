@@ -18,4 +18,4 @@ One of the most memorable and favourite photos on Flickr for me is [this by Anit
 I am also pleased to find out from reading Examples that I'm standing in good stead by also not having a clue when half my photos were taken. Who needs notes.
 
 
-\* I'm not after anything, I just [don't want her to get any more 'pets'](http://twitter.com/i5m/status/20894684184322048).
+\* I'm not after anything, I just [don't want her to get any more 'pets'](http://twitter.com/atomicules/status/20894684184322048).

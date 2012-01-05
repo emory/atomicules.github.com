@@ -13,7 +13,7 @@ So I tried thinking of lists as more like filters. As I think this is really wha
 
 But as I started setting this up I thought "this is a royal pain in the arse" (and maintaining them would be too). So I've pretty much given up.
 
-Also, I'm not too sure as to the point of public lists. As I might create a list to contain all the people I am [following because of flickr](https://twitter.com/#!/i5m/folkr/members), but this list is useless to everyone else... isn't it? Perhaps of very slight relevance to those on the list who might be able to draw some insight as to why I am following them based by their appearance on a particular list.
+Also, I'm not too sure as to the point of public lists. As I might create a list to contain all the people I am [following because of flickr](https://twitter.com/#!/atomicules/folkr/members), but this list is useless to everyone else... isn't it? Perhaps of very slight relevance to those on the list who might be able to draw some insight as to why I am following them based by their appearance on a particular list.
 
-But, at long last, I've finally [got the point of them](https://twitter.com/#!/i5m/folk-of-the-faraway-tree/members).
+But, at long last, I've finally [got the point of them](https://twitter.com/#!/atomicules/folk-of-the-faraway-tree/members).
 
