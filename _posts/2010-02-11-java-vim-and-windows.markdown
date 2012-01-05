@@ -58,3 +58,16 @@ and create a similar batch file to run the app. Although I found you have to wri
     !start j.bat classname
 
 as % includes path and extension (%< removes the extension, but it still includes the path. Aaargh!)
+
+**EDIT:** Fun and games. Combined the compile and run DOS batch command, for those stupid moments when I forget I need to compile:
+
+    set /P cpstr= <classpath.txt
+    javac -cp %cpstr% -d ./bin %1
+    for /f "tokens=1,2 delims=.\" %%a in ("%1") do set class=%%b
+    java -cp %cpstr%;bin %class%
+
+Also, note to self:
+
+    !start r.bat % & pause
+
+runs [asynchronously](http://vim.wikia.com/wiki/Execute_external_programs_asynchronously_under_Windows).

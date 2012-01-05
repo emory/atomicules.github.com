@@ -21,3 +21,5 @@ I was pulling data from an xml document, that unfortunately rather than containi
 It seems even trying to pass one   makes Smack throw a major wobbly.
 
 Figuring out the error took ages. Fixing was easy as I just stripped out all "&amp;nbsp;" characters.  
+
+**EDIT:** It's ampersands in general that causes the problem (makes more sense really). What's more, I can't figure out a way to catch the "java.io.EOFException". I get "never thrown in body of corresponding try statement" if I try (no pun intended!) to catch it where the Bot is connecting. So I don't think anything can be done apart form make sure you are never passing Ampersands via Smack. 
