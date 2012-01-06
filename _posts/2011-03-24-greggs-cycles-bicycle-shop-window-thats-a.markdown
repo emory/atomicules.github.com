@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: images/tumblr_likgjizYA01qdhcby_500.jpg
+photo: images/tumblr_likgjizYA01qdhcbyo1_500.jpg
 click-through: http://www.habitables.co.uk/architecture/greggs-cycles-bicycle-shop-window
 categories: 
 - bicycles

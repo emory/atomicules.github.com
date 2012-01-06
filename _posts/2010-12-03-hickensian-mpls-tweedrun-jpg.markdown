@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: images/tumblr_lcsotxG3gJ1qz4h13_500.jpg
+photo: images/tumblr_lcsotxG3gJ1qz4h13o1_500.jpg
 click-through: http://1.bp.blogspot.com/_Zyw4LnjUXZA/StKtDb63ulI/AAAAAAAAAt0/a0ac9AOMcKM/s1600-h/MPLS_TweedRUN.jpg
 categories: 
 - bicycles

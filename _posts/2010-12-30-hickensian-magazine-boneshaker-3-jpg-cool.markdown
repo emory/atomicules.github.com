@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: images/tumblr_le7lv8f8m11qz4h13_500.jpg
+photo: images/tumblr_le7lv8f8m11qz4h13o1_500.jpg
 click-through: http://www.velorution.biz/shop/boneshaker-magazine-1/
 categories: 
 - bicycles

@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: images/tumblr_la4iti0qan1qdhcby_500.jpg
+photo: images/tumblr_la4iti0qan1qdhcbyo1_500.jpg
 click-through: http://www.flickr.com/photos/buro9/5069348456/in/set-72157625011133209/
 categories: 
 - bicycles
