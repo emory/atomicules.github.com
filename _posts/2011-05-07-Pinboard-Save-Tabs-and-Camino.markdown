@@ -15,5 +15,74 @@ So even though the fake FormData is remarkabley clever, it is effectively pointl
 
 And this really might have tipped me over the edge to using TenFourFox instead of Camino.
 
-<script src="https://gist.github.com/955471.js?file=gistfile1.scpt"></script>
+{% highlight applescript %}
+--Camino Pinboard save tabs
+
+-- An Applescript to Save Open Tabs to Pinboard, using the Save Tabs functionality:
+-- http://blog.pinboard.in/2011/04/new_save_tabs_feature/
+-- Uses francois2metz fake html5-FormData since Gecko 1.9 doesn't have this
+-- https://github.com/francois2metz/html5-formdata
+-- BUT DOESN'T BLOODY WELL WORK BECAUSE OF A RESTRICTION IN GECKO 1.9
+-- Gecko 1.9 preflights all requests except from text/plain which screws the whole thing up
+-- (https://developer.mozilla.org/en/http_access_control#Preflighted_requests)
+-- Oh well, it was a nice idea. 
+
+property winz : ""
+property tabz : ""
+property resultz : ""
+property source : ""
+
+--Get list of tabs and windows, 
+tell application "Camino"
+    repeat with i from 1 to (count browser windows)
+        repeat with j from 1 to (count of tabs of browser window i)
+            set tabz to tabz & "{ \"title\": \"" & title of tab j of browser window i & "\", \"url\": \"" & URL of tab j of browser window i & "\"}"
+            if ((j < (count of tabs of browser window i)) and ((count of tabs of browser window i) > 1)) then
+                set tabz to tabz & ","
+            end if
+        end repeat
+        set winz to winz & "[" & tabz & "]"
+        if ((i < (count of browser windows)) and ((count of browser windows) > 1)) then
+            set winz to winz & ","
+        end if
+        set tabz to ""
+    end repeat
+end tell
+set resultz to resultz & "{\"browser\":\"camino\",\"windows\":[" & winz & "]}"
+
+set source to ("<html><head></head><body>
+<script type=\"text/javascript\" src=\"https://github.com/francois2metz/html5-formdata/raw/master/formdata.js\"></script>
+<script>
+var params = new FormData();
+var req = new XMLHttpRequest();
+params.append(\"data\", '" & resultz as string) & "'); // I have an inkling, that should a tab title contain an apostrophe, it may muck this up.
+
+req.open(\"POST\", \"https://pinboard.in/tabs/save/\", true);
+//Don't think these need to be set
+//req.setRequestHeader(\"Cache-Control\", \"no-cache\");
+//req.setRequestHeader(\"X-Requested-With\", \"XMLHttpRequest\");
+//This needs to be set explicity for Gecko, Webkit seems to do by default
+req.withCredentials = true
+req.setRequestHeader(\"Content-Type\", \"multipart/form-data; boundary=\"+ params.boundary);
+req.onreadystatechange = function() {
+    if (req.readyState == 4) {
+        window.location.href = \"https://pinboard.in/tabs/show/\";
+    }
+}
+req.send(params.toString());
+</script></body></html>"
+
+do shell script "rm -f $HOME/Library/'Application Support'/Camino/caminosavetabstopinboard.html"
+do shell script "touch $HOME/Library/'Application Support'/Camino/caminosavetabstopinboard.html"
+set js to ((path to home folder as string) & "Library:Application Support:Camino:caminosavetabstopinboard.html") as alias
+open for access js with write permission
+write source to js
+close access js
+
+
+tell application "Camino"
+    open js
+end tell
+{% endhighlight %}
+[Link to gist](https://gist.github.com/955471)
 

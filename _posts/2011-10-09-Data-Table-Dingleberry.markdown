@@ -32,10 +32,41 @@ And confused by the [FAQ](http://datatable.r-forge.r-project.org/datatable-faq.p
 
 So I ended up with this:
 
-<script src="https://gist.github.com/1273684.js?file=slower_use_of_data_table.r"></script>
+{% highlight r %}
+step1.dt  <- data.table(step1)
+setkey(step1, id)
+duplicates.step2$days.between  <- sapply(
+	1:nrow(duplicates.step2), #For each row in duplicates.step2
+	function(q) {
+		step2id <- duplicates.step2.dt[,id][q] #Gets the id
+		temp  <- min(
+			difftime(
+				duplicates.step2.dt[, Date][q], #Gets the date
+				step1.dt[J(eval(quote(step2id))]$Date, #gets the dates for all step1 rows of the same id. This is where it all goes wrong
+				units=c("days")
+			)
+		)
+	}
+)
+{% endhighlight %}
+[Link to gist](https://gist.github.com/1273684)
 
 The `eval` and `quote` are doing NOTHING here, removing them gets the same result (and still takes just as long). For my case, doing the below was 2400%(!) faster:
 
-<script src="https://gist.github.com/1273684.js?file=faster_use_of_data_table.r"></script>
+{% highlight r %}
+duplicates.step2$days.between  <- sapply(
+	1:nrow(duplicates.step2),
+	function(q) {
+		step2id <- as.character(duplicates.step2.dt[,id][q]) #as.character is important bit!
+		temp  <- min(
+			difftime(
+				duplicates.step2.dt[, Date][q],
+				step1.dt[step2id]$Date, #No need to crazily create another data.table
+				units=c("days")
+			)
+		)
+	}
+)
+{% endhighlight %}
 
 Thought it was worth pointing out, just in case anyone else is as stupid as me and takes the trivial `DT[J("a")]` example at face value.

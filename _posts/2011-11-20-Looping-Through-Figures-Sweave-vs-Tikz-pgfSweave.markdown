@@ -15,25 +15,133 @@ However, I was using Lattice graphics built-in capability to produce [multiple p
 
 In Sweave, the way you would [use one code chunk to produce multiple figures](http://www.statistik.lmu.de/~leisch/Sweave/FAQ.html#x1-11000A.9) is to use a `tex` chunk rather than a `fig`:
 
-<script src="https://gist.github.com/1380278.js?file=traditional_sweave_loop.Rnw"></script>
+{% highlight text %}
+%Traditional Sweave Loop
+%Sweave file extract
+
+<<eval=TRUE, echo=FALSE, results=hide>>=
+#Cleanup - delete previous files
+file.remove(list.files(pattern = glob2rx("ybygroup*.png")))
+#No need to use a loop here, lattice graphics will produce the necessary number of pngs
+png(file="ybygroup%03d.png", width=1000, height=2000)
+xyplot(Y ~ Date | Grouping, datatable, layout=c(1,8), ylim=c(-100,100), xlim=as.Date(c("2011-01-01", "2011-07-01")) )
+#This echos when using PNGs, so put in it's own block and hide.
+dev.off()
+@
+
+
+<<results=tex, echo=FALSE>>=
+files <- list.files(pattern = glob2rx("ybygroup*.png"))
+for(file in files){
+    cat("\\begin{figure}")
+    cat("\\begin{center}")
+    cat("\\includegraphics{", file, "}\n\n", sep="")
+    cat("\\end{center}")
+    cat("\\end{figure}")
+}
+@
+{% endhighlight %}
+[Link to gist](https://gist.github.com/1380278)
 
 I still haven't fully got my head round pgfSweave and [Tikz](http://cran.r-project.org/web/packages/tikzDevice/), but for individual plots you indicate the use of Tikz within the figure:
 
-<script src="https://gist.github.com/1380278.js?file=reference_for_pgfsweave-tikz_option.Rnw"></script>
+{% highlight text %}
+%Reference for pgfSweave / Tikz option
+%Sweave file extract
+
+\begin{figure}
+<<fig=TRUE, tikz=T>>=
+print(
+	xyplot(Y ~ Date | Grouping, datatable[levels(datatable$Grouping)[1:8]], layout=c(1,8), ylim=c(-100,100), xlim=as.Date(c("2011-01-01", "2011-07-01")) )
+)
+@
+\end{figure}
+{% endhighlight %}
 
 But I wanted to be able to produce all plots via a loop as per Sweave, rather than have to manually set up enough `fig` chunks so I came up with the following:
 
-<script src="https://gist.github.com/1380278.js?file=tikz_loop.Rnw"></script>
+{% highlight text %}
+%Tikz loop
+%Sweave file extract
+
+\usepackage{tikz}
+%...
+
+<<results=tex, echo=FALSE>>=
+#Need to know how many levels
+nl <- length(levels(datatable$Grouping))
+#then how many per graph
+ng = 8
+#Can then loop
+
+for (i in 1:ceiling(nl/ng)) {
+    cat("\\begin{figure}\n")
+    cat("\\begin{center}\n")
+    tikz(console=TRUE)
+    start=(i-1)*ng+1
+    end=i*ng
+    print(
+        xyplot(Y ~ Date | Grouping, datatable[levels(datatable$Grouping)[start:end]], layout=c(1,ng), ylim=c(-100,100), xlim=as.Date(c("2011-01-01", "2011-07-01")) )
+	)
+    dev.off()
+    cat("\\end{center}\n")
+    cat("\\end{figure}\n")
+}
+
+@
+
+{% endhighlight %}
 
 All of this looks and seems amazingly obvious as I write it up now, but it wasn't at the time. Especially because I came across this weird bug (which, thinking about it now, might not be a bug, rather a nuance of the [data.table](http://crantastic.org/packages/data-table) package - I need to investigate further):
 
 works:
 
-<script src="https://gist.github.com/1380293.js?file=good.R"></script>
+{% highlight r %}
+#Extract of R code
+#This works as expected
+
+#Need to know how many levels
+nl <- length(levels(datatable$Grouping))
+#then how many per graph
+ng = 8
+#Can then loop
+
+for (i in 1:ceiling(nl/ng)) {
+    start=(i-1)*ng+1
+    end=i*ng
+    print(
+        xyplot(Y ~ Date | Grouping, datatable[levels(datatable$Grouping)[start:end]], layout=c(1,ng), ylim=c(-100,100), xlim=as.Date(c("2011-01-01", "2011-07-01")) )
+	)
+}
+{% endhighlight %}
+[Link to gist](https://gist.github.com/1380293)
 
 doesn't work:
 
-<script src="https://gist.github.com/1380293.js?file=bad.R"></script>
+
+{% highlight r %}
+#Extract of R code
+#This doesn't work properly
+
+#Need to know how many levels
+nl <- length(levels(datatable$Grouping))
+#then how many per graph
+ng = 8
+#Can then loop
+
+for (i in 1:ceiling(nl/ng)) {
+    print(
+        xyplot(Y ~ Date | Grouping, datatable[levels(datatable$Grouping)[(i-1)*ng+1:(i*ng)]], layout=c(1,ng), ylim=c(-100,100), xlim=as.Date(c("2011-01-01", "2011-07-01")) )
+	)
+}
+
+#Instead of using the start and end variables within the loop, the values are calculated directly
+#as applied to the datatable. For some reason, from the 2nd loop onwards, `i*ng` seems to be 
+#evaluated as `(i+1)*ng` which means Lattice automatically produces two pages of graphs, instead
+#of just the one page per loop that it should. 
+
+#This is probably just a data.table nuance actually, not a bug.
+{% endhighlight %}
 
 Since this just uses Tikz within a `tex` chunk, in theory pgfSweave isn't actually required to process this and just  plain Sweave would do, in practice however, since pgfSweave can externalise the graphics by default, it will avoid text memory capacity issues with a large number of loops, where Sweave will run into them. 
 

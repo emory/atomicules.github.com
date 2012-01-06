@@ -15,11 +15,44 @@ I thought about doing a user-script style extension or a browser add-on, but the
 
 So this is the source-code (In CoffeeScript):
 
-<script src="https://gist.github.com/1053858.js?file=Smile.coffee"></script>
+{% highlight coffeescript %}
+#Bookmarklet to generate QIF for Recent Item and Previous Statement pages on SMILE.co.uk bank
+#Will (try to) open a new popup window where you will have to either:
+#a) Copy text from and paste to text editor (Chrome)
+#b) Save the page as a text file (Firefox)
+#
+#Written in Coffescript, but just use http://javascriptcompressor.com/ to compress the 
+#compiled javascript so you have a bookmarklet.
+
+data = document.getElementsByClassName("summarytable")[0].children[1].children
+
+qif = "!Type:Bank<br />"
+transaction = (row) -> 
+	unless row.children[0].innerHTML.trim() is "&nbsp;" #skip last row on Recent Items page
+		unless row.children[1].innerHTML.trim() is "BROUGHT FORWARD" #skip first row on Previous Statements page
+			qif += "D"+row.children[0].innerHTML.trim()+"<br />"
+			qif += "P"+row.children[1].innerHTML.trim()+"<br />"
+			#Then need transaction amount
+			unless row.children[2].innerHTML.trim() is "&nbsp;"
+				qif += "T"+row.children[2].innerHTML.trim().substring(1)+"<br />"
+			else 
+				qif += "T-"+row.children[3].innerHTML.trim().substring(1)+"<br />"
+			qif += "^<br />"
+
+transaction(row) for row in data
+
+window.open("data:text/html;charset=utf-8,"+qif)
+
+undefined #To get the void 0 bit so doesn't affect current window.
+
+{% endhighlight %}
+[Link to gist](https://gist.github.com/1053858)
 
 and this is the bookmarklet:
 
-<script src="https://gist.github.com/1053858.js?file=Smile_Bookmarklet.js"></script>
+{% highlight javascript %}
+javascript:var data,qif,row,transaction,_i,_len;data=document.getElementsByClassName("summarytable")[0].children[1].children;qif="!Type:Bank<br />";transaction=function(row){if(row.children[0].innerHTML.trim()!=="&nbsp;"){if(row.children[1].innerHTML.trim()!=="BROUGHT FORWARD"){qif+="D"+row.children[0].innerHTML.trim()+"<br />";qif+="P"+row.children[1].innerHTML.trim()+"<br />";if(row.children[2].innerHTML.trim()!=="&nbsp;"){qif+="T"+row.children[2].innerHTML.trim().substring(1)+"<br />"}else{qif+="T-"+row.children[3].innerHTML.trim().substring(1)+"<br />"}return qif+="^<br />"}}};for(_i=0,_len=data.length;_i<_len;_i++){row=data[_i];transaction(row)}window.open("data:text/html;charset=utf-8,"+qif);void 0;
+{% endhighlight %}
 
 (I'll be buggered if I can get an actual bookmarklet link to display correctly via Markdown. I got almost there, but couldn't stop RDiscount from turning the caret ^ into a `<sup>` element, so you'll just have to copy the above text and manually add a new bookmark). The same bookmarklet works on both Recent Items and Previous Statement pages. A limitation of doing a bookmarklet is that I can't generate a QIF file for download. All I can do is open up a web page that you can then save as a text file (add the ".qif" extension yourself) or copy and paste the text into a text editor and save as a QIF file - this is the same limitation that affects the [OFX/CSV userscript](http://userscripts.org/scripts/show/6976) (that only works on Previous Statement pages).
 

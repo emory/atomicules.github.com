@@ -20,12 +20,37 @@ This is a little more obvious and I'm sure lots of people do this. I'm using thi
 
 Not exactly tricky, but amazingly useful, is extending the above to make settings based on the network you are on. I.e. for me this is whether I'm at work or at home. So in the OS specific sections I'm looking to find the IP address (it's OS specifc since a different command is needed on each OS):
 
-<script src="https://gist.github.com/1190099.js?file=os-specific-extract.vim"></script>
+{% highlight vim %}
+"OS Specific
+"-----------
+let os = substitute(system('uname'), "\n", "" ,"") "thanks to http://objectmix.com/editors/149466-operating-system-checking-vimrc-files.html#post517594
+if os == "Linux"
+	...
+	let ip = match(system('ip addr show'), "10.0.1")
+elseif os == "Darwin"
+	...
+	let ip = match(system('ipconfig getifaddr en1'), "10.0.1") "Or whichever enX interface you need
+else "Assume windows as uname doesn't work on Windows	
+	...
+	let ip = match(system('ipconfig'), "10.0.1")
+endif
+{% endhighlight %}
+[Link to gist](https://gist.github.com/1190099)
 
 (I know at home my IP address will be in the range "10.0.1.X")
 
 Then I can set proxies for [TwitVim](http://www.vim.org/scripts/script.php?script_id=2204) and [SimpleNote.vim](http://www.vim.org/scripts/script.php?script_id=3582) just for when I'm at work:
 
-<script src="https://gist.github.com/1190099.js?file=ip-specific-extract.vim"></script>
+{% highlight vim %}
+"IP Address specific
+"-------------------
+"(i.e. Home or Work)
+if ip == -1
+	"Set proxies, Python urllib2 (TwitVim, Simplenote.vim) will automatically pick
+"these up	
+	let $http_proxy = 'http://<username>:<password>@<proxy-url>:<proxy-port>'
+	let $https_proxy = 'http://<username>:<password>@<proxy-url>:<proxy-port>'
+endif
+{% endhighlight %}
 
 And that's a [whole interesting thing in itself...](https://github.com/mrtazz/simplenote.vim/issues/13)
