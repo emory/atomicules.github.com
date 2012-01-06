@@ -1,2 +1,4 @@
 markdown: rdiscount
 permalink: /:year/:month/:day/:title.html
+baseurl: /
+#baseurl: http://atomicules.co.uk/
