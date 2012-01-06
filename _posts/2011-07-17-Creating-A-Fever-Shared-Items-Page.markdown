@@ -23,9 +23,11 @@ According to the Enable CORS website that is easily fixed by adding the followin
 
 And oddly enough was solved by a [post on jQuery](https://forum.jquery.com/topic/jquery-1-5-latest-chrome-post-ajax-request-xmlhttprequest-cannot-load-url-request-header-field-x-requested-with-is-not-allowed-by-access-control-allow-headers) (even though the error is nothing to do with jQuery).So, adding the following into Fever's index.php (so this may get wiped out each time Fever is updated, but this doesn't seem to happen too often) did the trick:
 
-    <?php
-    header("Access-Control-Allow-Headers: x-requested-with");
-    header("Access-Control-Allow-Origin: http://i5m.co.uk");
+{% highlight php %}
+<?php
+header("Access-Control-Allow-Headers: x-requested-with");
+header("Access-Control-Allow-Origin: http://i5m.co.uk");
+{% endhighlight %}
 
 I think the last thing I then did was update the version of jQuery over the one that ships with jFeed (1.6.2 vs 1.1.3.1 at the time of writing). If I recall correctly, I'd got rid of all the CORS errors, but the page still wasn't being generated (odd, because an offline copy of the exact same RSS fee worked fine). I didn't really hold out much hope that updating jQuery would fix the issue, but thankfully it did.
 

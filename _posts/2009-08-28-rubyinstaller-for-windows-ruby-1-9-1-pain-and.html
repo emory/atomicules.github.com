@@ -9,7 +9,7 @@ categories:
 <p>I fairly recently came across the <a href="http://rubyinstaller.org/">RubyInstaller</a> project, and excellent effort to update the ageing 1.8.6 One-Click installer still offered on the official <a href="http://www.ruby-lang.org/en/downloads/">Ruby download</a> page. They now offer two new "<a href="http://rubyforge.org/frs/?group_id=167&amp;release_id=38052">Technology Preview</a>" installers for Ruby; one for 1.8.6 and one for 1.9.1.</p>
 <p>Although there is perhaps <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_short">one step back</a> with these installers, there are <a href="http://wiki.github.com/oneclick/rubyinstaller/faq#bundled_long">a lot of steps forward</a>, and I'm very glad someone is making a decent effort on Windows. I particulary like that it doesn't modify the windows PATH environment variable, rather it offers a special shortcut to a Command Prompt that sources the Ruby install. This means you can easily install both Ruby 1.8.6 and 1.9.1 and have command prompts open for both and you can just type "ruby" or "irb" in both and it works rather than having to type "ruby19" or "irb19", etc. Mind you, there is also a shortcut staright to IRB and a built-in gems documentation local web server you can start up. Nice.</p>
 <p>It was a combination of the one-step back and trying Ruby 1.9.1 again that snagged me though, and things that "just worked" under the old One-Click installer weren't working under the new RubyInstaller, specifically trying to install <a href="http://roo.rubyforge.org/">roo</a>, led to an error installing <a href="http://libxml.rubyforge.org/">libxml-ruby</a>, even after I'd installed the <a href="http://wiki.github.com/oneclick/rubyinstaller/development-kit">Developer Kit</a> (you need that for Hpricot); I was getting the following:</p>
-<pre><code>
+{% highlight bash %}
 Building native extensions.  This could take a while...
 ERROR:  Error installing libxml-ruby:
 ERROR: Failed to build gem native extension.
@@ -52,7 +52,7 @@ Provided configuration options:
 --without-zlib-lib=${zlib-dir}/lib
 --with-socketlib
 --without-socketlib
---with-nsllib
+--with-nsllib}
 --without-nsllib
 --with-mlib
 --without-mlib
@@ -69,8 +69,7 @@ Gem files will remain installed in C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-rub
 y-1.1.3 for inspection.
 Results logged to C:/Ruby19/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.3/ext/libxm
 l/gem_make.out
-</code>
-</pre>
+{% endhighlight %}
 <p>The answer was on the <a href="http://libxml.rubyforge.org/rdoc/index.html">libxml</a> page:</p>
 <blockquote>If you are running Windows, make sure to install the Win32 RubyGem which             includes an already built binary file</blockquote>
 <p>So I <a href="http://rubyforge.org/frs/?group_id=494">downloaded</a> the <b>libxml-ruby-1.1.3-x86-mswin32-60.gem</b> and installed locally and all was well. (Note that under Ruby 1.8.6, rubygems is sensible enough to install this version, not so under 1.9.1)</p>

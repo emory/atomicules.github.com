@@ -14,60 +14,84 @@ After I got over the initial shock of squiggly brackets (It looks way harder tha
 
 One of the example programmes I was working with used System.out.println to debug, but I [quickly found](http://www.vipan.com/htdocs/log4jhelp.html) I should be using an actual logger. I went with the built-in logger:
 
-    Logger.getLogger("global").fine("Here's what's happening: "+stufftooutput);
+{% highlight java %}
+Logger.getLogger("global").fine("Here's what's happening: "+stufftooutput);
+{% endhighlight %}
 
 Because then you can control/grade which messages get shown according to their severity:
 
-    Logger.getLogger("global").setLevel(Level.FINE);
-    Logger.getLogger("").getHandlers()[0].setLevel(Level.FINE);
+{% highlight java %}
+Logger.getLogger("global").setLevel(Level.FINE);
+Logger.getLogger("").getHandlers()[0].setLevel(Level.FINE);
+{% endhighlight %}
 
 I [found out](http://coding.derkeiler.com/Archive/Java/comp.lang.java.help/2005-09/msg00152.html) I had to use both lines above to change this setting, rather than just one command. Don't know why. 
 
 It seems every tutorial sets out by telling you to get an IDE, but you really don't need to for simple programmes. I just used Vim and a couple of little tricks on Windows. To deal with classpaths, I stored them in a text file, so I could read them into an environment variable. I.e. create a empty text file called "classpath.txt". Open it in Vim and then read in the directory of the jar files you are referencing:
 
-    :r !dir /b
+{% highlight bat %}
+:r !dir /b
+{% endhighlight %}
 
 Then do a quick find and replace to get this all on one line, add in necessary path prefixes and semi-colons to separate. Then in Command Prompt I could just do this each session, to read the classpath into an environment variable:
 
-    set /P cpstr=<classpath.txt
+{% highlight bat %}
+set /P cpstr=<classpath.txt
+{% endhighlight %}
 
 Compiling and running was then dead simple from the Command Prompt:
 
-    javac -cp %cpstr% -d ./bin ./src/File.java
-    java -cp %cpstr%;bin File
+{% highlight bat %}
+javac -cp %cpstr% -d ./bin ./src/File.java
+java -cp %cpstr%;bin File
+{% endhighlight %}
 
 If you want to be ultra-Vimmy and not leave Vim to run commands in the Command Prompt, unfortunately I found you couldn't do this in Vim:
 
-    :!set /P cpstr=<classpath.txt & javac -cp \%cpstr\% etc
+{% highlight vim %}
+:!set /P cpstr=<classpath.txt & javac -cp \%cpstr\% etc
+{% endhighlight %}
 
 as it just puts "%cpstr%". Even though I was escaping Vim's use of the % to reference the current file. Yet if you do
 
-    !:echo \%HOME\% 
+{% highlight vim %}
+!:echo \%HOME\% 
+{% endhighlight %}
 
 it does what you expect. Grrrrrrr..... You might be able to get around this using setx (to set user environment variables), but you would have to run two separate commands, as setx only affects future Command Prompt windows. You can create a little batch file to work around this, i.e. a file "c.bat" containing:
 
-    set /P cpstr= <classpath.txt
-    javac -cp %cpstr% -d ./bin %1
+{% highlight bat %}
+set /P cpstr= <classpath.txt
+javac -cp %cpstr% -d ./bin %1
+{% endhighlight %}
 
 then in Vim, assuming correct directory, just do
 
-    !c.bat %
+{% highlight vim %}
+!c.bat %
+{% endhighlight %}
 
 and create a similar batch file to run the app. Although I found you have to write the actual class name from Vim:
 
-    !start j.bat classname
+{% highlight vim %}
+!start j.bat classname
+{% endhighlight %}
 
 as % includes path and extension (%< removes the extension, but it still includes the path. Aaargh!)
 
 **EDIT:** Fun and games. Combined the compile and run DOS batch command, for those stupid moments when I forget I need to compile:
 
-    set /P cpstr= <classpath.txt
-    javac -cp %cpstr% -d ./bin %1
-    for /f "tokens=1,2 delims=.\" %%a in ("%1") do set class=%%b
-    java -cp %cpstr%;bin %class%
+{% highlight bat %}
+set /P cpstr= <classpath.txt
+javac -cp %cpstr% -d ./bin %1
+for /f "tokens=1,2 delims=.\" %%a in ("%1") do set class=%%b
+java -cp %cpstr%;bin %class%
+{% endhighlight %}
 
 Also, note to self:
 
-    !start r.bat % & pause
+{% highlight vim %}
+!start r.bat % & pause
+{% endhighlight %}
 
 runs [asynchronously](http://vim.wikia.com/wiki/Execute_external_programs_asynchronously_under_Windows).

@@ -21,8 +21,10 @@ For each row in the Step 2 set of data, I wanted to find the matching IDs in Ste
 
 I was being clever and using the [data.table](http://datatable.r-forge.r-project.org/) package (since it really is much, much speedier for lookups than using functions like `subset()`, but I was misled (because these examples abound!) by the help files and seeing things like this:
 
-	DT["a"]     # join to 1st column of key
-	DT[J("a")]  # same
+{% highlight r %}
+DT["a"]     # join to 1st column of key
+DT[J("a")]  # same
+{% endhighlight %}
 
 _(`DT[J("a")]` crops up a lot, but as far as I can tell (unless I'm completely ignorant) it is just a frivolous example as it's just doing `DT[data.table("a")]`, and why on earth would you want to create a data.table just for "a"?)_
 

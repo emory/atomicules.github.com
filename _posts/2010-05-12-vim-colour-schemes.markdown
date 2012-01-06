@@ -19,6 +19,7 @@ I also went looking to see if the toolbar icons could be improved, because they 
 
 And note to self:
 
-    set guioptions-=T  "remove toolbar
-    colorscheme ir_black "set default colour scheme
-
+{% highlight vim %}
+set guioptions-=T  "remove toolbar
+colorscheme ir_black "set default colour scheme
+{% endhighlight %}

@@ -12,8 +12,9 @@ But it seems that isn't the case. It looks pants in Gecko 1.9 ,and in Gecko 2.0 
 
 **EDIT:** Ah, ok, this is to do with [parsing HTML5 elements](http://diveintohtml5.org/semantics.html#unknown-elements). Doing:
 
-    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-	    display:block;
-	}
-	
+{% highlight css %}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+{% endhighlight %}	
 solves all of the problems in Gecko 1.9. Interestingly, I thought there were also issues with a child selector of <code>body>footer</code> in Gecko 1.9, even though <code>body>header</code> worked, but turns out this is just a glitch in the Tumblr customise/preview mode. In this mode the footer displays all wrong (even using an id to select it rather than the child selector, the width and position is still screwed up), but once published it's all ok. Bizarre!

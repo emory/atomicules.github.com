@@ -10,15 +10,21 @@ I found this post by Mikhail Nasyrov from [an answer on Stackoverflow](http://st
 
 I thought I'd reverse this idea. I have a much simpler coffee.bat file which contains:
 
-    @node /cygdrive/D/Users/me/code/github/coffee-script/bin/coffee %*
+{% highlight bat %}
+@node /cygdrive/D/Users/me/code/github/coffee-script/bin/coffee %*
+{% endhighlight %}
 
 this way, if I add the coffee.bat directory to my Windows PATH, all I have to do is call
 
-    coffee -c filetocompile.coffee
+{% highlight bat %}
+coffee -c filetocompile.coffee
+{% endhighlight %}
 
 from the directory containing the file I'm working on and it'll compile into the same place. Which also means I can do it straight from vim:
 
-     :!coffee -c %
+{% highlight vim %}
+:!coffee -c %
+{% endhighlight %}
 
 For single files, this works great for me. For anything more complicated Mikhail Nasyrov has some solutions towards the end of his blog post. 
 

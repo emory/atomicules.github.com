@@ -19,18 +19,22 @@ Since it really is quite simple, there's nothing that interesting about the code
 
 And although very simple, I like the [use of reverse! on an array](http://github.com/atomicules/shoeset/blob/master/cloud.rb#L42-L46) to alternate text colours:
 
-    color = ["steelblue", "deeppink"]
-    #No idea why I spelt that the 'wrong' way
-    @wordcount.each_key do |word|
-        font_size = (10 + (@wordcount[word] * ratio)).round
-	cloud << %Q{para "#{word}", :size => #{font_size}, :stroke => #{color[0]}; }
-	color.reverse!
-    end
+{% highlight ruby %}
+color = ["steelblue", "deeppink"]
+#No idea why I spelt that the 'wrong' way
+@wordcount.each_key do |word|
+	font_size = (10 + (@wordcount[word] * ratio)).round
+cloud << %Q{para "#{word}", :size => #{font_size}, :stroke => #{color[0]}; }
+color.reverse!
+end
+{% endhighlight %}
 
 The most interesting thing, for me, about doing this app was learning about headers in Shoe shy files. I packaged the app up on a Windows machine as a Shy file, which should be platform independent. However, it wouldn't work on my OSX PPC machine. And vice versa. After a bit of investigation I discovered that the bulk of the Shy file was valid, it was just the header that was causing trouble. The [header of the Shy file](http://github.com/shoes/shoes/blob/master/lib/shoes/shy.rb#L30-L34) contains three parameters: the file type (Shy, so you can't simply rename an arbitrary file as .shy), the Version (should Shoes ever change file formats, etc) and the byte number offset for the end of the header (i.e. where to start reading the actual application files from). It was this last parameter that was causing the trouble and if I manually overrode it I could get the Shy file to open on both platforms.
 
 I finally tracked it down to [this](http://github.com/shoes/shoes/blob/master/lib/shoes/shy.rb#L15):
 
-    LAYOUT = "A4SL".freeze
+{% highlight ruby %}
+LAYOUT = "A4SL".freeze
+{% endhighlight %}
 
 These parameters are used in [Array.pack](http://ruby-doc.org/core/classes/Array.html#M002222) and [String.unpack](http://ruby-doc.org/core/classes/String.html#M000760). The problem is that **S**hort integers and **L**ong integers are done in [native byte order](http://en.wikipedia.org/wiki/Endianness#Examples_of_storing_the_value_0A0B0C0Dh_in_memory). So for Windows, etc this was little-endian, but on OSX PPC this was big-endian. Fixing was as simple as [always forcing little-endian, "A4vV"](http://github.com/ashbb/shoes/commit/4ab9ee2f86e0f240d5e7915888dd8db3cdca836b).

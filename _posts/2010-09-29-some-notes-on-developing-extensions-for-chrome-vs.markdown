@@ -132,16 +132,22 @@ I recently developed a pretty basic extension for Chrome for something at work a
 
 The only pluses I give Firefox is that it was easier to get the current URL:
 
-	var locationURL = window.opener.gBrowser.contentDocument.location.href  //thanks to  http://forums.mozillazine.org/viewtopic.php?f=19&t=778165&start=0 
+{% highlight javascript %}
+var locationURL = window.opener.gBrowser.contentDocument.location.href  //thanks to  http://forums.mozillazine.org/viewtopic.php?f=19&t=778165&start=0 
+{% endhighlight %}
 
 than in Chrome:
 
+{% highlight javascript %}
 	chrome.tabs.getSelected(null, function(tab) { //thanks to http://stackoverflow.com/questions/1979583/how-can-i-get-the-url-for-a-google-chrome-tab/1979709#1979709
 				var tablink = tab.url; })
+{% endhighlight %}
 
 and that in Firefox it is easy to copy text to the clipboard:
 
-	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);  //from https://developer.mozilla.org/en/Using_the_Clipboard
-	gClipboardHelper.copyString(sometext); 
+{% highlight javascript %}
+const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);  //from https://developer.mozilla.org/en/Using_the_Clipboard
+gClipboardHelper.copyString(sometext); 
+{% endhighlight %}
 
 whereas in Chrome the support is in an [experimental API](http://code.google.com/chrome/extensions/experimental.clipboard.html) and requires the user to by on the development channel of Chrome.
