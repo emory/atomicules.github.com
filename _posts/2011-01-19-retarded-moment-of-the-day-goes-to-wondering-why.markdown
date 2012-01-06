@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_lf9u1sfalL1qzcagp.jpg
+photo: images/tumblr_lf9u1sfalL1qzcagp.jpg
 click-through: https://github.com/atomicules/Pinboard-Tools-for-Google-Chrome
 categories: 
 - code

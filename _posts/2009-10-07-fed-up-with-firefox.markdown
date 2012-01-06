@@ -5,7 +5,7 @@ title: Fed up with Firefox
 categories: 
 - code
 ---
-I've had enough of Firefox freezing and locking up. I know it's the stupid intranet sites and [IETab](https://addons.mozilla.org/en-US/firefox/addon/1419) that do it, so not strictly the fault of Firefox, but I'm fed up of one tab bringing the whole thing down. So I'm giving [ChromePlus](http://atomicules.co.uk/2009/10/05/chrome-with-ietab.html) a proper go. 
+I've had enough of Firefox freezing and locking up. I know it's the stupid intranet sites and [IETab](https://addons.mozilla.org/en-US/firefox/addon/1419) that do it, so not strictly the fault of Firefox, but I'm fed up of one tab bringing the whole thing down. So I'm giving [ChromePlus]({{ site.baseurl }}2009/10/05/chrome-with-ietab.html) a proper go. 
 
 The *only* thing remaining that Firefox still has over ChromePlus is [gmail notifier](https://addons.mozilla.org/en-US/firefox/addon/173) - incredibly useful because it supports multiple accounts, provides me with actual notification windows and helps keep my personal (I.e: non-work related) clutter down (which was pretty much contained to Firefox). Oh, that and [FireGPG](ttp://getfiregpg.org), but I use that so rarely it doesn't matter. 
 

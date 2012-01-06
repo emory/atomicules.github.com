@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_l9chkyCIUx1qdhcbyo1_500.jpg
+photo: images/tumblr_l9chkyCIUx1qdhcbyo1_500.jpg
 click-through: http://www.flickr.com/photos/fatboyke/2668411239/
 categories: 
 - bicycles

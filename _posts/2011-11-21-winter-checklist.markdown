@@ -5,7 +5,7 @@ title: Winter checklist
 categories: 
 - bicycles
 ---
-There's currently no sign of snow. But a month or so ago, when it could have been just around the corner for all I knew, my winter cycling checklist looked something like this (and so [I was a bit worried](http://atomicules.co.uk/2011/07/17/fear-of-big-slides.html)):
+There's currently no sign of snow. But a month or so ago, when it could have been just around the corner for all I knew, my winter cycling checklist looked something like this (and so [I was a bit worried]({{ site.baseurl }}2011/07/17/fear-of-big-slides.html)):
 
 - &#x2610; - Reliable functioning lights
 - &#x2610; - Lower gear ratio to help with the studded tyres and mushed up snow
@@ -20,10 +20,10 @@ Fortunately it has improved somewhat and now looks like this:
 
 ##Smart Lunar 35 Lux Lights
 
-My [B&M Ixon IQ](http://atomicules.co.uk/2010/11/06/busch-muller-ixon-iq.html) bit the dust. I cycled a month with it in a very dodgy state: road vibrations caused it to continually switch from high to low power, until it finally decided to add "OFF" into it's newfound automatic mode selection routine. I tried fixing it quite a few times, but it wasn't to be:
+My [B&M Ixon IQ]({{ site.baseurl }}2010/11/06/busch-muller-ixon-iq.html) bit the dust. I cycled a month with it in a very dodgy state: road vibrations caused it to continually switch from high to low power, until it finally decided to add "OFF" into it's newfound automatic mode selection routine. I tried fixing it quite a few times, but it wasn't to be:
 
 - I'd fixed up the cracked lens cover with car headlamp lens repair tape.
-- It had a big screw through the back to hold it shut after I [broke the plastic catch](http://atomicules.co.uk/2011/01/22/an-update-on-the-light.html) from opening it all the time to charge the batteries (and dropping it of course).
+- It had a big screw through the back to hold it shut after I [broke the plastic catch]({{ site.baseurl }}2011/01/22/an-update-on-the-light.html) from opening it all the time to charge the batteries (and dropping it of course).
 - I'd broken a couple of battery contacts: after dropping the light on it's end, the batteries squashing the spring contacts flat and then me trying to bend them out again, snap!
 - So at first I though the mode switching was due to the broken battery contacts that I'd tried to replace with picture hooks. However, then I twigged the switch (or something) was broken
 - To get to the innards you are [meant to remove the hinge pin](http://yacf.co.uk/forum/index.php?topic=31377.msg582145#msg582145), but it's easier just cut out the battery carrier instead. Then you can start disassembling it from behind. Also the rubber switch cover can be pried out with a knife, etc.
@@ -35,7 +35,7 @@ Anyway, I was all for just getting another one and treating it better (charge th
 
 ##60 Gear Inches for Winter
 
-I'm so very glad I dropped my gear ratio down this year for winter and (primarily) my winter tyres (since I guess [those were the issue here](http://atomicules.co.uk/2011/02/18/40-16.html)). Thinking back I really have no idea how I managed on the same 42/16 (~70 gear inch) ratio last winter. I guess I didn't. And that's why I had epic journeys into work and a lot of walking. 
+I'm so very glad I dropped my gear ratio down this year for winter and (primarily) my winter tyres (since I guess [those were the issue here]({{ site.baseurl }}2011/02/18/40-16.html)). Thinking back I really have no idea how I managed on the same 42/16 (~70 gear inch) ratio last winter. I guess I didn't. And that's why I had epic journeys into work and a lot of walking. 
 
 I couldn't decide whether to go for a 18 or 19 tooth rear sprocket, as I was worried that 60 gear inches might result in too much spinning, but then a clearance offer on a 19 tooth made the decision for me. And I'm so glad I when for that option. There's not nearly as much spin as I thought there would be and I was surprised that there is still one hill I can't get all the way up without walking, and also that it isn't too low a ratio to stand up in when hill climbing. I guess in really, really bad winds and snow that perhaps going as low as 2:1 would be better, but fixed gear is all about compromise (or the state of being "always in the wrong gear").
 

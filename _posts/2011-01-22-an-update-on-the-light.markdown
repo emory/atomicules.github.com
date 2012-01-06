@@ -5,7 +5,7 @@ title: An Update on the Light
 categories: 
 - bicycles
 ---
-The only negatives I've found with [this light](http://atomicules.co.uk/2010/11/06/busch-muller-ixon-iq.html) are the clear plastic window over the led indicator light and the plastic latch used to hold the case shut.
+The only negatives I've found with [this light]({{ site.baseurl }}2010/11/06/busch-muller-ixon-iq.html) are the clear plastic window over the led indicator light and the plastic latch used to hold the case shut.
 
 Arguably I've abused my light and it's been used as a torch for a fair bit over the winter whilst shovelling snow and ice in the dark, which meant, inevitably, dropping the damn thing a few times.
 

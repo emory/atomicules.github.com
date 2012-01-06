@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_lcq73tQNS31qazfel.jpg
+photo: images/tumblr_lcq73tQNS31qazfel.jpg
 click-through: 
 categories: 
 

@@ -29,4 +29,4 @@ And oddly enough was solved by a [post on jQuery](https://forum.jquery.com/topic
 
 I think the last thing I then did was update the version of jQuery over the one that ships with jFeed (1.6.2 vs 1.1.3.1 at the time of writing). If I recall correctly, I'd got rid of all the CORS errors, but the page still wasn't being generated (odd, because an offline copy of the exact same RSS fee worked fine). I didn't really hold out much hope that updating jQuery would fix the issue, but thankfully it did.
 
-So now I have my [Fever Shared Item's page](http://atomicules.co.uk/fever.html) and here's the [code](https://github.com/atomicules/atomicules.github.com/blob/ef3d7f7337cd4ad580c21ba45632c1d70b999d7c/fever.html).
+So now I have my [Fever Shared Item's page]({{ site.baseurl }}fever.html) and here's the [code](https://github.com/atomicules/atomicules.github.com/blob/ef3d7f7337cd4ad580c21ba45632c1d70b999d7c/fever.html).

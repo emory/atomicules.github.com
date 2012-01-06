@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_kurmoaIPmX1qzw1hfo1_500.jpg
+photo: images/tumblr_kurmoaIPmX1qzw1hfo1_500.jpg
 click-through: http://tensionsevolve.files.wordpress.com/2009/09/where-the-wild-things-are.jpg
 categories: 
 

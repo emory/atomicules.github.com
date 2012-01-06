@@ -5,7 +5,7 @@ title: Fatigue
 categories: 
 - bicycles
 ---
-Not of me, of my handlebars. Didn't really think this was possible, but this week the left hand drop of my handlebars cracked all the way round and was only really held on by the ["tape"](http://atomicules.co.uk/2011/08/11/free-handlebar-tape.html). It cracked so much I couldn't even do a chop and flop job and convert them to bullhorns.
+Not of me, of my handlebars. Didn't really think this was possible, but this week the left hand drop of my handlebars cracked all the way round and was only really held on by the ["tape"]({{ site.baseurl }}2011/08/11/free-handlebar-tape.html). It cracked so much I couldn't even do a chop and flop job and convert them to bullhorns.
 
 So whilst I wait for payday, I've had to make some new handlebars from the original riser bar that came with the bike. I've chopped that down, fitted it upside down and fitted some old mountain bike bar ends on so my bike now looks like some really freaky lo-pro with studded tyres.
 

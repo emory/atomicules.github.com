@@ -24,7 +24,7 @@ Well, I say art, but at the moment it's just photography. I seem to have stopped
 
 * Shooting Kodachrome. I have still to get this scanned, but I'm very happy with what the slides look like. So, all good for my first and last ever roll of Kodachrome.
 
-* Having a kind fellow send me [some APS film from the US](http://atomicules.co.uk/2009/11/18/completely-forgot-to-write-a-about-this-but-its.html).   
+* Having a kind fellow send me [some APS film from the US]({{ site.baseurl }}2009/11/18/completely-forgot-to-write-a-about-this-but-its.html).   
 
 * Roidweeks. First did this last year. One of those global community events on Flickr where you can feel the love.  Always fun.
 

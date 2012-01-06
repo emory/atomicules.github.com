@@ -5,7 +5,7 @@ title: OS and Network Conditionals in Vim Configuration
 categories: 
 - code
 ---
-A bit of a follow-up to [this vim post](http://atomicules.co.uk/2009/05/30/vim.html) since - as happens to all Vim uses - my .vimrc file has grown a bit in complexity. It's still nowhere as near insane as some people's, but has changed enough to make that post redundant. Oh, and so has the number of plugins I'm using.
+A bit of a follow-up to [this vim post]({{ site.baseurl }}2009/05/30/vim.html) since - as happens to all Vim uses - my .vimrc file has grown a bit in complexity. It's still nowhere as near insane as some people's, but has changed enough to make that post redundant. Oh, and so has the number of plugins I'm using.
 
 I am still very much cross platform (as much Linux as possible, OSX when I get the chance and Windows when I have to; too frequently) so finally moved to using [git submodules and pathogen to synchronise](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/) across platforms. I'm not making my dotvim repository public though, as - well - who the hell actually wants to read through someone elses .vimrc?
 

@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_l315r7ufnU1qzcagp.jpg
+photo: images/tumblr_l315r7ufnU1qzcagp.jpg
 click-through: http://github.com/atomicules/shoefiti
 categories: 
 - code

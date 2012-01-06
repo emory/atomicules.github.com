@@ -35,7 +35,7 @@ Anyway. Here's what I'm using. I'm mainly going to program in Ruby also dabble i
 * [ragtag](http://www.vim.org/scripts/script.php?script_id=1896) - Because Tim Pope made it.
 * ~[Supertab](http://www.vim.org/scripts/script.php?script_id=1643)~ - I hear it's good, but not actually got around to using yet.
 * [taglist](http://www.vim.org/scripts/script.php?script_id=273) - Think I mainly used this when I played with C.
-* [Vim-R-Plugin](http://www.vim.org/scripts/script.php?script_id=2628) - For [working with R](http://atomicules.co.uk/2010/11/20/vim-r-plugin.html).
+* [Vim-R-Plugin](http://www.vim.org/scripts/script.php?script_id=2628) - For [working with R]({{ site.baseurl }}2010/11/20/vim-r-plugin.html).
 * [Full Screen Vim for Windows](http://www.vim.org/scripts/script.php?script_id=2596) - This is great!
 
 And worth a mention, but I'm not using it: [Command-T](https://github.com/wincent/Command-T). This is an interesting plugin to quickly open files by typing in a few letters of their path or filename. It's based on a Textmate feature. However, installing it is a bit of a palaver and (especially on Windows) requires certain versions of Vim, Ruby, and Ruby developer tools so you can build the extension once you've installed it. I tried it using the non-recommended versions (Vim 7.3 and Ruby 1.9.1) and it crashed. Just seems a lot of hassle for what it's worth.

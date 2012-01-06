@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_kr2zlvkk9k1qz7eo6o1_500.jpg
+photo: images/tumblr_kr2zlvkk9k1qz7eo6o1_500.jpg
 click-through: http://www.post-gazette.com/pg/07252/815585-109.stm
 categories: 
 

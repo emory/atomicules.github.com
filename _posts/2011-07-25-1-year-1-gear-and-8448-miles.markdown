@@ -13,6 +13,6 @@ The first day I pretty much felt like crying for my mum. I'd done no training. J
 
 A week into the cycle and I'd very quickly got used to it and was thinking fixed gear over this distance wasn't actually that bad. A few days later however, when the head winds picked up I'd changed my tune and was definitely getting some gears.
 
-Then the [cycle2work scheme fell through](http://atomicules.co.uk/2010/09/25/her-majestys-right-cun.html) and so I guess I was staying on fixed gear.
+Then the [cycle2work scheme fell through]({{ site.baseurl }}2010/09/25/her-majestys-right-cun.html) and so I guess I was staying on fixed gear.
 
 And the rest is history. And now that challenge is over, I can sit back and relax safe in the knowledge that I never have to do another full year on fixed gear. Ha! Not really, just get up tomorrow and carry on doing it.

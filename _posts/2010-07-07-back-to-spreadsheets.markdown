@@ -16,7 +16,7 @@ And on the face of it, it seems like a great idea: take a product built and test
 
 But then you've got to remember just how crap banks are. They don't give a shit about their punters so they are hardly going to splash out the cash for something that benefits their customers more than them. Shame though as the banks could do with dragging into the 21st century: *cough* Smile the 'Internet' (?!) bank. 
 
-What next? I really don't want to use [spreadsheets](http://atomicules.co.uk/2009/07/07/ditching-spreadsheets-for-budgeting.html) again. And Mint is still 100% useless outside of the US. But I have found three new alternatives:
+What next? I really don't want to use [spreadsheets]({{ site.baseurl }}2009/07/07/ditching-spreadsheets-for-budgeting.html) again. And Mint is still 100% useless outside of the US. But I have found three new alternatives:
 
 * [Pocketsmith](http://www.pocketsmith.com/) (free and pay) - Looks interesting as they have a different (calendar) based approach and also focus more on forecasting - which is what I am most interested in. Whereas Wesabe was primarily analysing historical spending (although I managed to do limited forecasting with it using manual cash accounts). 
 

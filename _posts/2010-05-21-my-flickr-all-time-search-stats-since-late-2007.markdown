@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_l2micbgGOU1qzcagpo1_r1_500.png
+photo: images/tumblr_l2micbgGOU1qzcagpo1_r1_500.png
 click-through: http://flickr.vispillo.org/output-authed/1274097387973.html
 categories: 
 - code

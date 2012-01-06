@@ -2,7 +2,7 @@
 layout: page
 type: photo
 title: 
-photo: http://atomicules.co.uk/images/tumblr_l9i2ds5OyG1qzcagp.jpg
+photo: images/tumblr_l9i2ds5OyG1qzcagp.jpg
 categories: 
 - code
 ---
