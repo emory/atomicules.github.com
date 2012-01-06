@@ -242,6 +242,9 @@ article .chat ul li.even {
 article .audiobox {
 	background: #fff;
 }
+article .photo img {
+	max-width: 500px; /*For images that are silly big */
+}
 .post-tags li.tags ul, .post-footer li.tags ul li{
 	display: inline; 
 }
