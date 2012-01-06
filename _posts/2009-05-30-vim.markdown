@@ -19,7 +19,7 @@ Anyway. Here's what I'm using. I'm mainly going to program in Ruby also dabble i
 
 ## Config Options
 
-<script src="http://gist.github.com/414504.js?file=gistfile1.vimrc"></script>
+<script src="https://gist.github.com/414504.js?file=gistfile1.vimrc"></script>
 
 ## Plugins
 
