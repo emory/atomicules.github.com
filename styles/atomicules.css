@@ -170,9 +170,12 @@ article {
 .postcontent .source {
 	margin: 1.0em 0 0 0;
 }
+.postcontent li {
+	line-height: 1.25em;
+}
 article p {
 	margin: 0 0 1.0em 0;
-	line-height: 1.3em;
+	line-height: 1.5em;
 }
 article a {
 	text-decoration: underline;
