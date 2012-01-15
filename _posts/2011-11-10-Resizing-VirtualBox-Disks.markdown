@@ -2,7 +2,7 @@
 layout: page
 type: link
 title: Resizing VirtualBox Disk Images
-link: http://pinboard.in/u:i5m/b:57793c2b999c
+link: http://pinboard.in/u:atomicules/b:57793c2b999c
 categories: 
 - code
 ---
