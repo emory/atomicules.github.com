@@ -66,9 +66,9 @@ header nav {
 	width: 100%;
 	background: #bd3c36;
 	text-align: right;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
-	line-height: 40px;
+	line-height: 42px;
 }
 
 header nav ul {
@@ -82,7 +82,7 @@ header nav li {
 }
 header iframe {
 	position: relative;
-	top: -38px;
+	top: -40px;
 	padding-left: 10px;
 }
 /* end pixels */
