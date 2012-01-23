@@ -1,0 +1,9 @@
+---
+layout: page
+type: text
+title: i5m No More
+date: 2012-01-23 15:37:00 UTC+0
+categories: 
+- site
+---
+Note to self: I realised I forgot to mention it here (although it is self-evident, I really should make a post for my own future reference) that after ten years of "i5m" I fancied a name change. A new beginning (of sorts) for the new year. And so I did. 
