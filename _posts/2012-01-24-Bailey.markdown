@@ -1,0 +1,9 @@
+---
+layout: page
+type: photo
+title: 
+photo: images/polaroid-jan-2012-1.jpg
+categories: 
+- pictures
+---
+In the excitement of having a whole two packs of instant film to play with (the last film I shot was a year ago) I continued to get carried away with trying to do things the camera was never meant to do (and unfortunately I've wasted most of the first pack in this manner). This was taken whilst jogging alongside my eldest who was trotting up the hill on Bailey (she's still learning so can't go off trotting on her own so some poor mug has to jog alongside 'just in case'). Anyway, never really stood much chance of pin-sharp focus, but the framing is pretty awesome :-)
