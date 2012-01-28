@@ -1,0 +1,9 @@
+---
+layout: page
+type: photo
+title: 
+photo: images/polaroid-jan-2012-6.jpg
+categories: 
+- pictures
+---
+Hardly any snow this year, but a lot of frost lately, which makes for some rather beautiful - if a little chilly - mornings. This doesn't really capture it, but ho-hum, got to try these things.
