@@ -1,7 +1,7 @@
 ---
 layout: page
 type: text
-title: My Listening to New Music Goal of 2010
+title: My "Listening to New Music" Goal of 2010
 categories: 
 - code
 - owtelse
@@ -51,4 +51,4 @@ Based on this raw data, I had 162 artists in 2011 and 113 in 2010. However, this
 
 This is pretty impressive as both my iPod mini (finally!) and iPod Touch died permanent deaths last year so listening and scrobbling has relied on me using a computer. This year I'm taking it easier: It was just too much work to keep checking through the Line of Best Fit and the Guardian New Band of the Day feeds, looking for what seemed interesting and then trying to "find" tracks by those artists lying around on the internet. I'm hoping to use libre.fm to find more legitimately free music to listen to this year, but I'm not going to go mad about it.
 
-(As a footnote: One of the most impressive things about last year is that I managed to oust Freesteylers from [my top artists](http://www.last.fm/user/i5m/charts) spot. That took a lot of self-control).
+(As a footnote: One of the most impressive things about last year is that I managed to oust Freesteylers from [my top artists](http://www.last.fm/user/i5m/charts?rangetype=year&subtype=artist) spot. That took a lot of self-control).
