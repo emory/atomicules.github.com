@@ -1,0 +1,30 @@
+---
+layout: page
+type: photo
+title: New Bike
+photo: images/polaroid-mar-2012-2.jpg
+categories: 
+- pictures
+- bicycles
+---
+I'll use this test shot (Yay, [rollers haven't got stuck open]({{ site.baseurl }}2012/03/05/More-Neigh.html)) to mostly waffle on about my new bike (not that you can really see or tell from this photo; it's the one on the left).
+
+I'm sure I've mentioned this elsewhere, but I'll do a <s>brief</s> (Fuck it, it's MY website, I'll do what I want) recap:
+
+1. Got a [fixed gear bike through Cycle2Work]({{ site.baseurl }}2009/07/27/taking-off-the-stabilisers-again.html) (first new bike since Father Christmas brought me one as a kid!), perfect for 7 mile round-trip commute.
+2. We move house, commute now a 38 mile round-trip. Nevermind, I'll get a more [appropriate bike](http://boardmanbikes.com/cx/index.html) as soon as Cycle2Work scheme re-opens as fixed gear a bit hard going in the winds, also need to be able to fit studded tyres for winter.
+3. Cycle2Work scheme gets put on hold indefinitely.
+4. A year and a half later, finally reopens. But in meantime have become accustomed to fixed and the key advantages of low (almost zero if you abuse things like me) maintenance. When times are tight this is ideal.
+5. So, was all set on getting another similar fixed gear so I could at least take this one offline to repair and then have as a spare.
+6. In typical "just my luck fashion", the [Genesis Day 01](http://www.genesisbikes.co.uk/bikes/cross/day-01/day-01-cross)s I had my eye on at the LBS sell out, then PlanetX/On One stop doing [Pompinos](http://www.on-one.co.uk/reviews/pompino-reviews/). So forced to have a re-think.
+7. Was primarily against a road bike as [could only afford Sora]({{ site.baseurl }}2012/01/23/Mild.html) and I [ride in the drops]({{ site.baseurl }}2010/10/06/why-do-so-many-people-still-buy-road-bikes-with-drop.html) a lot (although in hindsight, I can see how Sora would be useful on a winter only cross bike as could shift in mittens fine, but screw the [slow, boring, heavy, sensible option](http://www.edinburghbicycle.com/products/revolution-cross-sport-11)...)), but then miracle of miracles...
+8. I discovered [a company that accept Cyclescheme via mailorder](http://www.tredz.co.uk/cycletowork.aspx) and had a [GT GTR Series 5.0](http://www.gtbicycles.com/gbr/2012/bikes/road/performance/2012-gtr-series-5-0) bike that features an unheard-of-before-to-me brand of shifters called [microSHIFT](http://www.microshift.biz/) that don't have a stupid thumbshifter like Soras and would allow shifting from the drops!
+9. Victory
+
+So, yes, hurray! I went for the road bike. It is an "entry level" road bike - apparently - but, fuck, I've been riding one gear (fixed), having 16 gears (instead of 18, 20) is already more than I know what to do with. I still have some concerns over maintenance costs, but well, I can't be expected to run things as lean as I have been doing forever. And I will work on getting the fixed gear fixed up for winter (it's only when you get a new bike that you realise *that* is what a bike is meant to feel like and just how knackered the old one is).  
+
+A couple of interesting things about riding a bike with gears and a freewheel after two and a half years of riding nothing but fixed gear:
+
+- I can't get my feet in the toe-clips. Ha, [memories]({{ site.baseurl }}2009/09/14/flip-at-the-bottom-this-is-the-image-that-has.html). I now understand why people use clipless pedals on road bikes. On a fixed gear bike it is actually easier (also the pedals on the fixed are easier to flip) as there is obviously resistance when flipping the pedal backwards. Not so with a freewheel. So even getting the first foot in is harder. I have to do this with the pedal at the bottom of the stroke before setting off. Also, since the bottom bracket is much lower on the road bike, the toe-clips scrape on the road which is annoying as I can't get my second foot in on whilst the cranks are rotating. I have to get up enough speed first so I can freewheel and hold the pedals steady with the first foot.
+- Freewheeling is incredibly unnerving. It just feels wrong. But I shall have to force myself to do it because as well as the toe-clip issues, the lower bottom bracket also means I doubt some corners can be taken at full pelt whilst pedaling. 
+
