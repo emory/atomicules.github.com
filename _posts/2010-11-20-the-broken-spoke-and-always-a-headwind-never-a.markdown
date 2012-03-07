@@ -1,7 +1,7 @@
 ---
 layout: page
 type: text
-title: '"The Broken Spoke" and "Always a Headwind, Never a Tailwind"''
+title: '"The Broken Spoke" and "Always a Headwind, Never a Tailwind"'
 categories: 
 - bicycles
 ---
