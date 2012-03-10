@@ -6,4 +6,4 @@ link: https://github.com/atomicules/snose
 categories: 
 - code
 ---
-A little Python command line app I wrote that uses the [Simplenote.py](https://github.com/mrtazz/simplenote.py) module from [mrtazz (Daniel Schauenberg)](https://github.com/mrtazz) to synchronise arbitary files across multiple machines via the [Simplenote](ttp://simplenoteapp.com/) service. Basically I wanted a way to synchronise arbitrary "dotfiles" without the "expense" of a Git repository. More info in the README if you follow the link.
+A little Python command line app I wrote that uses the [Simplenote.py](https://github.com/mrtazz/simplenote.py) module from [mrtazz (Daniel Schauenberg)](https://github.com/mrtazz) to synchronise arbitary files across multiple machines via the [Simplenote](ttp://simplenoteapp.com/) service. Basically I wanted a way to synchronise certain "dotfiles" without the "expense" of a Git repository. More info in the README if you follow the link.
