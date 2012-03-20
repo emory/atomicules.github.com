@@ -1,0 +1,11 @@
+---
+layout: page
+type: photo
+title: Canter
+photo: images/polaroid-mar-2012-4.jpg
+categories: 
+- pictures
+---
+It was tricky finding the right place to stand for this one: I wanted to "fill the frame" as much as possible, but also make sure I was well out of the way of her cantering round. And then there was trying to gauge just how much she was going to cut the corner by; the answer: a lot more than I expected!
+
+(But I still really like this)
